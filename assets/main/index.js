@@ -1015,7 +1015,7 @@ System.register("chunks:///_virtual/main", ['./debug-view-runtime-control.ts', '
   };
 });
 
-System.register("chunks:///_virtual/Main.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UiMgr.ts', './index.ts', './ResMgr.ts', './AudioMgr.ts', './Item.ts', './index2.ts', './moment.mjs_cjs=&original=.js', './app.ts', './BulletFrame.ts', './index3.ts', './index.js', './index.mjs_cjs=&original=.js', './storage.ts', './GameFiMgr.ts', './index2.js', './moment.js'], function (exports) {
+System.register("chunks:///_virtual/Main.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UiMgr.ts', './index.ts', './ResMgr.ts', './AudioMgr.ts', './Item.ts', './index2.ts', './moment.mjs_cjs=&original=.js', './app.ts', './BulletFrame.ts', './index3.ts', './index2.js', './index.mjs_cjs=&original=.js', './storage.ts', './GameFiMgr.ts', './index.js', './moment.js'], function (exports) {
   var _applyDecoratedDescriptor, _initializerDefineProperty, cclegacy, Material, SpriteFrame, Prefab, _decorator, sp, Sprite, Label, game, input, Input, Camera, geometry, PhysicsSystem, MeshRenderer, Tween, Vec3, tween, instantiate, RigidBody, Node, director, UICtrl, resPkg, ResMgr, AudioMgr, Item, getRandom, countdown, Tost, BulletFrame, generateModelSorting, openNewGame, gameOver, buyPropProduct, TelegramWebAppContainer, getStorageData, GameFiMgr, _cjsExports, _cjsExports$1;
   return {
     setters: [function (module) {
@@ -1859,8 +1859,9 @@ System.register("chunks:///_virtual/Main.ts", ['./rollupPluginModLoBabelHelpers.
             const telegram = new TelegramWebAppContainer({
               exposeInMainWorld: true
             });
-            const shareText = '123232';
-            await telegram.WebApp.openTelegramLink(shareText);
+            const shareUrl = 't.me/ziongametest_bot/zion123?startapp=ref_123456';
+            const a = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}`;
+            await telegram.WebApp.openTelegramLink(a);
             // Tost("分享逻辑");
           }
           //
@@ -2390,10 +2391,8 @@ System.register("chunks:///_virtual/Start.ts", ['./rollupPluginModLoBabelHelpers
           });
           this.view["Button1"].on(Node.EventType.TOUCH_END, async e => {
             e.propagationStopped = true;
-            console.log(window.Telegram);
-            const shareUrl = 'https://game1-mocha.vercel.app/';
-            const shareText = '123232';
-            window.Telegram.WebApp?.openTelegramLink(`https://t.me/share/url?url=${shareUrl}/&text=${shareText}`);
+            const shareUrl = 't.me/ziongametest_bot/zion123?startapp=ref_123456';
+            window.Telegram.WebApp?.openTelegramLink(`https://t.me/share/url?url=${encodeURIComponent(shareUrl)}`);
           });
         }
         async loginWeb() {
