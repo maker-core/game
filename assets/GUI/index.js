@@ -1,8 +1,4 @@
-System.register("chunks:///_virtual/GUI", [], function () {
-  return {
-    execute: function () {}
-  };
-});
+System.register("chunks:///_virtual/GUI",[],(function(){return{execute:function(){}}}));
 
 (function(r) {
   r('virtual:///prerequisite-imports/GUI', 'chunks:///_virtual/GUI'); 
