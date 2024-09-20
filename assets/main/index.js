@@ -2306,8 +2306,8 @@ System.register("chunks:///_virtual/ResMgr.ts", ['cc'], function (exports) {
   };
 });
 
-System.register("chunks:///_virtual/Start.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './ResMgr.ts', './GameFiMgr.ts', './index.ts', './UiMgr.ts', './index.js', './index3.ts', './storage.ts'], function (exports) {
-  var _applyDecoratedDescriptor, _initializerDefineProperty, cclegacy, Node, _decorator, director, Label, ProgressBar, ResMgr, GameFiMgr, resPkg, UICtrl, TelegramWebAppContainer, getGameUserInfo, setStorageData;
+System.register("chunks:///_virtual/Start.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './ResMgr.ts', './GameFiMgr.ts', './index.ts', './UiMgr.ts', './index3.ts', './storage.ts'], function (exports) {
+  var _applyDecoratedDescriptor, _initializerDefineProperty, cclegacy, Node, _decorator, director, Label, ProgressBar, ResMgr, GameFiMgr, resPkg, UICtrl, getGameUserInfo, setStorageData;
   return {
     setters: [function (module) {
       _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
@@ -2327,8 +2327,6 @@ System.register("chunks:///_virtual/Start.ts", ['./rollupPluginModLoBabelHelpers
       resPkg = module.resPkg;
     }, function (module) {
       UICtrl = module.UICtrl;
-    }, function (module) {
-      TelegramWebAppContainer = module.TelegramWebAppContainer;
     }, function (module) {
       getGameUserInfo = module.getGameUserInfo;
     }, function (module) {
@@ -2392,15 +2390,14 @@ System.register("chunks:///_virtual/Start.ts", ['./rollupPluginModLoBabelHelpers
           });
           this.view["Button1"].on(Node.EventType.TOUCH_END, async e => {
             e.propagationStopped = true;
-            const telegram = new TelegramWebAppContainer();
-            console.log(telegram);
+
+            // const telegram = new TelegramWebAppContainer();
+            // console.log(telegram);
             console.log(window.Telegram);
-            window?.TelegramGameProxy?.shareScore();
-            // const hash = await GameFiMgr.Instance.sendTransaction(0.00001);
-            // console.log("hash", hash);
+            const shareText = '123232';
+            window.Telegram.WebApp?.openTelegramLink(shareText);
           });
         }
-
         async loginWeb() {
           const result = await getGameUserInfo({
             user_id_wallet: this.address
