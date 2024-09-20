@@ -1,44 +1,3476 @@
-System.register("chunks:///_virtual/app.ts",["cc","./ResMgr.ts","./Message.ts"],(function(e){var s,t,n,a,c;return{setters:[function(e){s=e.cclegacy,t=e.find,n=e.instantiate},function(e){a=e.ResMgr},function(e){c=e.Message}],execute:function(){s._RF.push({},"8d593AQkSdEFYxZSVYq20cQ","app",void 0);e("Tost",(function(e){var s=t("mian/Canvas"),i=a.Instance.getAsset("Sounds","Message"),u=n(i);s.getChildByName("Message")||(s.addChild(u),u.getComponent(c).setValue(e))}));s._RF.pop()}}}));
+System.register("chunks:///_virtual/app.ts", ['cc', './ResMgr.ts', './Message.ts'], function (exports) {
+  var cclegacy, find, instantiate, ResMgr, Message;
+  return {
+    setters: [function (module) {
+      cclegacy = module.cclegacy;
+      find = module.find;
+      instantiate = module.instantiate;
+    }, function (module) {
+      ResMgr = module.ResMgr;
+    }, function (module) {
+      Message = module.Message;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "8d593AQkSdEFYxZSVYq20cQ", "app", undefined);
 
-System.register("chunks:///_virtual/AudioMgr.ts",["./rollupPluginModLoBabelHelpers.js","cc","./ResMgr.ts"],(function(s){var o,n,t,u,i,e;return{setters:[function(s){o=s.inheritsLoose},function(s){n=s.cclegacy,t=s._decorator,u=s.AudioSource,i=s.Component},function(s){e=s.ResMgr}],execute:function(){n._RF.push({},"dfc68ApNu9H27Pz05ghRcER","AudioMgr",void 0);t.ccclass,t.property;s("AudioMgr",function(s){function n(){for(var o,n=arguments.length,t=new Array(n),u=0;u<n;u++)t[u]=arguments[u];return(o=s.call.apply(s,[this].concat(t))||this).sounds={},o}o(n,s);var t=n.prototype;return t.onLoad=function(){n.Instance?this.destroy():n.Instance=this},t.play=function(s,o){if(!this.sounds[s]){var n=e.Instance.getAsset("Sounds",""+s),t=new u(s);t.clip=n,this.sounds[s]=t}o.loop&&(this.sounds[s].loop=o.loop),o.playOnAwake&&(this.sounds[s].playOnAwake=o.playOnAwake),o.volume&&(this.sounds[s].volume=o.volume),this.sounds[s].playing||this.sounds[s].play()},t.pause=function(s){this.sounds[s]&&this.sounds[s].pause()},t.stop=function(s){this.sounds[s]&&this.sounds[s].stop()},t.stopAll=function(){for(var s in this.sounds)this.sounds[s].stop()},t.getAudioSourceByName=function(s){if(this.sounds[s])return this.sounds[s];console.error(s+" 不存在")},n}(i)).Instance=void 0,n._RF.pop()}}}));
+      var Tost = exports('Tost', function Tost(message) {
+        var canvas = find("mian/Canvas");
+        var base = ResMgr.Instance.getAsset("Sounds", "Message");
+        var child = instantiate(base);
 
-System.register("chunks:///_virtual/BulletFrame.ts",["./rollupPluginModLoBabelHelpers.js","cc","./UiMgr.ts"],(function(e){var t,i,n,o,r,a,s,c,l,p,u;return{setters:[function(e){t=e.applyDecoratedDescriptor,i=e.inheritsLoose,n=e.initializerDefineProperty,o=e.assertThisInitialized},function(e){r=e.cclegacy,a=e._decorator,s=e.SpriteFrame,c=e.Node,l=e.Label,p=e.Sprite},function(e){u=e.UICtrl}],execute:function(){var m,h,g,f,v,b,y,d,w;r._RF.push({},"cdf2eac9r1DIJdgYX9SjOO8","BulletFrame",void 0);var k=a.ccclass,C=a.property;e("BulletFrame",(m=k("BulletFrame"),h=C(s),g=C(s),f=C(s),m((y=t((b=function(e){function t(){for(var t,i=arguments.length,r=new Array(i),a=0;a<i;a++)r[a]=arguments[a];return t=e.call.apply(e,[this].concat(r))||this,n(t,"icon1",y,o(t)),n(t,"icon2",d,o(t)),n(t,"icon3",w,o(t)),t.type=1,t}i(t,e);var r=t.prototype;return r.onLoad=function(){var t=this;e.prototype.onLoad.call(this),this.view["mask/close"].on(c.EventType.TOUCH_END,(function(e){e.propagationStopped=!0,t.node.active=!1}))},r.close=function(){this.node.active=!1},r.setType=function(e){switch(this.type=e,e){case 1:this.view["mask/title/Label"].getComponent(l).string="Remove",this.view["mask/cal/icon"].getComponent(p).spriteFrame=this.icon1,this.view["mask/Label"].getComponent(l).string="Remove 3 objects from the grid and place them in the temporary storage.";break;case 2:this.view["mask/title/Label"].getComponent(l).string="Scrape",this.view["mask/cal/icon"].getComponent(p).spriteFrame=this.icon2,this.view["mask/Label"].getComponent(l).string="Automatically gather and place objects together";break;case 3:this.view["mask/title/Label"].getComponent(l).string="Disruption",this.view["mask/cal/icon"].getComponent(p).spriteFrame=this.icon3,this.view["mask/Label"].getComponent(l).string="Disrupt the pile of items"}},r.update=function(e){},t}(u)).prototype,"icon1",[h],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),d=t(b.prototype,"icon2",[g],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),w=t(b.prototype,"icon3",[f],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),v=b))||v));r._RF.pop()}}}));
+        if (!canvas.getChildByName("Message")) {
+          canvas.addChild(child);
 
-System.register("chunks:///_virtual/config.ts",["cc"],(function(t){var c;return{setters:[function(t){c=t.cclegacy}],execute:function(){c._RF.push({},"5fb11dsqL9C1JmVA7jcjYFI","config",void 0);t("baseUrl1","http://34.145.10.202:8091/"),t("baseUrl","http://192.168.1.103:8091/");t("baseUrl","https://goose.kystudio.cn/api/"),c._RF.pop()}}}));
+          var _Tost = child.getComponent(Message);
 
-System.register("chunks:///_virtual/debug-view-runtime-control.ts",["./rollupPluginModLoBabelHelpers.js","cc"],(function(t){var e,o,i,n,s,l,r,a,g,h,p,c,C,d,m,u,L;return{setters:[function(t){e=t.applyDecoratedDescriptor,o=t.inheritsLoose,i=t.initializerDefineProperty,n=t.assertThisInitialized},function(t){s=t.cclegacy,l=t._decorator,r=t.Node,a=t.Color,g=t.Canvas,h=t.UITransform,p=t.instantiate,c=t.Label,C=t.RichText,d=t.Toggle,m=t.Button,u=t.director,L=t.Component}],execute:function(){var f,M,b,v,T,S,x,E,I;s._RF.push({},"b2bd1+njXxJxaFY3ymm06WU","debug-view-runtime-control",void 0);var A=l.ccclass,y=l.property;t("DebugViewRuntimeControl",(f=A("internal.DebugViewRuntimeControl"),M=y(r),b=y(r),v=y(r),f((x=e((S=function(t){function e(){for(var e,o=arguments.length,s=new Array(o),l=0;l<o;l++)s[l]=arguments[l];return e=t.call.apply(t,[this].concat(s))||this,i(e,"compositeModeToggle",x,n(e)),i(e,"singleModeToggle",E,n(e)),i(e,"EnableAllCompositeModeButton",I,n(e)),e._single=0,e.strSingle=["No Single Debug","Vertex Color","Vertex Normal","Vertex Tangent","World Position","Vertex Mirror","Face Side","UV0","UV1","UV Lightmap","Project Depth","Linear Depth","Fragment Normal","Fragment Tangent","Fragment Binormal","Base Color","Diffuse Color","Specular Color","Transparency","Metallic","Roughness","Specular Intensity","IOR","Direct Diffuse","Direct Specular","Direct All","Env Diffuse","Env Specular","Env All","Emissive","Light Map","Shadow","AO","Fresnel","Direct Transmit Diffuse","Direct Transmit Specular","Env Transmit Diffuse","Env Transmit Specular","Transmit All","Direct Internal Specular","Env Internal Specular","Internal All","Fog"],e.strComposite=["Direct Diffuse","Direct Specular","Env Diffuse","Env Specular","Emissive","Light Map","Shadow","AO","Normal Map","Fog","Tone Mapping","Gamma Correction","Fresnel","Transmit Diffuse","Transmit Specular","Internal Specular","TT"],e.strMisc=["CSM Layer Coloration","Lighting With Albedo"],e.compositeModeToggleList=[],e.singleModeToggleList=[],e.miscModeToggleList=[],e.textComponentList=[],e.labelComponentList=[],e.textContentList=[],e.hideButtonLabel=void 0,e._currentColorIndex=0,e.strColor=["<color=#ffffff>","<color=#000000>","<color=#ff0000>","<color=#00ff00>","<color=#0000ff>"],e.color=[a.WHITE,a.BLACK,a.RED,a.GREEN,a.BLUE],e}o(e,t);var s=e.prototype;return s.start=function(){if(this.node.parent.getComponent(g)){var t=this.node.parent.getComponent(h),e=.5*t.width,o=.5*t.height,i=.1*e-e,n=o-.1*o,s=this.node.getChildByName("MiscMode"),l=p(s);l.parent=this.node,l.name="Buttons";var r=p(s);r.parent=this.node,r.name="Titles";for(var u=0;u<2;u++){var L=p(this.EnableAllCompositeModeButton.getChildByName("Label"));L.setPosition(i+(u>0?450:150),n,0),L.setScale(.75,.75,.75),L.parent=r;var f=L.getComponent(c);f.string=u?"----------Composite Mode----------":"----------Single Mode----------",f.color=a.WHITE,f.overflow=0,this.labelComponentList[this.labelComponentList.length]=f}n-=20;for(var M=0,b=0;b<this.strSingle.length;b++,M++){b===this.strSingle.length>>1&&(i+=200,M=0);var v=b?p(this.singleModeToggle):this.singleModeToggle;v.setPosition(i,n-20*M,0),v.setScale(.5,.5,.5),v.parent=this.singleModeToggle.parent;var T=v.getComponentInChildren(C);T.string=this.strSingle[b],this.textComponentList[this.textComponentList.length]=T,this.textContentList[this.textContentList.length]=T.string,v.on(d.EventType.TOGGLE,this.toggleSingleMode,this),this.singleModeToggleList[b]=v}i+=200,this.EnableAllCompositeModeButton.setPosition(i+15,n,0),this.EnableAllCompositeModeButton.setScale(.5,.5,.5),this.EnableAllCompositeModeButton.on(m.EventType.CLICK,this.enableAllCompositeMode,this),this.EnableAllCompositeModeButton.parent=l;var S=this.EnableAllCompositeModeButton.getComponentInChildren(c);this.labelComponentList[this.labelComponentList.length]=S;var x=p(this.EnableAllCompositeModeButton);x.setPosition(i+90,n,0),x.setScale(.5,.5,.5),x.on(m.EventType.CLICK,this.changeTextColor,this),x.parent=l,(S=x.getComponentInChildren(c)).string="TextColor",this.labelComponentList[this.labelComponentList.length]=S;var E=p(this.EnableAllCompositeModeButton);E.setPosition(i+200,n,0),E.setScale(.5,.5,.5),E.on(m.EventType.CLICK,this.hideUI,this),E.parent=this.node.parent,(S=E.getComponentInChildren(c)).string="Hide UI",this.labelComponentList[this.labelComponentList.length]=S,this.hideButtonLabel=S,n-=40;for(var I=0;I<this.strMisc.length;I++){var A=p(this.compositeModeToggle);A.setPosition(i,n-20*I,0),A.setScale(.5,.5,.5),A.parent=s;var y=A.getComponentInChildren(C);y.string=this.strMisc[I],this.textComponentList[this.textComponentList.length]=y,this.textContentList[this.textContentList.length]=y.string,A.getComponent(d).isChecked=!!I,A.on(d.EventType.TOGGLE,I?this.toggleLightingWithAlbedo:this.toggleCSMColoration,this),this.miscModeToggleList[I]=A}n-=150;for(var D=0;D<this.strComposite.length;D++){var B=D?p(this.compositeModeToggle):this.compositeModeToggle;B.setPosition(i,n-20*D,0),B.setScale(.5,.5,.5),B.parent=this.compositeModeToggle.parent;var w=B.getComponentInChildren(C);w.string=this.strComposite[D],this.textComponentList[this.textComponentList.length]=w,this.textContentList[this.textContentList.length]=w.string,B.on(d.EventType.TOGGLE,this.toggleCompositeMode,this),this.compositeModeToggleList[D]=B}}else console.error("debug-view-runtime-control should be child of Canvas")},s.isTextMatched=function(t,e){var o=new String(t),i=o.search(">");return-1===i?t===e:(o=(o=o.substr(i+1)).substr(0,o.search("<")))===e},s.toggleSingleMode=function(t){for(var e=u.root.debugView,o=t.getComponentInChildren(C),i=0;i<this.strSingle.length;i++)this.isTextMatched(o.string,this.strSingle[i])&&(e.singleMode=i)},s.toggleCompositeMode=function(t){for(var e=u.root.debugView,o=t.getComponentInChildren(C),i=0;i<this.strComposite.length;i++)this.isTextMatched(o.string,this.strComposite[i])&&e.enableCompositeMode(i,t.isChecked)},s.toggleLightingWithAlbedo=function(t){u.root.debugView.lightingWithAlbedo=t.isChecked},s.toggleCSMColoration=function(t){u.root.debugView.csmLayerColoration=t.isChecked},s.enableAllCompositeMode=function(t){var e=u.root.debugView;e.enableAllCompositeMode(!0);for(var o=0;o<this.compositeModeToggleList.length;o++){this.compositeModeToggleList[o].getComponent(d).isChecked=!0}var i=this.miscModeToggleList[0].getComponent(d);i.isChecked=!1,e.csmLayerColoration=!1,(i=this.miscModeToggleList[1].getComponent(d)).isChecked=!0,e.lightingWithAlbedo=!0},s.hideUI=function(t){var e=this.node.getChildByName("Titles"),o=!e.active;this.singleModeToggleList[0].parent.active=o,this.miscModeToggleList[0].parent.active=o,this.compositeModeToggleList[0].parent.active=o,this.EnableAllCompositeModeButton.parent.active=o,e.active=o,this.hideButtonLabel.string=o?"Hide UI":"Show UI"},s.changeTextColor=function(t){this._currentColorIndex++,this._currentColorIndex>=this.strColor.length&&(this._currentColorIndex=0);for(var e=0;e<this.textComponentList.length;e++)this.textComponentList[e].string=this.strColor[this._currentColorIndex]+this.textContentList[e]+"</color>";for(var o=0;o<this.labelComponentList.length;o++)this.labelComponentList[o].color=this.color[this._currentColorIndex]},s.onLoad=function(){},s.update=function(t){},e}(L)).prototype,"compositeModeToggle",[M],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),E=e(S.prototype,"singleModeToggle",[b],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),I=e(S.prototype,"EnableAllCompositeModeButton",[v],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),T=S))||T));s._RF.pop()}}}));
+          _Tost.setValue(message);
+        }
+      });
 
-System.register("chunks:///_virtual/EventMgr.ts",["./rollupPluginModLoBabelHelpers.js","cc"],(function(n){var t,e,o,r,c;return{setters:[function(n){t=n.inheritsLoose},function(n){e=n.cclegacy,o=n._decorator,r=n.EventTarget,c=n.Component}],execute:function(){e._RF.push({},"a0520KQvgVIhr8MfV5+NVnO","EventMgr",void 0);o.ccclass,o.property;n("EventMgr",function(n){function e(){return n.apply(this,arguments)||this}return t(e,n),e.prototype.onLoad=function(){e.Instance?this.destroy():e.Instance=new r},e}(c)).Instance=void 0,e._RF.pop()}}}));
+      cclegacy._RF.pop();
+    }
+  };
+});
 
-System.register("chunks:///_virtual/GameData.ts",["./rollupPluginModLoBabelHelpers.js","cc","./ResMgr.ts","./AudioMgr.ts","./EventMgr.ts","./GameFiMgr.ts"],(function(t){var n,e,o,a,s,i,r,c;return{setters:[function(t){n=t.inheritsLoose},function(t){e=t.cclegacy,o=t._decorator,a=t.Component},function(t){s=t.ResMgr},function(t){i=t.AudioMgr},function(t){r=t.EventMgr},function(t){c=t.GameFiMgr}],execute:function(){var u,d;e._RF.push({},"b0fb1qHVZZJ2ryeBmIZ5PQb","GameData",void 0);var p=o.ccclass;t("GameData",p("GameData")(((d=function(t){function e(){return t.apply(this,arguments)||this}return n(e,t),e.prototype.onLoad=function(){e.Instance?this.destroy():(e.Instance=this,this.node.addComponent(s),this.node.addComponent(i),this.node.addComponent(r),this.node.addComponent(c))},e}(a)).Instance=void 0,u=d))||u);e._RF.pop()}}}));
+System.register("chunks:///_virtual/AudioMgr.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './ResMgr.ts'], function (exports) {
+  var _inheritsLoose, cclegacy, _decorator, AudioSource, Component, ResMgr;
 
-System.register("chunks:///_virtual/GameFiMgr.ts",["./rollupPluginModLoBabelHelpers.js","cc","./index4.ts"],(function(n){var t,e,o,c,r,s,i,a,u;return{setters:[function(n){t=n.inheritsLoose,e=n.asyncToGenerator,o=n.regeneratorRuntime},function(n){c=n.cclegacy,r=n.Component},function(n){s=n.TonConnectUI,i=n.GameFi,a=n.Address,u=n.toNano}],execute:function(){c._RF.push({},"aad960tLrFGW6F0FqomlQl4","GameFiMgr",void 0),n("GameFiMgr",function(n){function c(){for(var t,e=arguments.length,o=new Array(e),c=0;c<e;c++)o[c]=arguments[c];return(t=n.call.apply(n,[this].concat(o))||this)._cocosGameFi=void 0,t._connectUI=void 0,t._bTonInit=!1,t.address="",t}t(c,n);var r=c.prototype;return r.onLoad=function(){c.Instance?this.destroy():c.Instance=this},r.initTonConnect=function(){var n=e(o().mark((function n(t){var e,c=this;return o().wrap((function(n){for(;;)switch(n.prev=n.next){case 0:return e=new s({manifestUrl:"https://ton-connect.github.io/demo-dapp-with-wallet/tonconnect-manifest.json"}),n.next=3,i.create({network:"mainnet",connector:e,merchant:{jettonAddress:a.parse("EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs"),tonAddress:"UQAMNl5M8dv_x5gEjAGzmARBUaey6qME2zwghgk0Jbd6kZB0"}});case 3:this._cocosGameFi=n.sent,this._connectUI=this._cocosGameFi.walletConnector,this._connectUI.onModalStateChange((function(n){console.log("model state changed! : "),c.updateConnect()})),this._connectUI.onStatusChange((function(n){console.log(n),console.log("wallet info status changed : "),c.updateConnect(),t&&t(n)})),this._bTonInit=!0,this.updateConnect();case 9:case"end":return n.stop()}}),n,this)})));return function(t){return n.apply(this,arguments)}}(),r.isConnected=function(){return this._connectUI?this._connectUI.connected:(console.error("ton ui not inited!"),!1)},r.updateConnect=function(){if(this.isConnected()){var n=this._connectUI.account.address;this.address=n}},r.openModal=function(){var n=e(o().mark((function n(){return o().wrap((function(n){for(;;)switch(n.prev=n.next){case 0:if(this._bTonInit){n.next=2;break}return n.abrupt("return");case 2:this.isConnected()?this._connectUI.disconnect():this._connectUI.openModal();case 3:case"end":return n.stop()}}),n,this)})));return function(){return n.apply(this,arguments)}}(),r.sendTransaction=function(){var n=e(o().mark((function n(t){var e;return o().wrap((function(n){for(;;)switch(n.prev=n.next){case 0:return n.next=2,this._cocosGameFi.transferJetton({to:a.parse("UQCXLI7EllDjQEFRglhfKi42hlZwyvYN-IKXM6nAc52_nZQp"),amount:u(t)});case 2:return e=n.sent,n.abrupt("return",e);case 4:case"end":return n.stop()}}),n,this)})));return function(t){return n.apply(this,arguments)}}(),c}(r)).Instance=void 0,c._RF.pop()}}}));
+  return {
+    setters: [function (module) {
+      _inheritsLoose = module.inheritsLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      _decorator = module._decorator;
+      AudioSource = module.AudioSource;
+      Component = module.Component;
+    }, function (module) {
+      ResMgr = module.ResMgr;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "dfc68ApNu9H27Pz05ghRcER", "AudioMgr", undefined);
 
-System.register("chunks:///_virtual/index.ts",["cc"],(function(t){var e,p,a;return{setters:[function(t){e=t.cclegacy,p=t.Prefab,a=t.AudioClip}],execute:function(){e._RF.push({},"575f06Qf8dBlrkz2fzrc3qq","index",void 0);t("resPkg",{GUI:{urls:[{tooTip:"u",type:"0",path:"eggcoin",assetType:p},{tooTip:"1",type:"0",path:"Breakfast_Sandwich",assetType:p},{tooTip:"2",type:"0",path:"Burger_Wrapped",assetType:p},{tooTip:"3",type:"0",path:"Croissant_Dough",assetType:p},{tooTip:"t",type:"1",path:"usdc",assetType:p},{tooTip:"4",type:"1",path:"IceCream",assetType:p},{tooTip:"5",type:"1",path:"Ketchup_Cup",assetType:p},{tooTip:"6",type:"1",path:"Waffle_Plain",assetType:p},{tooTip:"7",type:"1",path:"Chip_Bag",assetType:p},{tooTip:"8",type:"1",path:"Corndog",assetType:p},{tooTip:"9",type:"2",path:"Loaf_Cinnamon",assetType:p},{tooTip:"a",type:"2",path:"Loaf_White",assetType:p},{tooTip:"b",type:"2",path:"Wreath_Light",assetType:p},{tooTip:"c",type:"2",path:"ToGo_Bag_W",assetType:p}]},Sounds:{urls:[{path:"btnclick",assetType:a},{path:"freeze",assetType:a},{path:"pass",assetType:a},{path:"softFail",assetType:a},{path:"starCollect",assetType:a},{path:"tap",assetType:a},{path:"bg",assetType:a},{path:"click",assetType:a},{path:"Message",assetType:p}]}});e._RF.pop()}}}));
+      var ccclass = _decorator.ccclass,
+          property = _decorator.property; // @ccclass('AudioMgr')
 
-System.register("chunks:///_virtual/index2.ts",["cc","./moment.mjs_cjs=&original=.js","./moment.js"],(function(n){var t,r;return{setters:[function(n){t=n.cclegacy},null,function(n){r=n.default}],execute:function(){n({addSeparatorToNumber:function(n,t){return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,t)},countdown:function(n){var t=r(),o=n,e=r.duration(o.diff(t));if(e.asMilliseconds()<=0)return{end:!0};var u=Math.floor(e.asDays()),a=Math.floor(e.hours()),i=Math.floor(e.minutes()),s=Math.floor(e.seconds());return{days:u,hours:a,minutes:i,seconds:s,end:!1}},debounce:function(n,t){var r=null;return function(){for(var o=this,e=arguments.length,u=new Array(e),a=0;a<e;a++)u[a]=arguments[a];r&&clearTimeout(r),r=setTimeout((function(){n.apply(o,u)}),t)}},getRandom:function(n,t){return n=Math.ceil(n),t=Math.floor(t),Math.floor(Math.random()*(t-n+1))+n}}),t._RF.push({},"75244sNKmhGJIbha+4+BzAW","index",void 0);n("keyObject",(function(n){var t="";for(var r in n)t+=r+"="+n[r]+"&";return""!==t&&(t=t.substr(0,t.lastIndexOf("&"))),t}));t._RF.pop()}}}));
+      var AudioMgr = exports('AudioMgr', /*#__PURE__*/function (_Component) {
+        _inheritsLoose(AudioMgr, _Component);
 
-System.register("chunks:///_virtual/index3.ts",["cc","./request.ts"],(function(e){var t,n;return{setters:[function(e){t=e.cclegacy},function(e){n=e.default}],execute:function(){e({buyPropProduct:function(e){return n({data:e||null,method:"GET",url:"game/buyPropProduct"})},gameOver:function(e){return n({data:e||null,method:"POST",url:"game/gameOver"})},generateModelSorting:function(e){return n({data:e||null,method:"GET",url:"rule/generateModelSorting"})},getGameUserInfo:function(e){return n({data:e||null,method:"GET",url:"gameUser/getGameUserInfo"})},getPrice:function(e){return n({data:e||null,method:"GET",url:"getPrice"})},openNewGame:function(e){return n({data:e||null,method:"GET",url:"game/openNewGame"})},postTest:function(e){return n({data:e||null,method:"POST",url:"postTest"})}}),t._RF.push({},"c657fQy5bpLFLenBmom+S00","index",void 0),t._RF.pop()}}}));
+        function AudioMgr() {
+          var _this;
 
-System.register("chunks:///_virtual/Item.ts",["./rollupPluginModLoBabelHelpers.js","cc"],(function(e){var t,o,i,r,n,s,a,c,l,u;return{setters:[function(e){t=e.applyDecoratedDescriptor,o=e.inheritsLoose,i=e.initializerDefineProperty,r=e.assertThisInitialized},function(e){n=e.cclegacy,s=e._decorator,a=e.Vec3,c=e.RigidBody,l=e.Collider,u=e.Component}],execute:function(){var p,d,f,m,y,v,g;n._RF.push({},"b08a3qMqrRKXaTPZOtmmSw2","Item",void 0);var h=s.ccclass,b=s.property;e("Item",(p=h("Item"),d=b(a),f=b(a),p((v=t((y=function(e){function t(){for(var t,o=arguments.length,n=new Array(o),s=0;s<o;s++)n[s]=arguments[s];return(t=e.call.apply(e,[this].concat(n))||this).removed=!1,t.removedPos=void 0,t.playRmovedEff=!1,t.isTemp=!1,t.isBottom=!1,i(t,"rotation",v,r(t)),i(t,"scale",g,r(t)),t}o(t,e);var n=t.prototype;return n.start=function(){},n.setUseGravity=function(e){var t=this.node.getComponent(c);t&&(t.useGravity=e)},n.setWorldPosition=function(e){var t=this.node.getWorldPosition();t.y+=e,this.node.setWorldPosition(t)},n.destoryCollider=function(){if(!this.isTemp){var e=this.node.getComponent(c);this.node.getComponent(l).isTrigger=!0,e&&e.destroy()}},n.update=function(e){},t}(u)).prototype,"rotation",[d],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return new a(0,0,0)}}),g=t(y.prototype,"scale",[f],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return new a(1,1,1)}}),m=y))||m));n._RF.pop()}}}));
+          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
 
-System.register("chunks:///_virtual/main",["./debug-view-runtime-control.ts","./BulletFrame.ts","./Message.ts","./config.ts","./index.ts","./GameData.ts","./Item.ts","./Main.ts","./Start.ts","./AudioMgr.ts","./EventMgr.ts","./GameFiMgr.ts","./ResMgr.ts","./UiMgr.ts","./app.ts","./index2.ts","./request.ts","./storage.ts","./type.ts","./index3.ts"],(function(){return{setters:[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],execute:function(){}}}));
+          _this = _Component.call.apply(_Component, [this].concat(args)) || this;
+          _this.sounds = {};
+          return _this;
+        }
 
-System.register("chunks:///_virtual/Main.ts",["./rollupPluginModLoBabelHelpers.js","cc","./UiMgr.ts","./index.ts","./ResMgr.ts","./AudioMgr.ts","./Item.ts","./index2.ts","./moment.mjs_cjs=&original=.js","./app.ts","./BulletFrame.ts","./index3.ts","./index.mjs_cjs=&original=.js","./storage.ts","./GameFiMgr.ts","./moment.js","./index.js"],(function(e){var t,n,i,o,a,s,r,l,c,u,v,m,p,h,g,d,f,C,y,w,T,b,I,k,O,S,P,E,_,x,N,M,D,U,G,R,A,L,B,F,H,z,j,W,V,q,X;return{setters:[function(e){t=e.applyDecoratedDescriptor,n=e.inheritsLoose,i=e.initializerDefineProperty,o=e.assertThisInitialized,a=e.asyncToGenerator,s=e.regeneratorRuntime,r=e.extends,l=e.createForOfIteratorHelperLoose},function(e){c=e.cclegacy,u=e._decorator,v=e.sp,m=e.Material,p=e.SpriteFrame,h=e.Prefab,g=e.Sprite,d=e.Label,f=e.game,C=e.input,y=e.Input,w=e.Camera,T=e.geometry,b=e.PhysicsSystem,I=e.MeshRenderer,k=e.Tween,O=e.Vec3,S=e.tween,P=e.instantiate,E=e.RigidBody,_=e.Node,x=e.director},function(e){N=e.UICtrl},function(e){M=e.resPkg},function(e){D=e.ResMgr},function(e){U=e.AudioMgr},function(e){G=e.Item},function(e){R=e.getRandom,A=e.countdown},null,function(e){L=e.Tost},function(e){B=e.BulletFrame},function(e){F=e.generateModelSorting,H=e.openNewGame,z=e.gameOver,j=e.buyPropProduct},null,function(e){W=e.getStorageData},function(e){V=e.GameFiMgr},function(e){q=e.default},function(e){X=e.default}],execute:function(){var Z,J,K,Q,Y,$,ee,te,ne,ie,oe,ae,se,re,le;c._RF.push({},"a7d6dXfqilInpZcCfgaVlXs","Main",void 0);var ce=u.ccclass,ue=u.property,ve=v.SkeletonData;e("Main",(Z=ce("Main"),J=ue(m),K=ue(p),Q=ue(p),Y=ue(h),$=ue(ve),ee=ue(ve),Z((ie=t((ne=function(e){function t(){for(var t,n=arguments.length,a=new Array(n),s=0;s<n;s++)a[s]=arguments[s];return t=e.call.apply(e,[this].concat(a))||this,i(t,"material",ie,o(t)),i(t,"tag",oe,o(t)),i(t,"add",ae,o(t)),i(t,"nft",se,o(t)),i(t,"usdc",re,o(t)),i(t,"coin",le,o(t)),t.touchNode=null,t.allItem=[],t.collectPos=[],t.collectTiles=[],t.touchMaterial=null,t.temporaryItem=[],t.temporaryPos=[],t.currentLevel=1,t.gameStop=!1,t.clickPlay=!0,t.stage1=0,t.stage2=0,t.stage3=0,t.count=0,t.InitializedData=[],t.usdtCount=0,t.myCoinCount=0,t.gameDate=null,t.isGameOver=!1,t}n(t,e);var c=t.prototype;return c.changeTag=function(){0==this.stage1?(this.view["Canvas/ui/bottom/button/add"].getComponent(g).spriteFrame=this.add,this.view["Canvas/ui/bottom/button/add/Label"].getComponent(d).string=""):(this.view["Canvas/ui/bottom/button/add"].getComponent(g).spriteFrame=this.tag,this.view["Canvas/ui/bottom/button/add/Label"].getComponent(d).string=""+this.stage1),0==this.stage2?(this.view["Canvas/ui/bottom/button1/add"].getComponent(g).spriteFrame=this.add,this.view["Canvas/ui/bottom/button1/add/Label"].getComponent(d).string=""):(this.view["Canvas/ui/bottom/button1/add"].getComponent(g).spriteFrame=this.tag,this.view["Canvas/ui/bottom/button1/add/Label"].getComponent(d).string=""+this.stage2),0==this.stage3?(this.view["Canvas/ui/bottom/button2/add"].getComponent(g).spriteFrame=this.add,this.view["Canvas/ui/bottom/button2/add/Label"].getComponent(d).string=""):(this.view["Canvas/ui/bottom/button2/add"].getComponent(g).spriteFrame=this.tag,this.view["Canvas/ui/bottom/button2/add/Label"].getComponent(d).string=""+this.stage3)},c.onLoad=function(){e.prototype.onLoad.call(this),f.frameRate=120,this.dataInit()},c.dataInit=function(){var e=a(s().mark((function e(){var t,n,i,o,a=this;return s().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return this.initGameId(),e.next=3,F();case 3:if(t=e.sent,n=t.result){for(o in i=[],n)i.push(o);i.forEach((function(e){n[e]&&X.AES.decrypt(n[e],"bc1ptyc7v0hk0w48vqhxf86j7uetu42kf4c5z8nn6llv6f7l2g6cr3nszftf32").toString(X.enc.Utf8).split("").forEach((function(t){var n=M.GUI.urls.find((function(e){return e.tooTip==t}));a.InitializedData.push(r({},n,{level:e})),a.count++}))}))}1==this.currentLevel?this.init(4,2):this.init2(this.InitializedData);case 7:case"end":return e.stop()}}),e,this)})));return function(){return e.apply(this,arguments)}}(),c.initGameId=function(){var e=a(s().mark((function e(){var t,n;return s().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return t=W("user_info"),e.next=3,H({ton_user_id:t.ton_user_id,game_user_id:t.game_user_id});case 3:200==(n=e.sent).code&&(console.log(n.result),this.gameDate=n.result);case 5:case"end":return e.stop()}}),e,this)})));return function(){return e.apply(this,arguments)}}(),c.onEnable=function(){C.on(y.EventType.TOUCH_START,this.onTouchStart,this),C.on(y.EventType.TOUCH_END,this.onTouchEnd,this),C.on(y.EventType.TOUCH_MOVE,this.onTouchMove,this)},c.onDisable=function(){C.off(y.EventType.TOUCH_START,this.onTouchStart,this),C.off(y.EventType.TOUCH_END,this.onTouchEnd,this),C.off(y.EventType.TOUCH_MOVE,this.onTouchMove,this),this.unscheduleAllCallbacks()},c.checkItem=function(e){return M.GUI.urls.some((function(t){return t.path==e.name}))},c.onTouchStart=function(e){if(!(this.gameStop||0==this.allItem.length||this.collectTiles.length>=7)){var t=e.getLocation(),n=this.node.parent.getChildByName("Main Camera").getComponent(w),i=new T.Ray;if(null==n||n.screenPointToRay(t.x,t.y,i),b.instance.raycastClosest(i,4294967295,1e7,!0)){var o=b.instance.raycastClosestResult.collider;if("NFT"==o.node.name)return o.node.getComponent(G).destoryCollider(),o.node.destroy(),this.gameStop=!0,this.view["Canvas/Over"].active=!0,this.view["Canvas/Over/falied"].active=!1,void(this.view["Canvas/Over/win"].active=!0);if(!this.checkItem(o.node))return;this.setNodeMaterial(o.node,this.material,!0),o.node.getComponent(G).isTemp||(o.node.getComponent(G).setUseGravity(!1),o.node.getComponent(G).setWorldPosition(1)),this.touchNode=o.node,this.clickPlay&&U.Instance.play("click",{playOnAwake:!0})}}},c.setNodeMaterial=function(e,t,n){var i=this;void 0===n&&(n=!0),"usdc"!=e.name&&"eggcoin"!=e.name&&"nft"!=e.name&&e.children.forEach((function(e){if(n)e.getComponent(I)&&(i.touchMaterial=e.getComponent(I).materials[0],e.getComponent(I).setMaterial(t,0)),i.setNodeMaterial(e,t,n);else{if(e.getComponent(I)){var o=new m;o.copy(i.touchMaterial),e.getComponent(I).setMaterial(o,0)}i.setNodeMaterial(e,t,n)}}))},c.onTouchEnd=function(e){if(!(this.gameStop||0==this.allItem.length||this.collectTiles.length>=7)){var t=e.getLocation(),n=this.node.parent.getChildByName("Main Camera").getComponent(w),i=new T.Ray;null==n||n.screenPointToRay(t.x,t.y,i);var o=b.instance.raycastClosest(i,4294967295,1e7,!0);if(o){var a=b.instance.raycastClosestResult.collider;if(!this.checkItem(a.node))return;if(this.touchNode==a.node){if(a.node.getComponent(G).isTemp||this.touchNode.getComponent(G).setUseGravity(!0),this.setNodeMaterial(this.touchNode,null,!1),2==this.currentLevel&&this.initGravity(),a.node.getComponent(G).isBottom)return;this.chooseItem(this.touchNode)}else console.log(this.touchNode,"不是同一个节点")}else console.log(o)}},c.onTouchMove=function(e){if(!(this.gameStop||0==this.allItem.length||this.collectTiles.length>=7)){var t=e.getLocation(),n=this.node.parent.getChildByName("Main Camera").getComponent(w),i=new T.Ray;if(null==n||n.screenPointToRay(t.x,t.y,i),b.instance.raycastClosest(i,4294967295,1e7,!0)){var o=b.instance.raycastClosestResult.collider;if(o.node){if(!this.checkItem(o.node))return this.touchNode.getComponent(G).setUseGravity(!0),void this.setNodeMaterial(this.touchNode,null,!1);if(this.touchNode&&this.touchNode==o.node)return;this.touchNode.getComponent(G).setUseGravity(!0),this.setNodeMaterial(this.touchNode,null,!1),this.setNodeMaterial(o.node,this.material,!0),o.node.getComponent(G).setUseGravity(!1),o.node.getComponent(G).setWorldPosition(1),this.touchNode=o.node}}}},c.chooseItem=function(e){var t=e.name;if(e.getComponent(G).destoryCollider(),console.log(e.getComponent(G)),e.getComponent(G).isTemp){for(var n=0;n<this.temporaryItem.length;++n)if(this.temporaryItem[n]==e){this.temporaryItem.splice(n,1);break}}else for(n=0;n<this.allItem.length;++n)if(this.allItem[n]==e){this.allItem.splice(n,1);break}var i=!1;for(n=this.collectTiles.length-1;n>=0;--n)if(this.collectTiles[n].name==t){this.collectTiles.splice(n+1,0,e),i=!0;break}i||this.collectTiles.push(e),this.playAnimationStart(t)},c.checkResult=function(){this.collectTiles.length>=7?(this.gameStop=!0,this.view["Canvas/Over"].active=!0,this.view["Canvas/Over/falied"].active=!0,this.view["Canvas/Over/win"].active=!1,this.isGameOver=!1):0==this.collectTiles.length&&0==this.allItem.length&&(1==this.currentLevel?(this.init2(this.InitializedData),this.currentLevel=2):(this.gameStop=!0,this.view["Canvas/Over"].active=!0,this.view["Canvas/Over/falied"].active=!1,this.view["Canvas/Over/win"].active=!0))},c.moveToRightPos=function(){var e=this;0==this.temporaryItem.length&&this.view.temporary.active&&(this.view.temporary.active=!1),this.collectTiles.map((function(t,n){var i=t.getComponent(G);k.stopAllByTarget(t);var o=t.worldPosition,a=e.collectPos[n].clone(),s=new O((o.x+a.x)/2,2*(o.y+a.y),(o.z+a.z)/2);S(t).to(.2,{worldPosition:s}).to(.3,{worldPosition:e.collectPos[n].clone()}).start(),S(t).to(.5,{eulerAngles:i.rotation,scale:i.scale}).call((function(){i.isBottom=!0,i.removed&&S(t).to(.25,{worldPosition:i.removedPos},{easing:"backIn"}).call((function(){if(i.playRmovedEff){var n=e.node.parent.getChildByName("Main Camera").getComponent(w).convertToUINode(t.worldPosition,e.view.Canvas);if("usdc"==t.name||"eggcoin"==t.name){e.view["Canvas/ui/tokenani"].active=!0,e.view["Canvas/ui/tokenani"].setPosition(n.x,n.y);var o=e.view["Canvas/ui/tokenani"].getComponent(v.Skeleton),a=t.name;if("usdc"==t.name?o.skeletonData=e.usdc:o.skeletonData=e.coin,o.setAnimation(0,"baozha",!1),o.addAnimation(0,"feichu",!1),"usdc"==a){var s=e.view["Canvas/ui/tokenani"],r=s.getWorldPosition(),l=e.view["Canvas/ui/coinBox/usdcCion"].getWorldPosition();console.log(l,r),S(s).delay(1.5).to(1,{worldPosition:new O(l.x-350,l.y-r.y,0)}).start()}else{var c=e.view["Canvas/ui/tokenani"],u=c.getWorldPosition(),m=e.view["Canvas/ui/coinBox/eggCion"].getWorldPosition();console.log(m,u),S(c).delay(1.5).to(1,{worldPosition:new O(m.x-350,m.y-u.y,0)}).start()}}else{e.view["Canvas/ui/animation"].active=!0,e.view["Canvas/ui/animation"].setPosition(n.x,n.y),e.view["Canvas/ui/animation"].getComponent(v.Skeleton).setAnimation(0,"effect",!1)}U.Instance.play("starCollect",{playOnAwake:!0}),e.checkResult()}"usdc"==t.name&&(e.usdtCount+=1,e.updateCoinCount()),"eggcoin"==t.name&&(e.myCoinCount+=1,e.updateCoinCount()),t.destroy(),e.moveToRightPos()})).start()})).start()}))},c.updateCoinCount=function(){this.view["Canvas/ui/coinBox/eggCion/Label"].getComponent(d).string=""+this.myCoinCount,this.view["Canvas/ui/coinBox/usdcCion/Label"].getComponent(d).string=""+this.usdtCount},c.init2=function(){var e=a(s().mark((function e(t){var n,i,o,a,r,c,u,v;return s().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:for(n=this.view["GameSpace/ItemSource"],i=P(this.nft),n.addChild(i),o=l(t);!(a=o()).done;)r=a.value,c=D.Instance.getAsset("GUI",r.path),(u=P(c)).eulerAngles=new O(R(0,360),R(0,360),R(0,360)),u.level=r.level,this.allItem.push(u),u.getComponent(E).linearDamping,u.getComponent(E).angularDamping,n.addChild(u),(v=u.getComponent(I))?v.enabled=!1:u.children.forEach((function(e){e.getComponent(I)}));this.initTime();case 5:case"end":return e.stop()}}),e,this)})));return function(t){return e.apply(this,arguments)}}(),c.init=function(e,t){var n=this,i=this.view["GameSpace/ItemSource"],o=0,a=setInterval((function(){M.GUI.urls.slice(3,6).forEach((function(e,t){var o=D.Instance.getAsset("GUI",e.path),a=P(o);a.eulerAngles=new O(R(0,360),R(0,360),R(0,360)),n.allItem.push(a),i.addChild(a)})),++o>t&&clearInterval(a)}),100)},c.initTime=function(){var e=this;this.view["Canvas/ui/time"].active=!0;var t=q().add(10,"minute");this.schedule((function(){var n=A(t);n.end?(e.unscheduleAllCallbacks(),e.gameStop=!0,e.view["Canvas/Over"].active=!0,e.view["Canvas/Over/falied"].active=!0,e.view["Canvas/Over/win"].active=!1,e.isGameOver=!0):e.view["Canvas/ui/time/Label"].getComponent(d).string=n.minutes+":"+n.seconds}))},c.initGravity=function(){var e=this.view.targetNode.worldPosition;this.allItem.forEach((function(t,n){var i=t.getComponent(E),o=e.subtract(t.worldPosition),a=o.length();o=o.normalize();var s=150/Math.max(a*a,1),r=o.multiplyScalar(s);i.applyForce(r,t.worldPosition)}))},c.start=function(){var e=this;U.Instance.play("bg",{playOnAwake:!0,loop:!0,volume:.4}),this.currentLevel=1,this.usdtCount=0,this.myCoinCount=0,this.changeTag(),this.collectPos=[],this.view.collectnox.children.map((function(t){e.collectPos.unshift(t.worldPosition),t.active=!1})),this.view.temporary.children.map((function(t){e.temporaryPos.push(t.worldPosition),t.active=!1})),this.view.temporary.active=!1,this.view["Canvas/ui/stop"].on(_.EventType.TOUCH_END,(function(t){t.propagationStopped=!0,e.view["Canvas/gameOver"].active=!0,e.gameStop=!0})),this.view["Canvas/gameOver/mask/close"].on(_.EventType.TOUCH_END,(function(t){t.propagationStopped=!0,e.view["Canvas/gameOver"].active=!1,e.gameStop=!1})),this.view["Canvas/gameOver/mask/continue"].on(_.EventType.TOUCH_END,(function(t){t.propagationStopped=!0,e.view["Canvas/gameOver"].active=!1,e.gameStop=!1})),this.view["Canvas/gameOver/mask/giveUp"].on(_.EventType.TOUCH_END,a(s().mark((function t(n){return s().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return n.propagationStopped=!0,t.next=3,e.submitGameOver("false");case 3:e.view["Canvas/gameOver"].active=!1,e.currentLevel=1,x.loadScene("start");case 6:case"end":return t.stop()}}),t)})))),this.view["Canvas/Over/falied/giveUp"].on(_.EventType.TOUCH_END,a(s().mark((function t(n){return s().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return n.propagationStopped=!0,t.next=3,e.submitGameOver("false");case 3:e.view["Canvas/Over"].active=!1,e.currentLevel=1,x.loadScene("start");case 6:case"end":return t.stop()}}),t)})))),this.view["Canvas/Over/falied/continue"].on(_.EventType.TOUCH_END,a(s().mark((function t(n){return s().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:if(n.propagationStopped=!0,!e.isGameOver){t.next=9;break}return t.next=4,e.submitGameOver("true");case 4:e.view["Canvas/Over"].active=!1,e.currentLevel=1,x.loadScene("start"),t.next=16;break;case 9:e.view["Canvas/Over"].active=!1,e.temporaryItem=e.collectTiles.slice(0,e.collectTiles.length),e.temporaryItem.forEach((function(e){e.getComponent(G).isBottom=!1})),e.collectTiles=e.collectTiles.slice(e.collectTiles.length),e.view.temporary.active=!0,e.mvTemporary(),e.gameStop=!1;case 16:case"end":return t.stop()}}),t)})))),this.view["Canvas/Over/win/continue"].on(_.EventType.TOUCH_END,a(s().mark((function t(n){return s().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return n.propagationStopped=!0,t.next=3,e.submitGameOver("true");case 3:e.view["GameSpace/ItemSource"].removeAllChildren(),e.view["Canvas/Over"].active=!1,e.gameStop=!1,e.collectTiles=[],e.currentLevel=1,x.loadScene("start");case 9:case"end":return t.stop()}}),t)})))),this.view["Canvas/gameOver/mask/setting/sound/Toggle"].on("toggle",(function(e){e.isChecked?U.Instance.play("bg",{playOnAwake:!0,loop:!0,volume:.4}):U.Instance.stop("bg")})),this.view["Canvas/gameOver/mask/setting/music/Toggle"].on("toggle",(function(t){t.isChecked?e.clickPlay=!0:e.clickPlay=!1})),this.view["Canvas/ui/bottom/button"].on(_.EventType.TOUCH_END,(function(t){if(t.propagationStopped=!0,0==e.stage1)return e.view["Canvas/BulletFrame"].active=!0,void e.view["Canvas/BulletFrame"].getComponent(B).setType(1);0!=e.collectTiles.length?(e.collectTiles.length>3?(e.temporaryItem=e.collectTiles.slice(0,3),e.collectTiles=e.collectTiles.slice(3)):(e.temporaryItem=e.collectTiles.slice(0,e.collectTiles.length),e.collectTiles=e.collectTiles.slice(e.collectTiles.length)),e.temporaryItem.forEach((function(e){e.getComponent(G).isBottom=!1})),e.view.temporary.active=!0,e.mvTemporary(),e.stage1=0,e.changeTag()):L("No items were collected")})),this.view["Canvas/ui/bottom/button1"].on(_.EventType.TOUCH_END,(function(t){if(t.propagationStopped=!0,0==e.stage2)return e.view["Canvas/BulletFrame"].active=!0,void e.view["Canvas/BulletFrame"].getComponent(B).setType(2);if(0!=e.collectTiles.length){var n=e.collectTiles.filter((function(t,n){return e.collectTiles.some((function(e,i){return t.name==e.name&&n!=i}))}));if(n.length>0){for(var i=n[0].name,o=[],a=0;a<e.allItem.length;++a)if(e.allItem[a].name==i){o.push.apply(o,e.allItem.splice(a,1));break}o.forEach((function(t){for(var n=!1,i=e.collectTiles.length-1;i>=0;--i)if(e.collectTiles[i].name==t.name){t.getComponent(G).destoryCollider(),t.getComponent(G).setUseGravity(!1),e.collectTiles.splice(i+1,0,t),n=!0;break}n||e.collectTiles.push(t)})),e.playAnimationStart(i)}else{if(!(e.collectTiles.length<6))return void L("Insufficient vacancies");for(var s=e.collectTiles[0].name,r=[],l=0;l<2;l++)for(a=0;a<e.allItem.length;++a)if(e.allItem[a].name==s){r.push.apply(r,e.allItem.splice(a,1));break}r.forEach((function(t){for(var n=!1,i=e.collectTiles.length-1;i>=0;--i)if(e.collectTiles[i].name==t.name){t.getComponent(G).destoryCollider(),t.getComponent(G).setUseGravity(!1),e.collectTiles.splice(i+1,0,t),n=!0;break}n||e.collectTiles.push(t)})),e.playAnimationStart(s)}e.stage2=0,e.changeTag()}else L("No items were collected")})),this.view["Canvas/ui/bottom/button2"].on(_.EventType.TOUCH_END,(function(t){if(t.propagationStopped=!0,0==e.stage3)return e.view["Canvas/BulletFrame"].active=!0,void e.view["Canvas/BulletFrame"].getComponent(B).setType(3);e.stage3=1,e.changeTag()})),this.view["Canvas/BulletFrame/mask/Button"].on(_.EventType.TOUCH_END,a(s().mark((function t(n){var i;return s().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return n.propagationStopped=!0,1==(i=e.view["Canvas/BulletFrame"].getComponent(B)).type?e.stage1=1:2==i.type?e.stage2=1:e.stage3=1,t.next=5,e.buyAndShareItem();case 5:e.changeTag(),i.close();case 7:case"end":return t.stop()}}),t)}))))},c.submitGameOver=function(){var e=a(s().mark((function e(t){return s().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,z({game_user_id:this.gameDate.game_user_id,game_id:this.gameDate.game_id,result:t,inside_point:this.myCoinCount,inside_usdt:this.usdtCount,prop_one:this.gameDate.prop_one});case 2:e.sent;case 3:case"end":return e.stop()}}),e,this)})));return function(t){return e.apply(this,arguments)}}(),c.buyAndShareItem=function(){var e=a(s().mark((function e(){var t,n,i,o;return s().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(this.gameDate.prop_one%3!=0){e.next=7;break}return e.next=3,V.Instance.sendTransaction(1e-5);case 3:t=e.sent,console.log(t),e.next=8;break;case 7:null==(n=window)||null==(i=n.TelegramGameProxy)||i.shareScore();case 8:return e.next=10,j({game_id:this.gameDate.game_id,prop_one:this.gameDate.prop_one});case 10:200==(o=e.sent).code&&(this.gameDate.prop_one=o.result.prop_one);case 13:case"end":return e.stop()}}),e,this)})));return function(){return e.apply(this,arguments)}}(),c.playAnimationStart=function(e){this.moveToRightPos();var t=this.collectTiles.filter((function(t){return t.name==e}));if(3==t.length)for(var n=this.collectTiles.length-1;n>=0;--n)if(this.collectTiles[n].name==e){var i=this.collectTiles[n];i.getComponent(G).removed=!0,this.collectTiles.splice(n,1),i.getComponent(G).removedPos=t[1].worldPosition,i==t[1]&&(i.getComponent(G).playRmovedEff=!0)}this.checkResult()},c.mvTemporary=function(){var e=this,t=this.temporaryPos.map((function(e){return e.clone()}));this.temporaryItem.map((function(n,i){n.getComponent(G).isTemp=!0;var o=i%3,a=Math.floor(i/3);t[o].y=1==a?2*t[o].y:2==a?3*t[o].y:1*t[o].y,S(n).to(.4,{worldPosition:t[o]}).call((function(){e.moveToRightPos()})).start()}))},c.update=function(e){},t}(N)).prototype,"material",[J],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),oe=t(ne.prototype,"tag",[K],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),ae=t(ne.prototype,"add",[Q],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),se=t(ne.prototype,"nft",[Y],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),re=t(ne.prototype,"usdc",[$],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),le=t(ne.prototype,"coin",[ee],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),te=ne))||te));c._RF.pop()}}}));
+        var _proto = AudioMgr.prototype;
 
-System.register("chunks:///_virtual/Message.ts",["./rollupPluginModLoBabelHelpers.js","cc","./UiMgr.ts"],(function(e){var t,o,n,s,r,i,a;return{setters:[function(e){t=e.inheritsLoose},function(e){o=e.cclegacy,n=e._decorator,s=e.Label,r=e.UIOpacity,i=e.tween},function(e){a=e.UICtrl}],execute:function(){var c;o._RF.push({},"51bc7fU8Y9MSYWWLBh/fEe+","Message",void 0);var u=n.ccclass;n.property,e("Message",u("Message")(c=function(e){function o(){return e.apply(this,arguments)||this}t(o,e);var n=o.prototype;return n.onLoad=function(){e.prototype.onLoad.call(this)},n.setValue=function(e,t){var o=this;this.node.getChildByName("Label").getComponent(s).string=e;var n=this.node.getComponent(r);i(n).to(.6,{opacity:255}).start();var a=setTimeout((function(){o.node&&(o.node.active=!1,o.node.destroy()),clearTimeout(a)}),t||2e3)},o}(a))||c);o._RF.pop()}}}));
+        _proto.onLoad = function onLoad() {
+          if (!AudioMgr.Instance) {
+            AudioMgr.Instance = this;
+          } else {
+            this.destroy();
+            return;
+          }
+        } // 播放音乐
+        ;
 
-System.register("chunks:///_virtual/request.ts",["cc","./config.ts","./ResMgr.ts","./index2.ts","./storage.ts"],(function(e){var t,n,a,r,s,o,i,u;return{setters:[function(e){t=e.cclegacy,n=e.find,a=e.instantiate},function(e){r=e.baseUrl,s=e.baseUrl1},function(e){o=e.ResMgr},function(e){i=e.keyObject},function(e){u=e.getStorageData}],execute:function(){e("default",(function(e){return new Promise((function(t,a){n("Canvas");var s=new XMLHttpRequest;s.onreadystatechange=function(){if(4==s.readyState&&(200==s.status||201==s.status)){var e=JSON.parse(s.responseText);t(e)}},s.timeout=e.timeout||5e4;var o=e.method||"GET",c=r+e.url;if(e.data=e.data,"get"==o||"GET"==o){e.data&&(c=c+"?"+i(e.data)),s.open(o,c,!0);var h=u("token");h&&s.setRequestHeader("token",h),s.setRequestHeader("Content-type","application/json;charset=utf-8"),s.send()}else{s.open(o,c,!0);var d=u("token");d&&s.setRequestHeader("token",d),s.setRequestHeader("Content-type","application/json;charset=utf-8");try{s.send(JSON.stringify(e.data))}catch(e){console.log(e)}}}))})),t._RF.push({},"0b092YOWnRMHZj9czjoyStZ","request",void 0);e("ajax",new(function(){function e(){this.xhr=void 0,this.xhr=new XMLHttpRequest,this.xhr.timeout=5e4}var t=e.prototype;return t.get=function(e,t){var r=this;return new Promise((function(c,h){var d=n("Canvas"),f=o.Instance.getAsset("GUI","component/Loading"),p=a(f);d.getChildByName("Loading")||d.addChild(p),r.xhr.onreadystatechange=function(){if(4==r.xhr.readyState&&200==r.xhr.status){var e=JSON.parse(r.xhr.responseText);p.destroy(),c(e)}};var x=s+e;t&&t&&(x=x+"?"+i(t)),r.xhr.open("GET",x,!0);var v=u("token");v&&r.xhr.setRequestHeader("token",v),r.xhr.setRequestHeader("Content-type","application/json;charset=utf-8"),r.xhr.send()}))},t.post=function(e,t){var n=this;return new Promise((function(a,r){n.xhr.onreadystatechange=function(){if(4==n.xhr.readyState&&201==n.xhr.status){var e=JSON.parse(n.xhr.responseText);a(e)}};var o=s+e;n.xhr.open("POST",o,!0);var i=u("token");i&&n.xhr.setRequestHeader("token",i),n.xhr.setRequestHeader("Content-type","application/json;charset=utf-8"),n.xhr.send(JSON.stringify(t))}))},e}()));t._RF.pop()}}}));
+        _proto.play = function play(name, options) {
+          if (!this.sounds[name]) {
+            var Clip = ResMgr.Instance.getAsset("Sounds", "" + name);
+            var audio = new AudioSource(name);
+            audio.clip = Clip;
+            this.sounds[name] = audio;
+          }
 
-System.register("chunks:///_virtual/ResMgr.ts",["./rollupPluginModLoBabelHelpers.js","cc"],(function(n){var o,t,e,r,s,a;return{setters:[function(n){o=n.inheritsLoose},function(n){t=n.cclegacy,e=n.assetManager,r=n.SpriteFrame,s=n.SpriteAtlas,a=n.Component}],execute:function(){t._RF.push({},"87881hT1qdLp79gFpPIDHKe","ResMgr",void 0),n("ResMgr",function(n){function t(){for(var o,t=arguments.length,e=new Array(t),r=0;r<t;r++)e[r]=arguments[r];return(o=n.call.apply(n,[this].concat(e))||this).totalAb=0,o.nowAb=0,o.total=0,o.now=0,o.abBUnds={},o.progressFun=null,o.endFun=null,o}o(t,n);var a=t.prototype;return a.onLoad=function(){t.Instance?this.destroy():t.Instance=this},a.preloadResourcePkg=function(n,o,t){var e=this;for(var r in this.totalAb=0,this.nowAb=0,this.total=0,this.now=0,this.progressFun=o,this.endFun=t,n)this.totalAb++,this.total+=n[r].urls.length;for(var s in n)this.loadAssetBundle(s,(function(){e.nowAb++,e.nowAb==e.totalAb&&e.loadAssetsInAssetBundle(n)}))},a.preloadResourcePkgAny=function(n,o,t){var r=this;for(var s in this.totalAb=0,this.nowAb=0,this.total=0,this.now=0,this.progressFun=o,this.endFun=t,n)this.totalAb++,this.total+=n[s].urls.length;for(var a in n)e.preloadAny(n[a].urls,(function(n,o,t){r.nowAb++,r.now+=n,r.progressFun&&r.progressFun(r.now,r.total)}),(function(n,o){n&&console.error("预加载失败"),r.endFun&&r.endFun()}))},a.loadAssetsInAssetBundle=function(n){var o=this,t=function(t){n[t].urls.forEach((function(n){o.loadRes(o.abBUnds[t],n.path,n.assetType)}))};for(var e in n)t(e)},a.loadRes=function(n,o,t){var e=this;n.load(o,t,(function(n,r){e.now++,t.name,n&&(console.error(n),console.error("load res err "+o)),e.progressFun&&e.progressFun(e.now,e.total),e.now>=e.total&&e.endFun&&e.endFun()}))},a.loadAssetBundle=function(n,o){var t=this;e.loadBundle(n,(function(e,r){e?console.error("load loadAssetBundle error"+n):t.abBUnds[n]=r,o&&o()}))},a.unloadResourcePkg=function(n){for(var o in n)e.removeBundle(this.abBUnds[o])},a.getAsset=function(n,o,t){var s=e.getBundle(n);s||console.error("getBundle err !!!"),s.load(o,r,(function(n,o){}));var a=s.get(o);return a||s.load(o,r,(function(n,o){t&&t(o)})),a},a.getPlistAsset=function(n,o,t){var r=e.getBundle(n);r||console.error("getBundle err !!!"),r.load(o,s,(function(n,e){n&&console.error("load res err "+o),t&&t(e)}))},t}(a)).Instance=void 0,t._RF.pop()}}}));
+          if (options.loop) {
+            this.sounds[name].loop = options.loop;
+          }
 
-System.register("chunks:///_virtual/Start.ts",["./rollupPluginModLoBabelHelpers.js","cc","./ResMgr.ts","./GameFiMgr.ts","./index.ts","./UiMgr.ts","./index3.ts","./storage.ts"],(function(t){var e,n,r,a,o,s,i,c,u,p,l,f,d,g,h,v,m,w;return{setters:[function(t){e=t.applyDecoratedDescriptor,n=t.inheritsLoose,r=t.initializerDefineProperty,a=t.assertThisInitialized,o=t.asyncToGenerator,s=t.regeneratorRuntime},function(t){i=t.cclegacy,c=t._decorator,u=t.Node,p=t.director,l=t.Label,f=t.ProgressBar},function(t){d=t.ResMgr},function(t){g=t.GameFiMgr},function(t){h=t.resPkg},function(t){v=t.UICtrl},function(t){m=t.getGameUserInfo},function(t){w=t.setStorageData}],execute:function(){var y,b,G,L,x;i._RF.push({},"56e26DaluZGB6fS6NaTOueI","Start",void 0);var I=c.ccclass,_=c.property;t("Start",(y=I("Start"),b=_(u),y((x=e((L=function(t){function e(){for(var e,n=arguments.length,o=new Array(n),s=0;s<n;s++)o[s]=arguments[s];return e=t.call.apply(t,[this].concat(o))||this,r(e,"GameData",x,a(e)),e.isLogin=!1,e.address="",e}n(e,t);var i=e.prototype;return i.onLoad=function(){t.prototype.onLoad.call(this),p.addPersistRootNode(this.GameData),this.initGameDatainfo()},i.initGameDatainfo=function(){var t=o(s().mark((function t(){var e=this;return s().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:g.Instance._bTonInit?(this.isLogin=!0,this.address=g.Instance._cocosGameFi.wallet.account.address):g.Instance.initTonConnect(o(s().mark((function t(n){return s().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:console.log(n),n?(e.address=n.account.address,e.isLogin=!0):(e.isLogin=!0,e.address=g.Instance._cocosGameFi.wallet.account.address);case 2:case"end":return t.stop()}}),t)})))),this.view.Button.on(u.EventType.TOUCH_END,o(s().mark((function t(n){var r;return s().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:if(n.propagationStopped=!0,!e.isLogin){t.next=8;break}return t.next=4,g.Instance.sendTransaction(1e-5);case 4:r=t.sent,console.log(r),t.next=9;break;case 8:g.Instance.openModal();case 9:case"end":return t.stop()}}),t)}))));case 2:case"end":return t.stop()}}),t,this)})));return function(){return t.apply(this,arguments)}}(),i.loginWeb=function(){var t=o(s().mark((function t(){var e;return s().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,m({user_id_wallet:this.address});case 2:200==(e=t.sent).code&&this.saveResult(e.result);case 4:case"end":return t.stop()}}),t,this)})));return function(){return t.apply(this,arguments)}}(),i.saveResult=function(t){w("user_info",t),this.view["bitcone/eggCoinGroup/Label"].getComponent(l).string=t.points,this.view["bitcone/usdcCoinGroup/Label"].getComponent(l).string=t.usdt_coin},i.start=function(){var t=this;this.isLogin=!1,d.Instance.preloadResourcePkg(h,(function(e,n){t.view["pbar/ProgressBar"].getComponent(f).progress=e/n}),o(s().mark((function e(){return s().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:try{t.view.Button.active=!0}catch(t){console.log(t)}case 1:case"end":return e.stop()}}),e)}))))},i.update=function(t){},e}(v)).prototype,"GameData",[b],{configurable:!0,enumerable:!0,writable:!0,initializer:function(){return null}}),G=L))||G));i._RF.pop()}}}));
+          if (options.playOnAwake) {
+            this.sounds[name].playOnAwake = options.playOnAwake;
+          }
 
-System.register("chunks:///_virtual/storage.ts",["cc"],(function(t){var e,a;return{setters:[function(t){e=t.cclegacy,a=t.sys}],execute:function(){e._RF.push({},"28fccWncOFOiruMdj4PtvaN","storage",void 0);t("setStorageData",(function(t,e){a.localStorage.setItem(t,JSON.stringify(e))})),t("getStorageData",(function(t){return a.localStorage.getItem(t)?JSON.parse(a.localStorage.getItem(t)):null})),t("removeStorageData",(function(t){a.localStorage.removeItem(t)})),t("clearStorageData",(function(){a.localStorage.clear()}));e._RF.pop()}}}));
+          if (options.volume) {
+            this.sounds[name].volume = options.volume;
+          }
 
-System.register("chunks:///_virtual/type.ts",["cc"],(function(){var t;return{setters:[function(e){t=e.cclegacy}],execute:function(){t._RF.push({},"c05a00xUqVKorvfx9AXhENp","type",void 0),t._RF.pop()}}}));
+          if (!this.sounds[name].playing) {
+            this.sounds[name].play();
+          }
+        } //暂停
+        ;
 
-System.register("chunks:///_virtual/UiMgr.ts",["./rollupPluginModLoBabelHelpers.js","cc"],(function(n){var o,e,t,r;return{setters:[function(n){o=n.inheritsLoose},function(n){e=n.cclegacy,t=n.Button,r=n.Component}],execute:function(){e._RF.push({},"0347bkkmf9Lwpk/Cdl/7Fvq","UiMgr",void 0);n("UICtrl",function(n){function e(){for(var o,e=arguments.length,t=new Array(e),r=0;r<e;r++)t[r]=arguments[r];return(o=n.call.apply(n,[this].concat(t))||this).view={},o}o(e,n);var r=e.prototype;return r.onLoad=function(){this.load_all_node(this.node,"")},r.load_all_node=function(n,o){for(var e=0;e<n.children.length;e++)this.view[o+n.children[e].name]=n.children[e],this.load_all_node(n.children[e],o+n.children[e].name+"/")},r.addButtonListener=function(n,o,e){var r=this.view[n];r?r.getComponent(t)?r.on(t.EventType.CLICK,e,o):console.error(n+"Component not found"):console.error(n+"node not found")},e}(r));e._RF.pop()}}}));
+        _proto.pause = function pause(name) {
+          if (this.sounds[name]) {
+            this.sounds[name].pause();
+          }
+        } //停止
+        ;
+
+        _proto.stop = function stop(name) {
+          if (this.sounds[name]) {
+            this.sounds[name].stop();
+          }
+        };
+
+        _proto.stopAll = function stopAll() {
+          for (var key in this.sounds) {
+            this.sounds[key].stop();
+          }
+        };
+
+        _proto.getAudioSourceByName = function getAudioSourceByName(name) {
+          if (this.sounds[name]) {
+            return this.sounds[name];
+          } else {
+            console.error(name + " \u4E0D\u5B58\u5728");
+          }
+        };
+
+        return AudioMgr;
+      }(Component));
+      AudioMgr.Instance = void 0;
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/BulletFrame.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UiMgr.ts'], function (exports) {
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, SpriteFrame, Node, Label, Sprite, UICtrl;
+
+  return {
+    setters: [function (module) {
+      _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
+      _inheritsLoose = module.inheritsLoose;
+      _initializerDefineProperty = module.initializerDefineProperty;
+      _assertThisInitialized = module.assertThisInitialized;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      _decorator = module._decorator;
+      SpriteFrame = module.SpriteFrame;
+      Node = module.Node;
+      Label = module.Label;
+      Sprite = module.Sprite;
+    }, function (module) {
+      UICtrl = module.UICtrl;
+    }],
+    execute: function () {
+      var _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3;
+
+      cclegacy._RF.push({}, "cdf2eac9r1DIJdgYX9SjOO8", "BulletFrame", undefined);
+
+      var ccclass = _decorator.ccclass,
+          property = _decorator.property;
+      var BulletFrame = exports('BulletFrame', (_dec = ccclass('BulletFrame'), _dec2 = property(SpriteFrame), _dec3 = property(SpriteFrame), _dec4 = property(SpriteFrame), _dec(_class = (_class2 = /*#__PURE__*/function (_UICtrl) {
+        _inheritsLoose(BulletFrame, _UICtrl);
+
+        function BulletFrame() {
+          var _this;
+
+          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+
+          _this = _UICtrl.call.apply(_UICtrl, [this].concat(args)) || this;
+
+          _initializerDefineProperty(_this, "icon1", _descriptor, _assertThisInitialized(_this));
+
+          _initializerDefineProperty(_this, "icon2", _descriptor2, _assertThisInitialized(_this));
+
+          _initializerDefineProperty(_this, "icon3", _descriptor3, _assertThisInitialized(_this));
+
+          _this.type = 1;
+          return _this;
+        }
+
+        var _proto = BulletFrame.prototype;
+
+        _proto.onLoad = function onLoad() {
+          var _this2 = this;
+
+          _UICtrl.prototype.onLoad.call(this);
+
+          this.view["mask/close"].on(Node.EventType.TOUCH_END, function (e) {
+            e.propagationStopped = true;
+            _this2.node.active = false;
+          });
+        };
+
+        _proto.close = function close() {
+          this.node.active = false;
+        };
+
+        _proto.setType = function setType(type) {
+          this.type = type;
+
+          switch (type) {
+            case 1:
+              this.view["mask/title/Label"].getComponent(Label).string = "Remove";
+              this.view["mask/cal/icon"].getComponent(Sprite).spriteFrame = this.icon1;
+              this.view["mask/Label"].getComponent(Label).string = "Remove 3 objects from the grid and place them in the temporary storage.";
+              break;
+
+            case 2:
+              this.view["mask/title/Label"].getComponent(Label).string = "Scrape";
+              this.view["mask/cal/icon"].getComponent(Sprite).spriteFrame = this.icon2;
+              this.view["mask/Label"].getComponent(Label).string = "Automatically gather and place objects together";
+              break;
+
+            case 3:
+              this.view["mask/title/Label"].getComponent(Label).string = "Disruption";
+              this.view["mask/cal/icon"].getComponent(Sprite).spriteFrame = this.icon3;
+              this.view["mask/Label"].getComponent(Label).string = "Disrupt the pile of items";
+              break;
+          }
+        };
+
+        _proto.update = function update(deltaTime) {};
+
+        return BulletFrame;
+      }(UICtrl), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "icon1", [_dec2], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "icon2", [_dec3], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "icon3", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      })), _class2)) || _class));
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/config.ts", ['cc'], function (exports) {
+  var cclegacy;
+  return {
+    setters: [function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "5fb11dsqL9C1JmVA7jcjYFI", "config", undefined);
+
+      var baseUrl1 = exports('baseUrl1', "http://34.145.10.202:8091/");
+      var baseUrl = exports('baseUrl', "http://192.168.1.103:8091/");
+      {
+        baseUrl = exports('baseUrl', "https://goose.kystudio.cn/api/"); // baseUrl = "http://192.168.31.30:8091/";
+        // baseUrl = "http://192.168.1.103:8091/";
+      }
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/debug-view-runtime-control.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Node, Color, Canvas, UITransform, instantiate, Label, RichText, Toggle, Button, director, Component;
+
+  return {
+    setters: [function (module) {
+      _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
+      _inheritsLoose = module.inheritsLoose;
+      _initializerDefineProperty = module.initializerDefineProperty;
+      _assertThisInitialized = module.assertThisInitialized;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      _decorator = module._decorator;
+      Node = module.Node;
+      Color = module.Color;
+      Canvas = module.Canvas;
+      UITransform = module.UITransform;
+      instantiate = module.instantiate;
+      Label = module.Label;
+      RichText = module.RichText;
+      Toggle = module.Toggle;
+      Button = module.Button;
+      director = module.director;
+      Component = module.Component;
+    }],
+    execute: function () {
+      var _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3;
+
+      cclegacy._RF.push({}, "b2bd1+njXxJxaFY3ymm06WU", "debug-view-runtime-control", undefined);
+
+      var ccclass = _decorator.ccclass,
+          property = _decorator.property;
+      var DebugViewRuntimeControl = exports('DebugViewRuntimeControl', (_dec = ccclass('internal.DebugViewRuntimeControl'), _dec2 = property(Node), _dec3 = property(Node), _dec4 = property(Node), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
+        _inheritsLoose(DebugViewRuntimeControl, _Component);
+
+        function DebugViewRuntimeControl() {
+          var _this;
+
+          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+
+          _this = _Component.call.apply(_Component, [this].concat(args)) || this;
+
+          _initializerDefineProperty(_this, "compositeModeToggle", _descriptor, _assertThisInitialized(_this));
+
+          _initializerDefineProperty(_this, "singleModeToggle", _descriptor2, _assertThisInitialized(_this));
+
+          _initializerDefineProperty(_this, "EnableAllCompositeModeButton", _descriptor3, _assertThisInitialized(_this));
+
+          _this._single = 0;
+          _this.strSingle = ['No Single Debug', 'Vertex Color', 'Vertex Normal', 'Vertex Tangent', 'World Position', 'Vertex Mirror', 'Face Side', 'UV0', 'UV1', 'UV Lightmap', 'Project Depth', 'Linear Depth', 'Fragment Normal', 'Fragment Tangent', 'Fragment Binormal', 'Base Color', 'Diffuse Color', 'Specular Color', 'Transparency', 'Metallic', 'Roughness', 'Specular Intensity', 'IOR', 'Direct Diffuse', 'Direct Specular', 'Direct All', 'Env Diffuse', 'Env Specular', 'Env All', 'Emissive', 'Light Map', 'Shadow', 'AO', 'Fresnel', 'Direct Transmit Diffuse', 'Direct Transmit Specular', 'Env Transmit Diffuse', 'Env Transmit Specular', 'Transmit All', 'Direct Internal Specular', 'Env Internal Specular', 'Internal All', 'Fog'];
+          _this.strComposite = ['Direct Diffuse', 'Direct Specular', 'Env Diffuse', 'Env Specular', 'Emissive', 'Light Map', 'Shadow', 'AO', 'Normal Map', 'Fog', 'Tone Mapping', 'Gamma Correction', 'Fresnel', 'Transmit Diffuse', 'Transmit Specular', 'Internal Specular', 'TT'];
+          _this.strMisc = ['CSM Layer Coloration', 'Lighting With Albedo'];
+          _this.compositeModeToggleList = [];
+          _this.singleModeToggleList = [];
+          _this.miscModeToggleList = [];
+          _this.textComponentList = [];
+          _this.labelComponentList = [];
+          _this.textContentList = [];
+          _this.hideButtonLabel = void 0;
+          _this._currentColorIndex = 0;
+          _this.strColor = ['<color=#ffffff>', '<color=#000000>', '<color=#ff0000>', '<color=#00ff00>', '<color=#0000ff>'];
+          _this.color = [Color.WHITE, Color.BLACK, Color.RED, Color.GREEN, Color.BLUE];
+          return _this;
+        }
+
+        var _proto = DebugViewRuntimeControl.prototype;
+
+        _proto.start = function start() {
+          // get canvas resolution
+          var canvas = this.node.parent.getComponent(Canvas);
+
+          if (!canvas) {
+            console.error('debug-view-runtime-control should be child of Canvas');
+            return;
+          }
+
+          var uiTransform = this.node.parent.getComponent(UITransform);
+          var halfScreenWidth = uiTransform.width * 0.5;
+          var halfScreenHeight = uiTransform.height * 0.5;
+          var x = -halfScreenWidth + halfScreenWidth * 0.1,
+              y = halfScreenHeight - halfScreenHeight * 0.1;
+          var width = 200,
+              height = 20; // new nodes
+
+          var miscNode = this.node.getChildByName('MiscMode');
+          var buttonNode = instantiate(miscNode);
+          buttonNode.parent = this.node;
+          buttonNode.name = 'Buttons';
+          var titleNode = instantiate(miscNode);
+          titleNode.parent = this.node;
+          titleNode.name = 'Titles'; // title
+
+          for (var i = 0; i < 2; i++) {
+            var newLabel = instantiate(this.EnableAllCompositeModeButton.getChildByName('Label'));
+            newLabel.setPosition(x + (i > 0 ? 50 + width * 2 : 150), y, 0.0);
+            newLabel.setScale(0.75, 0.75, 0.75);
+            newLabel.parent = titleNode;
+
+            var _labelComponent = newLabel.getComponent(Label);
+
+            _labelComponent.string = i ? '----------Composite Mode----------' : '----------Single Mode----------';
+            _labelComponent.color = Color.WHITE;
+            _labelComponent.overflow = 0;
+            this.labelComponentList[this.labelComponentList.length] = _labelComponent;
+          }
+
+          y -= height; // single
+
+          var currentRow = 0;
+
+          for (var _i = 0; _i < this.strSingle.length; _i++, currentRow++) {
+            if (_i === this.strSingle.length >> 1) {
+              x += width;
+              currentRow = 0;
+            }
+
+            var newNode = _i ? instantiate(this.singleModeToggle) : this.singleModeToggle;
+            newNode.setPosition(x, y - height * currentRow, 0.0);
+            newNode.setScale(0.5, 0.5, 0.5);
+            newNode.parent = this.singleModeToggle.parent;
+            var textComponent = newNode.getComponentInChildren(RichText);
+            textComponent.string = this.strSingle[_i];
+            this.textComponentList[this.textComponentList.length] = textComponent;
+            this.textContentList[this.textContentList.length] = textComponent.string;
+            newNode.on(Toggle.EventType.TOGGLE, this.toggleSingleMode, this);
+            this.singleModeToggleList[_i] = newNode;
+          }
+
+          x += width; // buttons
+
+          this.EnableAllCompositeModeButton.setPosition(x + 15, y, 0.0);
+          this.EnableAllCompositeModeButton.setScale(0.5, 0.5, 0.5);
+          this.EnableAllCompositeModeButton.on(Button.EventType.CLICK, this.enableAllCompositeMode, this);
+          this.EnableAllCompositeModeButton.parent = buttonNode;
+          var labelComponent = this.EnableAllCompositeModeButton.getComponentInChildren(Label);
+          this.labelComponentList[this.labelComponentList.length] = labelComponent;
+          var changeColorButton = instantiate(this.EnableAllCompositeModeButton);
+          changeColorButton.setPosition(x + 90, y, 0.0);
+          changeColorButton.setScale(0.5, 0.5, 0.5);
+          changeColorButton.on(Button.EventType.CLICK, this.changeTextColor, this);
+          changeColorButton.parent = buttonNode;
+          labelComponent = changeColorButton.getComponentInChildren(Label);
+          labelComponent.string = 'TextColor';
+          this.labelComponentList[this.labelComponentList.length] = labelComponent;
+          var HideButton = instantiate(this.EnableAllCompositeModeButton);
+          HideButton.setPosition(x + 200, y, 0.0);
+          HideButton.setScale(0.5, 0.5, 0.5);
+          HideButton.on(Button.EventType.CLICK, this.hideUI, this);
+          HideButton.parent = this.node.parent;
+          labelComponent = HideButton.getComponentInChildren(Label);
+          labelComponent.string = 'Hide UI';
+          this.labelComponentList[this.labelComponentList.length] = labelComponent;
+          this.hideButtonLabel = labelComponent; // misc
+
+          y -= 40;
+
+          for (var _i2 = 0; _i2 < this.strMisc.length; _i2++) {
+            var _newNode = instantiate(this.compositeModeToggle);
+
+            _newNode.setPosition(x, y - height * _i2, 0.0);
+
+            _newNode.setScale(0.5, 0.5, 0.5);
+
+            _newNode.parent = miscNode;
+
+            var _textComponent = _newNode.getComponentInChildren(RichText);
+
+            _textComponent.string = this.strMisc[_i2];
+            this.textComponentList[this.textComponentList.length] = _textComponent;
+            this.textContentList[this.textContentList.length] = _textComponent.string;
+
+            var toggleComponent = _newNode.getComponent(Toggle);
+
+            toggleComponent.isChecked = _i2 ? true : false;
+
+            _newNode.on(Toggle.EventType.TOGGLE, _i2 ? this.toggleLightingWithAlbedo : this.toggleCSMColoration, this);
+
+            this.miscModeToggleList[_i2] = _newNode;
+          } // composite
+
+
+          y -= 150;
+
+          for (var _i3 = 0; _i3 < this.strComposite.length; _i3++) {
+            var _newNode2 = _i3 ? instantiate(this.compositeModeToggle) : this.compositeModeToggle;
+
+            _newNode2.setPosition(x, y - height * _i3, 0.0);
+
+            _newNode2.setScale(0.5, 0.5, 0.5);
+
+            _newNode2.parent = this.compositeModeToggle.parent;
+
+            var _textComponent2 = _newNode2.getComponentInChildren(RichText);
+
+            _textComponent2.string = this.strComposite[_i3];
+            this.textComponentList[this.textComponentList.length] = _textComponent2;
+            this.textContentList[this.textContentList.length] = _textComponent2.string;
+
+            _newNode2.on(Toggle.EventType.TOGGLE, this.toggleCompositeMode, this);
+
+            this.compositeModeToggleList[_i3] = _newNode2;
+          }
+        };
+
+        _proto.isTextMatched = function isTextMatched(textUI, textDescription) {
+          var tempText = new String(textUI);
+          var findIndex = tempText.search('>');
+
+          if (findIndex === -1) {
+            return textUI === textDescription;
+          } else {
+            tempText = tempText.substr(findIndex + 1);
+            tempText = tempText.substr(0, tempText.search('<'));
+            return tempText === textDescription;
+          }
+        };
+
+        _proto.toggleSingleMode = function toggleSingleMode(toggle) {
+          var debugView = director.root.debugView;
+          var textComponent = toggle.getComponentInChildren(RichText);
+
+          for (var i = 0; i < this.strSingle.length; i++) {
+            if (this.isTextMatched(textComponent.string, this.strSingle[i])) {
+              debugView.singleMode = i;
+            }
+          }
+        };
+
+        _proto.toggleCompositeMode = function toggleCompositeMode(toggle) {
+          var debugView = director.root.debugView;
+          var textComponent = toggle.getComponentInChildren(RichText);
+
+          for (var i = 0; i < this.strComposite.length; i++) {
+            if (this.isTextMatched(textComponent.string, this.strComposite[i])) {
+              debugView.enableCompositeMode(i, toggle.isChecked);
+            }
+          }
+        };
+
+        _proto.toggleLightingWithAlbedo = function toggleLightingWithAlbedo(toggle) {
+          var debugView = director.root.debugView;
+          debugView.lightingWithAlbedo = toggle.isChecked;
+        };
+
+        _proto.toggleCSMColoration = function toggleCSMColoration(toggle) {
+          var debugView = director.root.debugView;
+          debugView.csmLayerColoration = toggle.isChecked;
+        };
+
+        _proto.enableAllCompositeMode = function enableAllCompositeMode(button) {
+          var debugView = director.root.debugView;
+          debugView.enableAllCompositeMode(true);
+
+          for (var i = 0; i < this.compositeModeToggleList.length; i++) {
+            var _toggleComponent = this.compositeModeToggleList[i].getComponent(Toggle);
+
+            _toggleComponent.isChecked = true;
+          }
+
+          var toggleComponent = this.miscModeToggleList[0].getComponent(Toggle);
+          toggleComponent.isChecked = false;
+          debugView.csmLayerColoration = false;
+          toggleComponent = this.miscModeToggleList[1].getComponent(Toggle);
+          toggleComponent.isChecked = true;
+          debugView.lightingWithAlbedo = true;
+        };
+
+        _proto.hideUI = function hideUI(button) {
+          var titleNode = this.node.getChildByName('Titles');
+          var activeValue = !titleNode.active;
+          this.singleModeToggleList[0].parent.active = activeValue;
+          this.miscModeToggleList[0].parent.active = activeValue;
+          this.compositeModeToggleList[0].parent.active = activeValue;
+          this.EnableAllCompositeModeButton.parent.active = activeValue;
+          titleNode.active = activeValue;
+          this.hideButtonLabel.string = activeValue ? 'Hide UI' : 'Show UI';
+        };
+
+        _proto.changeTextColor = function changeTextColor(button) {
+          this._currentColorIndex++;
+
+          if (this._currentColorIndex >= this.strColor.length) {
+            this._currentColorIndex = 0;
+          }
+
+          for (var i = 0; i < this.textComponentList.length; i++) {
+            this.textComponentList[i].string = this.strColor[this._currentColorIndex] + this.textContentList[i] + '</color>';
+          }
+
+          for (var _i4 = 0; _i4 < this.labelComponentList.length; _i4++) {
+            this.labelComponentList[_i4].color = this.color[this._currentColorIndex];
+          }
+        };
+
+        _proto.onLoad = function onLoad() {};
+
+        _proto.update = function update(deltaTime) {};
+
+        return DebugViewRuntimeControl;
+      }(Component), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "compositeModeToggle", [_dec2], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "singleModeToggle", [_dec3], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "EnableAllCompositeModeButton", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      })), _class2)) || _class));
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/EventMgr.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _inheritsLoose, cclegacy, _decorator, EventTarget, Component;
+
+  return {
+    setters: [function (module) {
+      _inheritsLoose = module.inheritsLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      _decorator = module._decorator;
+      EventTarget = module.EventTarget;
+      Component = module.Component;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "a0520KQvgVIhr8MfV5+NVnO", "EventMgr", undefined);
+
+      var ccclass = _decorator.ccclass,
+          property = _decorator.property;
+      var EventMgr = exports('EventMgr', /*#__PURE__*/function (_Component) {
+        _inheritsLoose(EventMgr, _Component);
+
+        function EventMgr() {
+          return _Component.apply(this, arguments) || this;
+        }
+
+        var _proto = EventMgr.prototype;
+
+        _proto.onLoad = function onLoad() {
+          if (!EventMgr.Instance) {
+            EventMgr.Instance = new EventTarget();
+          } else {
+            this.destroy();
+            return;
+          }
+        };
+
+        return EventMgr;
+      }(Component));
+      EventMgr.Instance = void 0;
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/GameData.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './ResMgr.ts', './AudioMgr.ts', './EventMgr.ts', './GameFiMgr.ts'], function (exports) {
+  var _inheritsLoose, cclegacy, _decorator, Component, ResMgr, AudioMgr, EventMgr, GameFiMgr;
+
+  return {
+    setters: [function (module) {
+      _inheritsLoose = module.inheritsLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      _decorator = module._decorator;
+      Component = module.Component;
+    }, function (module) {
+      ResMgr = module.ResMgr;
+    }, function (module) {
+      AudioMgr = module.AudioMgr;
+    }, function (module) {
+      EventMgr = module.EventMgr;
+    }, function (module) {
+      GameFiMgr = module.GameFiMgr;
+    }],
+    execute: function () {
+      var _dec, _class, _class2;
+
+      cclegacy._RF.push({}, "b0fb1qHVZZJ2ryeBmIZ5PQb", "GameData", undefined);
+
+      var ccclass = _decorator.ccclass;
+      var GameData = exports('GameData', (_dec = ccclass('GameData'), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
+        _inheritsLoose(GameData, _Component);
+
+        function GameData() {
+          return _Component.apply(this, arguments) || this;
+        }
+
+        var _proto = GameData.prototype;
+
+        _proto.onLoad = function onLoad() {
+          if (!GameData.Instance) {
+            GameData.Instance = this;
+          } else {
+            this.destroy();
+            return;
+          } //资源管理
+
+
+          this.node.addComponent(ResMgr); //初始化声音管理
+
+          this.node.addComponent(AudioMgr); //初始化事件管理
+
+          this.node.addComponent(EventMgr); //初始化游戏币管理
+
+          this.node.addComponent(GameFiMgr);
+        };
+
+        return GameData;
+      }(Component), _class2.Instance = void 0, _class2)) || _class));
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/GameFiMgr.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './index4.ts'], function (exports) {
+  var _inheritsLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, Component, __webpack_exports__TonConnectUI, __webpack_exports__GameFi, __webpack_exports__Address, __webpack_exports__toNano;
+
+  return {
+    setters: [function (module) {
+      _inheritsLoose = module.inheritsLoose;
+      _asyncToGenerator = module.asyncToGenerator;
+      _regeneratorRuntime = module.regeneratorRuntime;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      Component = module.Component;
+    }, function (module) {
+      __webpack_exports__TonConnectUI = module.TonConnectUI;
+      __webpack_exports__GameFi = module.GameFi;
+      __webpack_exports__Address = module.Address;
+      __webpack_exports__toNano = module.toNano;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "aad960tLrFGW6F0FqomlQl4", "GameFiMgr", undefined);
+
+      var GameFiMgr = exports('GameFiMgr', /*#__PURE__*/function (_Component) {
+        _inheritsLoose(GameFiMgr, _Component);
+
+        function GameFiMgr() {
+          var _this;
+
+          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+
+          _this = _Component.call.apply(_Component, [this].concat(args)) || this;
+          _this._cocosGameFi = void 0;
+          _this._connectUI = void 0;
+          _this._bTonInit = false;
+          _this.address = "";
+          return _this;
+        }
+
+        var _proto = GameFiMgr.prototype;
+
+        _proto.onLoad = function onLoad() {
+          if (!GameFiMgr.Instance) {
+            GameFiMgr.Instance = this;
+          } else {
+            this.destroy();
+            return;
+          }
+        };
+
+        _proto.initTonConnect = /*#__PURE__*/function () {
+          var _initTonConnect = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(cb) {
+            var _this2 = this;
+
+            var uiconnector;
+            return _regeneratorRuntime().wrap(function _callee$(_context) {
+              while (1) switch (_context.prev = _context.next) {
+                case 0:
+                  uiconnector = new __webpack_exports__TonConnectUI({
+                    manifestUrl: 'https://ton-connect.github.io/demo-dapp-with-wallet/tonconnect-manifest.json'
+                  });
+                  _context.next = 3;
+                  return __webpack_exports__GameFi.create({
+                    network: "mainnet",
+                    connector: uiconnector,
+                    merchant: {
+                      jettonAddress: __webpack_exports__Address.parse("EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs"),
+                      tonAddress: "UQAMNl5M8dv_x5gEjAGzmARBUaey6qME2zwghgk0Jbd6kZB0"
+                    }
+                  });
+
+                case 3:
+                  this._cocosGameFi = _context.sent;
+                  this._connectUI = this._cocosGameFi.walletConnector;
+
+                  this._connectUI.onModalStateChange(function (state) {
+                    console.log("model state changed! : ");
+
+                    _this2.updateConnect();
+                  });
+
+                  this._connectUI.onStatusChange(function (info) {
+                    console.log(info);
+                    console.log("wallet info status changed : ");
+
+                    _this2.updateConnect();
+
+                    cb && cb(info);
+                  });
+
+                  this._bTonInit = true;
+                  this.updateConnect();
+
+                case 9:
+                case "end":
+                  return _context.stop();
+              }
+            }, _callee, this);
+          }));
+
+          function initTonConnect(_x) {
+            return _initTonConnect.apply(this, arguments);
+          }
+
+          return initTonConnect;
+        }();
+
+        _proto.isConnected = function isConnected() {
+          if (!this._connectUI) {
+            console.error("ton ui not inited!");
+            return false;
+          }
+
+          return this._connectUI.connected;
+        };
+
+        _proto.updateConnect = function updateConnect() {
+          if (this.isConnected()) {
+            var address = this._connectUI.account.address;
+            this.address = address;
+          }
+        };
+
+        _proto.openModal = /*#__PURE__*/function () {
+          var _openModal = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
+                case 0:
+                  if (this._bTonInit) {
+                    _context2.next = 2;
+                    break;
+                  }
+
+                  return _context2.abrupt("return");
+
+                case 2:
+                  if (this.isConnected()) {
+                    this._connectUI.disconnect();
+                  } else {
+                    this._connectUI.openModal();
+                  }
+
+                case 3:
+                case "end":
+                  return _context2.stop();
+              }
+            }, _callee2, this);
+          }));
+
+          function openModal() {
+            return _openModal.apply(this, arguments);
+          }
+
+          return openModal;
+        }();
+
+        _proto.sendTransaction = /*#__PURE__*/function () {
+          var _sendTransaction = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(amount) {
+            var result;
+            return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+              while (1) switch (_context3.prev = _context3.next) {
+                case 0:
+                  _context3.next = 2;
+                  return this._cocosGameFi.transferJetton({
+                    to: __webpack_exports__Address.parse("UQCXLI7EllDjQEFRglhfKi42hlZwyvYN-IKXM6nAc52_nZQp"),
+                    amount: __webpack_exports__toNano(amount)
+                  });
+
+                case 2:
+                  result = _context3.sent;
+                  return _context3.abrupt("return", result);
+
+                case 4:
+                case "end":
+                  return _context3.stop();
+              }
+            }, _callee3, this);
+          }));
+
+          function sendTransaction(_x2) {
+            return _sendTransaction.apply(this, arguments);
+          }
+
+          return sendTransaction;
+        }();
+
+        return GameFiMgr;
+      }(Component));
+      GameFiMgr.Instance = void 0;
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/index.ts", ['cc'], function (exports) {
+  var cclegacy, Prefab, AudioClip;
+  return {
+    setters: [function (module) {
+      cclegacy = module.cclegacy;
+      Prefab = module.Prefab;
+      AudioClip = module.AudioClip;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "575f06Qf8dBlrkz2fzrc3qq", "index", undefined);
+
+      var resPkg = exports('resPkg', {
+        GUI: {
+          urls: [{
+            tooTip: "u",
+            type: "0",
+            path: "eggcoin",
+            assetType: Prefab
+          }, {
+            tooTip: "1",
+            type: "0",
+            path: "Breakfast_Sandwich",
+            assetType: Prefab
+          }, {
+            tooTip: "2",
+            type: "0",
+            path: "Burger_Wrapped",
+            assetType: Prefab
+          }, {
+            tooTip: "3",
+            type: "0",
+            path: "Croissant_Dough",
+            //Fish_Patty
+            assetType: Prefab //  
+
+          }, {
+            tooTip: "t",
+            type: "1",
+            path: "usdc",
+            assetType: Prefab
+          }, {
+            tooTip: "4",
+            type: "1",
+            path: "IceCream",
+            assetType: Prefab
+          }, {
+            tooTip: "5",
+            type: "1",
+            path: "Ketchup_Cup",
+            assetType: Prefab
+          }, {
+            tooTip: "6",
+            type: "1",
+            path: "Waffle_Plain",
+            assetType: Prefab
+          }, {
+            tooTip: "7",
+            type: "1",
+            path: "Chip_Bag",
+            assetType: Prefab
+          }, {
+            tooTip: "8",
+            type: "1",
+            path: "Corndog",
+            assetType: Prefab
+          }, //大的
+          {
+            tooTip: "9",
+            type: "2",
+            path: "Loaf_Cinnamon",
+            // Fork
+            assetType: Prefab
+          }, {
+            tooTip: "a",
+            type: "2",
+            path: "Loaf_White",
+            //Ketchup_Bottle
+            assetType: Prefab
+          }, {
+            tooTip: "b",
+            type: "2",
+            path: "Wreath_Light",
+            //Pizza_Base
+            assetType: Prefab
+          }, {
+            tooTip: "c",
+            type: "2",
+            path: "ToGo_Bag_W",
+            assetType: Prefab
+          }]
+        },
+        Sounds: {
+          urls: [{
+            path: "btnclick",
+            assetType: AudioClip
+          }, {
+            path: "freeze",
+            assetType: AudioClip
+          }, {
+            path: "pass",
+            assetType: AudioClip
+          }, {
+            path: "softFail",
+            assetType: AudioClip
+          }, {
+            path: "starCollect",
+            assetType: AudioClip
+          }, {
+            path: "tap",
+            assetType: AudioClip
+          }, {
+            path: "bg",
+            assetType: AudioClip
+          }, {
+            path: "click",
+            assetType: AudioClip
+          }, {
+            path: "Message",
+            assetType: Prefab
+          }]
+        }
+      });
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/index2.ts", ['cc', './moment.mjs_cjs=&original=.js', './moment.js'], function (exports) {
+  var cclegacy, _cjsExports;
+
+  return {
+    setters: [function (module) {
+      cclegacy = module.cclegacy;
+    }, null, function (module) {
+      _cjsExports = module.default;
+    }],
+    execute: function () {
+      exports({
+        addSeparatorToNumber: addSeparatorToNumber,
+        countdown: countdown,
+        debounce: debounce,
+        getRandom: getRandom
+      });
+
+      cclegacy._RF.push({}, "75244sNKmhGJIbha+4+BzAW", "index", undefined); // import crypto from 'crypto';
+
+
+      var keyObject = exports('keyObject', function keyObject(param) {
+        var dataStr = "";
+
+        for (var key in param) {
+          dataStr += key + '=' + param[key] + '&';
+        }
+
+        if (dataStr !== '') {
+          dataStr = dataStr.substr(0, dataStr.lastIndexOf('&'));
+        }
+
+        return dataStr;
+      });
+
+      function addSeparatorToNumber(number, separator) {
+        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, separator);
+      }
+
+      function debounce(fn, delay) {
+        var timer = null; // 原始函数的参数args
+
+        var _debounce = function _debounce() {
+          var _this = this;
+
+          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+
+          if (timer) clearTimeout(timer);
+          timer = setTimeout(function () {
+            // 绑定this
+            fn.apply(_this, args);
+          }, delay);
+        };
+
+        return _debounce;
+      }
+
+      function getRandom(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      } // moment
+      // 你好请用 moment 包 ts 编写一个倒计时的代码，时间通过传入的方式
+
+
+      function countdown(targetTime) {
+        var now = _cjsExports(); // 目标时间
+
+
+        var endTime = targetTime;
+
+        var duration = _cjsExports.duration(endTime.diff(now));
+
+        if (duration.asMilliseconds() <= 0) {
+          return {
+            end: true
+          };
+        } //分钟和秒
+
+
+        var days = Math.floor(duration.asDays());
+        var hours = Math.floor(duration.hours());
+        var minutes = Math.floor(duration.minutes());
+        var seconds = Math.floor(duration.seconds());
+        return {
+          days: days,
+          hours: hours,
+          minutes: minutes,
+          seconds: seconds,
+          end: false
+        };
+      }
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/index3.ts", ['cc', './request.ts'], function (exports) {
+  var cclegacy, request;
+  return {
+    setters: [function (module) {
+      cclegacy = module.cclegacy;
+    }, function (module) {
+      request = module.default;
+    }],
+    execute: function () {
+      exports({
+        buyPropProduct: buyPropProduct,
+        gameOver: gameOver,
+        generateModelSorting: generateModelSorting,
+        getGameUserInfo: getGameUserInfo,
+        getPrice: getPrice,
+        openNewGame: openNewGame,
+        postTest: postTest
+      });
+
+      cclegacy._RF.push({}, "c657fQy5bpLFLenBmom+S00", "index", undefined);
+
+      function getPrice(params) {
+        return request({
+          data: params || null,
+          method: "GET",
+          url: "getPrice"
+        });
+      }
+
+      function postTest(params) {
+        return request({
+          data: params || null,
+          method: "POST",
+          url: "postTest"
+        });
+      } //rule/generateModelSorting
+
+
+      function generateModelSorting(params) {
+        return request({
+          data: params || null,
+          method: "GET",
+          url: "rule/generateModelSorting"
+        });
+      } //getGameUserInfo?
+
+
+      function getGameUserInfo(params) {
+        return request({
+          data: params || null,
+          method: "GET",
+          url: "gameUser/getGameUserInfo"
+        });
+      } //http://192.168.31.109:3000/game/openNewGame
+
+
+      function openNewGame(params) {
+        return request({
+          data: params || null,
+          method: "GET",
+          url: "game/openNewGame"
+        });
+      } //game/buyPropProduct?game_id=f25fdbfc-adae-4ac4-a893-91f1ecf565e9&prop_one=0
+
+
+      function buyPropProduct(params) {
+        return request({
+          data: params || null,
+          method: "GET",
+          url: "game/buyPropProduct"
+        });
+      } // 结算 /game/gameOver?game_user_id=39cf03ec-c893-456a-b9fd-da5035a921fb&game_id=3d5cb2a7-ddd5-45fa-9b1e-a3abd5fe2d84&result=true&inside_point=5&inside_usdt=10&prop_one=2
+
+
+      function gameOver(params) {
+        return request({
+          data: params || null,
+          method: "POST",
+          url: "game/gameOver"
+        });
+      }
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/Item.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, cclegacy, _decorator, Vec3, RigidBody, Collider, Component;
+
+  return {
+    setters: [function (module) {
+      _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
+      _inheritsLoose = module.inheritsLoose;
+      _initializerDefineProperty = module.initializerDefineProperty;
+      _assertThisInitialized = module.assertThisInitialized;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      _decorator = module._decorator;
+      Vec3 = module.Vec3;
+      RigidBody = module.RigidBody;
+      Collider = module.Collider;
+      Component = module.Component;
+    }],
+    execute: function () {
+      var _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2;
+
+      cclegacy._RF.push({}, "b08a3qMqrRKXaTPZOtmmSw2", "Item", undefined);
+
+      var ccclass = _decorator.ccclass,
+          property = _decorator.property;
+      var Item = exports('Item', (_dec = ccclass('Item'), _dec2 = property(Vec3), _dec3 = property(Vec3), _dec(_class = (_class2 = /*#__PURE__*/function (_Component) {
+        _inheritsLoose(Item, _Component);
+
+        function Item() {
+          var _this;
+
+          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+
+          _this = _Component.call.apply(_Component, [this].concat(args)) || this;
+          _this.removed = false;
+          _this.removedPos = void 0; //消除的时候做一个向中间靠拢的动画
+
+          _this.playRmovedEff = false;
+          _this.isTemp = false;
+          _this.isBottom = false;
+
+          _initializerDefineProperty(_this, "rotation", _descriptor, _assertThisInitialized(_this));
+
+          _initializerDefineProperty(_this, "scale", _descriptor2, _assertThisInitialized(_this));
+
+          return _this;
+        }
+
+        var _proto = Item.prototype;
+
+        _proto.start = function start() {};
+
+        _proto.setUseGravity = function setUseGravity(use) {
+          var Temp = this.node.getComponent(RigidBody);
+
+          if (Temp) {
+            Temp.useGravity = use;
+          }
+        };
+
+        _proto.setWorldPosition = function setWorldPosition(y) {
+          var pos = this.node.getWorldPosition();
+          pos.y += y;
+          this.node.setWorldPosition(pos);
+        };
+
+        _proto.destoryCollider = function destoryCollider() {
+          if (!this.isTemp) {
+            var Temp = this.node.getComponent(RigidBody);
+            this.node.getComponent(Collider).isTrigger = true;
+
+            if (Temp) {
+              Temp.destroy();
+            }
+          }
+        };
+
+        _proto.update = function update(deltaTime) {};
+
+        return Item;
+      }(Component), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "rotation", [_dec2], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return new Vec3(0, 0, 0);
+        }
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "scale", [_dec3], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return new Vec3(1, 1, 1);
+        }
+      })), _class2)) || _class));
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/main", ['./debug-view-runtime-control.ts', './BulletFrame.ts', './Message.ts', './config.ts', './index.ts', './GameData.ts', './Item.ts', './Main.ts', './Start.ts', './AudioMgr.ts', './EventMgr.ts', './GameFiMgr.ts', './ResMgr.ts', './UiMgr.ts', './app.ts', './index2.ts', './request.ts', './storage.ts', './type.ts', './index3.ts'], function () {
+  return {
+    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+    execute: function () {}
+  };
+});
+
+System.register("chunks:///_virtual/Main.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UiMgr.ts', './index.ts', './ResMgr.ts', './AudioMgr.ts', './Item.ts', './index2.ts', './moment.mjs_cjs=&original=.js', './app.ts', './BulletFrame.ts', './index3.ts', './index.mjs_cjs=&original=.js', './storage.ts', './GameFiMgr.ts', './moment.js', './index.js'], function (exports) {
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, _extends, _createForOfIteratorHelperLoose, cclegacy, _decorator, sp, Material, SpriteFrame, Prefab, Sprite, Label, game, input, Input, Camera, geometry, PhysicsSystem, MeshRenderer, Tween, Vec3, tween, instantiate, RigidBody, Node, director, UICtrl, resPkg, ResMgr, AudioMgr, Item, getRandom, countdown, Tost, BulletFrame, generateModelSorting, openNewGame, gameOver, buyPropProduct, getStorageData, GameFiMgr, _cjsExports, _cjsExports$1;
+
+  return {
+    setters: [function (module) {
+      _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
+      _inheritsLoose = module.inheritsLoose;
+      _initializerDefineProperty = module.initializerDefineProperty;
+      _assertThisInitialized = module.assertThisInitialized;
+      _asyncToGenerator = module.asyncToGenerator;
+      _regeneratorRuntime = module.regeneratorRuntime;
+      _extends = module.extends;
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      _decorator = module._decorator;
+      sp = module.sp;
+      Material = module.Material;
+      SpriteFrame = module.SpriteFrame;
+      Prefab = module.Prefab;
+      Sprite = module.Sprite;
+      Label = module.Label;
+      game = module.game;
+      input = module.input;
+      Input = module.Input;
+      Camera = module.Camera;
+      geometry = module.geometry;
+      PhysicsSystem = module.PhysicsSystem;
+      MeshRenderer = module.MeshRenderer;
+      Tween = module.Tween;
+      Vec3 = module.Vec3;
+      tween = module.tween;
+      instantiate = module.instantiate;
+      RigidBody = module.RigidBody;
+      Node = module.Node;
+      director = module.director;
+    }, function (module) {
+      UICtrl = module.UICtrl;
+    }, function (module) {
+      resPkg = module.resPkg;
+    }, function (module) {
+      ResMgr = module.ResMgr;
+    }, function (module) {
+      AudioMgr = module.AudioMgr;
+    }, function (module) {
+      Item = module.Item;
+    }, function (module) {
+      getRandom = module.getRandom;
+      countdown = module.countdown;
+    }, null, function (module) {
+      Tost = module.Tost;
+    }, function (module) {
+      BulletFrame = module.BulletFrame;
+    }, function (module) {
+      generateModelSorting = module.generateModelSorting;
+      openNewGame = module.openNewGame;
+      gameOver = module.gameOver;
+      buyPropProduct = module.buyPropProduct;
+    }, null, function (module) {
+      getStorageData = module.getStorageData;
+    }, function (module) {
+      GameFiMgr = module.GameFiMgr;
+    }, function (module) {
+      _cjsExports = module.default;
+    }, function (module) {
+      _cjsExports$1 = module.default;
+    }],
+    execute: function () {
+      var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6;
+
+      cclegacy._RF.push({}, "a7d6dXfqilInpZcCfgaVlXs", "Main", undefined);
+
+      var ccclass = _decorator.ccclass,
+          property = _decorator.property;
+      var SkeletonData = sp.SkeletonData;
+      var Main = exports('Main', (_dec = ccclass('Main'), _dec2 = property(Material), _dec3 = property(SpriteFrame), _dec4 = property(SpriteFrame), _dec5 = property(Prefab), _dec6 = property(SkeletonData), _dec7 = property(SkeletonData), _dec(_class = (_class2 = /*#__PURE__*/function (_UICtrl) {
+        _inheritsLoose(Main, _UICtrl);
+
+        function Main() {
+          var _this;
+
+          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+
+          _this = _UICtrl.call.apply(_UICtrl, [this].concat(args)) || this;
+
+          _initializerDefineProperty(_this, "material", _descriptor, _assertThisInitialized(_this)); //透明材质
+
+
+          _initializerDefineProperty(_this, "tag", _descriptor2, _assertThisInitialized(_this)); //透明材质贴图
+
+
+          _initializerDefineProperty(_this, "add", _descriptor3, _assertThisInitialized(_this)); //透明材质贴图
+
+
+          _initializerDefineProperty(_this, "nft", _descriptor4, _assertThisInitialized(_this)); //nft
+
+
+          _initializerDefineProperty(_this, "usdc", _descriptor5, _assertThisInitialized(_this));
+
+          _initializerDefineProperty(_this, "coin", _descriptor6, _assertThisInitialized(_this));
+
+          _this.touchNode = null; //当前点击的几何模型
+
+          _this.allItem = []; //所有节点集合
+
+          _this.collectPos = []; //底部收集点世界坐标集合
+
+          _this.collectTiles = []; //底部收集点节点集合
+          //是否初始化
+
+          _this.touchMaterial = null;
+          _this.temporaryItem = []; //临时节点
+
+          _this.temporaryPos = []; //临时节点坐标集合
+
+          _this.currentLevel = 1; //当前关卡
+
+          _this.gameStop = false; //游戏暂停
+
+          _this.clickPlay = true; //是否点击播放
+
+          _this.stage1 = 0; //道具1
+
+          _this.stage2 = 0; //道具2
+
+          _this.stage3 = 0; //道具3
+
+          _this.count = 0;
+          _this.InitializedData = [];
+          _this.usdtCount = 0;
+          _this.myCoinCount = 0;
+          _this.gameDate = null;
+          _this.isGameOver = false;
+          return _this;
+        }
+
+        var _proto = Main.prototype;
+
+        _proto.changeTag = function changeTag() {
+          if (this.stage1 == 0) {
+            this.view["Canvas/ui/bottom/button/add"].getComponent(Sprite).spriteFrame = this.add;
+            this.view["Canvas/ui/bottom/button/add/Label"].getComponent(Label).string = "";
+          } else {
+            this.view["Canvas/ui/bottom/button/add"].getComponent(Sprite).spriteFrame = this.tag;
+            this.view["Canvas/ui/bottom/button/add/Label"].getComponent(Label).string = "" + this.stage1;
+          }
+
+          if (this.stage2 == 0) {
+            this.view["Canvas/ui/bottom/button1/add"].getComponent(Sprite).spriteFrame = this.add;
+            this.view["Canvas/ui/bottom/button1/add/Label"].getComponent(Label).string = "";
+          } else {
+            this.view["Canvas/ui/bottom/button1/add"].getComponent(Sprite).spriteFrame = this.tag;
+            this.view["Canvas/ui/bottom/button1/add/Label"].getComponent(Label).string = "" + this.stage2;
+          }
+
+          if (this.stage3 == 0) {
+            this.view["Canvas/ui/bottom/button2/add"].getComponent(Sprite).spriteFrame = this.add;
+            this.view["Canvas/ui/bottom/button2/add/Label"].getComponent(Label).string = "";
+          } else {
+            this.view["Canvas/ui/bottom/button2/add"].getComponent(Sprite).spriteFrame = this.tag;
+            this.view["Canvas/ui/bottom/button2/add/Label"].getComponent(Label).string = "" + this.stage3;
+          }
+        };
+
+        _proto.onLoad = function onLoad() {
+          _UICtrl.prototype.onLoad.call(this); //初始化  
+
+
+          game.frameRate = 120;
+          this.dataInit();
+        };
+
+        _proto.dataInit = /*#__PURE__*/function () {
+          var _dataInit = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+            var _this2 = this;
+
+            var result, meshData, sortArr, key;
+            return _regeneratorRuntime().wrap(function _callee$(_context) {
+              while (1) switch (_context.prev = _context.next) {
+                case 0:
+                  this.initGameId();
+                  _context.next = 3;
+                  return generateModelSorting();
+
+                case 3:
+                  result = _context.sent;
+                  meshData = result.result;
+
+                  if (meshData) {
+                    sortArr = [];
+
+                    for (key in meshData) {
+                      sortArr.push(key);
+                    }
+
+                    sortArr.forEach(function (key) {
+                      if (meshData[key]) {
+                        var decrypted1 = _cjsExports$1.AES.decrypt(meshData[key], "bc1ptyc7v0hk0w48vqhxf86j7uetu42kf4c5z8nn6llv6f7l2g6cr3nszftf32").toString(_cjsExports$1.enc.Utf8);
+
+                        var arr = decrypted1.split("");
+                        arr.forEach(function (tip) {
+                          var item = resPkg.GUI.urls.find(function (item) {
+                            return item.tooTip == tip;
+                          });
+
+                          _this2.InitializedData.push(_extends({}, item, {
+                            level: key
+                          }));
+
+                          _this2.count++;
+                        });
+                      }
+                    }); // console.log(this.count, this.InitializedData);
+                  }
+
+                  if (this.currentLevel == 1) {
+                    this.init(4, 2);
+                  } else {
+                    this.init2(this.InitializedData);
+                  }
+
+                case 7:
+                case "end":
+                  return _context.stop();
+              }
+            }, _callee, this);
+          }));
+
+          function dataInit() {
+            return _dataInit.apply(this, arguments);
+          }
+
+          return dataInit;
+        }();
+
+        _proto.initGameId = /*#__PURE__*/function () {
+          var _initGameId = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+            var user_info, result;
+            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
+                case 0:
+                  user_info = getStorageData("user_info");
+                  _context2.next = 3;
+                  return openNewGame({
+                    ton_user_id: user_info.ton_user_id,
+                    game_user_id: user_info.game_user_id
+                  });
+
+                case 3:
+                  result = _context2.sent;
+
+                  if (result.code == 200) {
+                    console.log(result.result);
+                    this.gameDate = result.result;
+                  }
+
+                case 5:
+                case "end":
+                  return _context2.stop();
+              }
+            }, _callee2, this);
+          }));
+
+          function initGameId() {
+            return _initGameId.apply(this, arguments);
+          }
+
+          return initGameId;
+        }();
+
+        _proto.onEnable = function onEnable() {
+          input.on(Input.EventType.TOUCH_START, this.onTouchStart, this);
+          input.on(Input.EventType.TOUCH_END, this.onTouchEnd, this);
+          input.on(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
+        };
+
+        _proto.onDisable = function onDisable() {
+          input.off(Input.EventType.TOUCH_START, this.onTouchStart, this);
+          input.off(Input.EventType.TOUCH_END, this.onTouchEnd, this);
+          input.off(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
+          this.unscheduleAllCallbacks();
+        } // 检查是否是可点击的物品
+        ;
+
+        _proto.checkItem = function checkItem(node) {
+          var exists = resPkg.GUI.urls.some(function (item) {
+            return item.path == node.name;
+          });
+          return exists;
+        } // 点击事件
+        ;
+
+        _proto.onTouchStart = function onTouchStart(event) {
+          if (this.gameStop) return;
+          if (this.allItem.length == 0) return;
+
+          if (this.collectTiles.length >= 7) {
+            return;
+          }
+
+          var p = event.getLocation();
+          var Scence = this.node.parent;
+          var camera = Scence.getChildByName("Main Camera").getComponent(Camera);
+          var r = new geometry.Ray();
+          camera == null ? void 0 : camera.screenPointToRay(p.x, p.y, r);
+          var b = PhysicsSystem.instance.raycastClosest(r, 0xffffffff, 10000000, true);
+
+          if (b) {
+            var collider = PhysicsSystem.instance.raycastClosestResult.collider;
+
+            if (collider.node.name == "NFT") {
+              collider.node.getComponent(Item).destoryCollider();
+              collider.node.destroy();
+              this.gameStop = true;
+              this.view["Canvas/Over"].active = true;
+              this.view["Canvas/Over/falied"].active = false;
+              this.view["Canvas/Over/win"].active = true;
+              return;
+            }
+
+            if (!this.checkItem(collider.node)) return;
+            this.setNodeMaterial(collider.node, this.material, true);
+
+            if (!collider.node.getComponent(Item).isTemp) {
+              collider.node.getComponent(Item).setUseGravity(false);
+              collider.node.getComponent(Item).setWorldPosition(1);
+            }
+
+            this.touchNode = collider.node;
+
+            if (this.clickPlay) {
+              AudioMgr.Instance.play("click", {
+                playOnAwake: true
+              });
+            }
+          }
+        } // 设置节点材质
+        ;
+
+        _proto.setNodeMaterial = function setNodeMaterial(node, material, org) {
+          var _this3 = this;
+
+          if (org === void 0) {
+            org = true;
+          }
+
+          if (node.name == "usdc" || node.name == "eggcoin" || node.name == "nft") return;
+          node.children.forEach(function (item) {
+            if (org) {
+              if (item.getComponent(MeshRenderer)) {
+                _this3.touchMaterial = item.getComponent(MeshRenderer).materials[0];
+                item.getComponent(MeshRenderer).setMaterial(material, 0);
+              }
+
+              _this3.setNodeMaterial(item, material, org);
+            } else {
+              if (item.getComponent(MeshRenderer)) {
+                var customMaterial = new Material();
+                customMaterial.copy(_this3.touchMaterial);
+                item.getComponent(MeshRenderer).setMaterial(customMaterial, 0);
+              }
+
+              _this3.setNodeMaterial(item, material, org);
+            }
+          });
+        } // 点击结束事件
+        ;
+
+        _proto.onTouchEnd = function onTouchEnd(event) {
+          if (this.gameStop) return;
+          if (this.allItem.length == 0) return;
+
+          if (this.collectTiles.length >= 7) {
+            return;
+          }
+
+          var p = event.getLocation();
+          var Scence = this.node.parent;
+          var camera = Scence.getChildByName("Main Camera").getComponent(Camera);
+          var r = new geometry.Ray();
+          camera == null ? void 0 : camera.screenPointToRay(p.x, p.y, r);
+          var b = PhysicsSystem.instance.raycastClosest(r, 0xffffffff, 10000000, true);
+
+          if (b) {
+            var collider = PhysicsSystem.instance.raycastClosestResult.collider;
+            if (!this.checkItem(collider.node)) return;
+
+            if (this.touchNode == collider.node) {
+              if (!collider.node.getComponent(Item).isTemp) {
+                this.touchNode.getComponent(Item).setUseGravity(true);
+              }
+
+              this.setNodeMaterial(this.touchNode, null, false);
+
+              if (this.currentLevel == 2) {
+                this.initGravity();
+              }
+
+              if (collider.node.getComponent(Item).isBottom) return;
+              this.chooseItem(this.touchNode);
+            } else {
+              console.log(this.touchNode, "不是同一个节点");
+            }
+          } else {
+            console.log(b);
+          }
+        } // 移动事件
+        ;
+
+        _proto.onTouchMove = function onTouchMove(event) {
+          if (this.gameStop) return;
+          if (this.allItem.length == 0) return;
+
+          if (this.collectTiles.length >= 7) {
+            return;
+          }
+
+          var p = event.getLocation();
+          var Scence = this.node.parent;
+          var camera = Scence.getChildByName("Main Camera").getComponent(Camera);
+          var r = new geometry.Ray();
+          camera == null ? void 0 : camera.screenPointToRay(p.x, p.y, r);
+          var b = PhysicsSystem.instance.raycastClosest(r, 0xffffffff, 10000000, true);
+
+          if (b) {
+            var collider = PhysicsSystem.instance.raycastClosestResult.collider;
+
+            if (collider.node) {
+              if (!this.checkItem(collider.node)) {
+                this.touchNode.getComponent(Item).setUseGravity(true);
+                this.setNodeMaterial(this.touchNode, null, false);
+                return;
+              }
+
+              if (this.touchNode && this.touchNode == collider.node) {
+                return;
+              } else {
+                this.touchNode.getComponent(Item).setUseGravity(true);
+                this.setNodeMaterial(this.touchNode, null, false);
+                this.setNodeMaterial(collider.node, this.material, true);
+                collider.node.getComponent(Item).setUseGravity(false);
+                collider.node.getComponent(Item).setWorldPosition(1);
+                this.touchNode = collider.node;
+              }
+            }
+          }
+        } // 选择物品
+        ;
+
+        _proto.chooseItem = function chooseItem(item) {
+          var chooseName = item.name; // 取消重力影响
+
+          item.getComponent(Item).destoryCollider();
+          console.log(item.getComponent(Item));
+
+          if (item.getComponent(Item).isTemp) {
+            for (var i = 0; i < this.temporaryItem.length; ++i) {
+              if (this.temporaryItem[i] == item) {
+                this.temporaryItem.splice(i, 1);
+                break;
+              }
+            }
+          } else {
+            //删除点击对象从列表
+            for (var i = 0; i < this.allItem.length; ++i) {
+              if (this.allItem[i] == item) {
+                this.allItem.splice(i, 1);
+                break;
+              }
+            }
+          } //插入
+
+
+          var bInsert = false;
+
+          for (var i = this.collectTiles.length - 1; i >= 0; --i) {
+            if (this.collectTiles[i].name == chooseName) {
+              this.collectTiles.splice(i + 1, 0, item);
+              bInsert = true;
+              break;
+            }
+          }
+
+          if (!bInsert) {
+            this.collectTiles.push(item);
+          }
+
+          this.playAnimationStart(chooseName);
+        } // 检查结果
+        ;
+
+        _proto.checkResult = function checkResult() {
+          if (this.collectTiles.length >= 7) {
+            this.gameStop = true;
+            this.view["Canvas/Over"].active = true;
+            this.view["Canvas/Over/falied"].active = true;
+            this.view["Canvas/Over/win"].active = false;
+            this.isGameOver = false;
+          } else if (this.collectTiles.length == 0 && this.allItem.length == 0) {
+            if (this.currentLevel == 1) {
+              // this.init(resPkg.GUI.urls.length, 8);
+              this.init2(this.InitializedData);
+              this.currentLevel = 2;
+            } else {
+              this.gameStop = true;
+              this.view["Canvas/Over"].active = true;
+              this.view["Canvas/Over/falied"].active = false;
+              this.view["Canvas/Over/win"].active = true;
+            }
+          }
+        } // 移动到正确位置动画
+        ;
+
+        _proto.moveToRightPos = function moveToRightPos() {
+          var _this4 = this;
+
+          if (this.temporaryItem.length == 0) {
+            if (this.view["temporary"].active) {
+              this.view["temporary"].active = false;
+            }
+          }
+
+          this.collectTiles.map(function (a, i) {
+            var tileItem = a.getComponent(Item);
+            Tween.stopAllByTarget(a);
+            var pointA = a.worldPosition;
+
+            var pointB = _this4.collectPos[i].clone(); // 求中间坐标
+
+
+            var midPoint = new Vec3((pointA.x + pointB.x) / 2, (pointA.y + pointB.y) * 2, (pointA.z + pointB.z) / 2);
+            tween(a).to(0.2, {
+              worldPosition: midPoint
+            }).to(0.3, {
+              worldPosition: _this4.collectPos[i].clone()
+            }).start();
+            tween(a).to(0.5, {
+              eulerAngles: tileItem.rotation,
+              scale: tileItem.scale
+            }).call(function () {
+              tileItem.isBottom = true;
+
+              if (tileItem.removed) {
+                tween(a).to(0.25, {
+                  worldPosition: tileItem.removedPos
+                }, {
+                  easing: "backIn"
+                }).call(function () {
+                  //最中央的播放移除特效
+                  if (tileItem.playRmovedEff) {
+                    // 获取爆炸的屏幕地址
+                    var Scence = _this4.node.parent;
+                    var camera = Scence.getChildByName("Main Camera").getComponent(Camera);
+                    var pos = camera.convertToUINode(a.worldPosition, _this4.view["Canvas"]);
+
+                    if (a.name == "usdc" || a.name == "eggcoin") {
+                      _this4.view["Canvas/ui/tokenani"].active = true;
+
+                      _this4.view["Canvas/ui/tokenani"].setPosition(pos.x, pos.y);
+
+                      var aniInstance = _this4.view["Canvas/ui/tokenani"].getComponent(sp.Skeleton);
+
+                      var tokenName = a.name;
+
+                      if (a.name == "usdc") {
+                        aniInstance.skeletonData = _this4.usdc;
+                      } else {
+                        aniInstance.skeletonData = _this4.coin;
+                      }
+
+                      aniInstance.setAnimation(0, "baozha", false);
+                      aniInstance.addAnimation(0, "feichu", false);
+
+                      if (tokenName == "usdc") {
+                        var span = _this4.view["Canvas/ui/tokenani"];
+                        var basePo = span.getWorldPosition();
+
+                        var _pos = _this4.view["Canvas/ui/coinBox/usdcCion"].getWorldPosition();
+
+                        console.log(_pos, basePo);
+                        tween(span).delay(1.5).to(1, {
+                          worldPosition: new Vec3(_pos.x - 350, _pos.y - basePo.y, 0)
+                        }).start();
+                      } else {
+                        var _span = _this4.view["Canvas/ui/tokenani"];
+
+                        var _basePo = _span.getWorldPosition();
+
+                        var _pos2 = _this4.view["Canvas/ui/coinBox/eggCion"].getWorldPosition();
+
+                        console.log(_pos2, _basePo);
+                        tween(_span).delay(1.5).to(1, {
+                          worldPosition: new Vec3(_pos2.x - 350, _pos2.y - _basePo.y, 0)
+                        }).start();
+                      }
+                    } else {
+                      _this4.view["Canvas/ui/animation"].active = true;
+
+                      _this4.view["Canvas/ui/animation"].setPosition(pos.x, pos.y);
+
+                      var _aniInstance = _this4.view["Canvas/ui/animation"].getComponent(sp.Skeleton);
+
+                      _aniInstance.setAnimation(0, "effect", false);
+                    }
+
+                    AudioMgr.Instance.play("starCollect", {
+                      playOnAwake: true
+                    });
+
+                    _this4.checkResult();
+                  }
+
+                  if (a.name == "usdc") {
+                    _this4.usdtCount += 1;
+
+                    _this4.updateCoinCount();
+                  }
+
+                  if (a.name == "eggcoin") {
+                    _this4.myCoinCount += 1;
+
+                    _this4.updateCoinCount();
+                  }
+
+                  a.destroy();
+
+                  _this4.moveToRightPos();
+                }).start();
+              }
+            }).start();
+          });
+        };
+
+        _proto.updateCoinCount = function updateCoinCount() {
+          this.view["Canvas/ui/coinBox/eggCion/Label"].getComponent(Label).string = "" + this.myCoinCount;
+          this.view["Canvas/ui/coinBox/usdcCion/Label"].getComponent(Label).string = "" + this.usdtCount;
+        };
+
+        _proto.init2 = /*#__PURE__*/function () {
+          var _init = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(InitializedData) {
+            var parentNode, tempNode, _iterator, _step, item, node, _tempNode, meshRenderer;
+
+            return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+              while (1) switch (_context3.prev = _context3.next) {
+                case 0:
+                  parentNode = this.view["GameSpace/ItemSource"];
+                  tempNode = instantiate(this.nft);
+                  parentNode.addChild(tempNode); // InitializedData
+
+                  for (_iterator = _createForOfIteratorHelperLoose(InitializedData); !(_step = _iterator()).done;) {
+                    item = _step.value; // 假设每个 item 都是异步操作
+                    // console.log(item.level);
+
+                    node = ResMgr.Instance.getAsset("GUI", item.path);
+                    _tempNode = instantiate(node); // tempNode.setPosition(getRandom(-2, 2), getRandom(0, 1), getRandom(-2, 2));
+
+                    _tempNode.eulerAngles = new Vec3(getRandom(0, 360), getRandom(0, 360), getRandom(0, 360));
+                    _tempNode.level = item.level;
+                    this.allItem.push(_tempNode);
+                    _tempNode.getComponent(RigidBody).linearDamping == 1000000;
+                    _tempNode.getComponent(RigidBody).angularDamping == 1000000;
+                    parentNode.addChild(_tempNode);
+                    meshRenderer = _tempNode.getComponent(MeshRenderer);
+
+                    if (meshRenderer) {
+                      meshRenderer.enabled = false; // 隐藏模型
+                    } else {
+                      _tempNode.children.forEach(function (item) {
+                        if (item.getComponent(MeshRenderer)) ;
+                      });
+                    }
+                  }
+
+                  this.initTime();
+
+                case 5:
+                case "end":
+                  return _context3.stop();
+              }
+            }, _callee3, this);
+          }));
+
+          function init2(_x) {
+            return _init.apply(this, arguments);
+          }
+
+          return init2;
+        }() // 初始化
+        ;
+
+        _proto.init = function init(num, index) {
+          var _this5 = this;
+
+          var parentNode = this.view["GameSpace/ItemSource"];
+          var i = 0;
+          var timer = setInterval(function () {
+            var arr = resPkg.GUI.urls.slice(3, 6);
+            arr.forEach(function (item, index) {
+              var node = ResMgr.Instance.getAsset("GUI", item.path);
+              var tempNode = instantiate(node); // tempNode.setPosition(getRandom(-2, 2), getRandom(0, 1), getRandom(-2, 2));
+
+              tempNode.eulerAngles = new Vec3(getRandom(0, 360), getRandom(0, 360), getRandom(0, 360));
+
+              _this5.allItem.push(tempNode);
+
+              parentNode.addChild(tempNode);
+            });
+            i++;
+
+            if (i > index) {
+              clearInterval(timer);
+            }
+          }, 100);
+        };
+
+        _proto.initTime = function initTime() {
+          var _this6 = this;
+
+          this.view["Canvas/ui/time"].active = true;
+
+          var targetTime = _cjsExports().add(10, "minute");
+
+          this.schedule(function () {
+            var time = countdown(targetTime);
+
+            if (time.end) {
+              // console.log("输了");
+              _this6.unscheduleAllCallbacks();
+
+              _this6.gameStop = true;
+              _this6.view["Canvas/Over"].active = true;
+              _this6.view["Canvas/Over/falied"].active = true;
+              _this6.view["Canvas/Over/win"].active = false;
+              _this6.isGameOver = true;
+            } else {
+              _this6.view["Canvas/ui/time/Label"].getComponent(Label).string = time.minutes + ":" + time.seconds;
+            }
+          });
+        } //初始化重力
+        ;
+
+        _proto.initGravity = function initGravity() {
+          // targetNode
+          var targetPosition = this.view["targetNode"].worldPosition;
+          this.allItem.forEach(function (tempNode, index) {
+            var attractedBody = tempNode.getComponent(RigidBody); // 计算吸引方向（从被吸引物体指向目标物体的向量）
+
+            var direction = targetPosition.subtract(tempNode.worldPosition); // 计算两者之间的距离
+
+            var distance = direction.length(); // 归一化方向向量（使其长度为 1）
+
+            direction = direction.normalize(); // 计算吸引力的大小（根据距离可以做衰减处理，距离越远吸引力越小）
+
+            var attractionStrength = 150; // 吸引力大小
+
+            var forceMagnitude = attractionStrength / Math.max(distance * distance, 1); // 吸引力可以跟距离平方成反比
+            // 计算施加的力向量
+            // console.log('forceMagnitude', forceMagnitude);
+
+            var force = direction.multiplyScalar(forceMagnitude); // 对被吸引物体施加力
+            // console.log('force', force);
+
+            attractedBody.applyForce(force, tempNode.worldPosition);
+          });
+        };
+
+        _proto.start = function start() {
+          var _this7 = this;
+
+          AudioMgr.Instance.play("bg", {
+            playOnAwake: true,
+            loop: true,
+            volume: 0.4
+          });
+          this.currentLevel = 1;
+          this.usdtCount = 0;
+          this.myCoinCount = 0;
+          this.changeTag();
+          this.collectPos = [];
+          this.view["collectnox"].children.map(function (tempNode) {
+            _this7.collectPos.unshift(tempNode.worldPosition);
+
+            tempNode.active = false;
+          });
+          this.view["temporary"].children.map(function (tempNode) {
+            _this7.temporaryPos.push(tempNode.worldPosition);
+
+            tempNode.active = false;
+          });
+          this.view["temporary"].active = false;
+          this.view["Canvas/ui/stop"].on(Node.EventType.TOUCH_END, function (e) {
+            e.propagationStopped = true; // Tost("任务完成，奖励已到")
+
+            _this7.view["Canvas/gameOver"].active = true;
+            _this7.gameStop = true;
+          });
+          this.view["Canvas/gameOver/mask/close"].on(Node.EventType.TOUCH_END, function (e) {
+            e.propagationStopped = true; // Tost("任务完成，奖励已到")
+
+            _this7.view["Canvas/gameOver"].active = false;
+            _this7.gameStop = false;
+          });
+          this.view["Canvas/gameOver/mask/continue"].on(Node.EventType.TOUCH_END, function (e) {
+            e.propagationStopped = true; // Tost("任务完成，奖励已到")
+
+            _this7.view["Canvas/gameOver"].active = false;
+            _this7.gameStop = false;
+          });
+          this.view["Canvas/gameOver/mask/giveUp"].on(Node.EventType.TOUCH_END, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(e) {
+            return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+              while (1) switch (_context4.prev = _context4.next) {
+                case 0:
+                  e.propagationStopped = true;
+                  _context4.next = 3;
+                  return _this7.submitGameOver("false");
+
+                case 3:
+                  _this7.view["Canvas/gameOver"].active = false;
+                  _this7.currentLevel = 1;
+                  director.loadScene("start");
+
+                case 6:
+                case "end":
+                  return _context4.stop();
+              }
+            }, _callee4);
+          })));
+          this.view["Canvas/Over/falied/giveUp"].on(Node.EventType.TOUCH_END, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(e) {
+            return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+              while (1) switch (_context5.prev = _context5.next) {
+                case 0:
+                  e.propagationStopped = true;
+                  _context5.next = 3;
+                  return _this7.submitGameOver("false");
+
+                case 3:
+                  _this7.view["Canvas/Over"].active = false;
+                  _this7.currentLevel = 1;
+                  director.loadScene("start");
+
+                case 6:
+                case "end":
+                  return _context5.stop();
+              }
+            }, _callee5);
+          })));
+          this.view["Canvas/Over/falied/continue"].on(Node.EventType.TOUCH_END, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6(e) {
+            return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+              while (1) switch (_context6.prev = _context6.next) {
+                case 0:
+                  e.propagationStopped = true;
+
+                  if (!_this7.isGameOver) {
+                    _context6.next = 9;
+                    break;
+                  }
+
+                  _context6.next = 4;
+                  return _this7.submitGameOver("true");
+
+                case 4:
+                  _this7.view["Canvas/Over"].active = false;
+                  _this7.currentLevel = 1;
+                  director.loadScene("start");
+                  _context6.next = 16;
+                  break;
+
+                case 9:
+                  _this7.view["Canvas/Over"].active = false;
+                  _this7.temporaryItem = _this7.collectTiles.slice(0, _this7.collectTiles.length);
+
+                  _this7.temporaryItem.forEach(function (item) {
+                    var tileItem = item.getComponent(Item);
+                    tileItem.isBottom = false;
+                  });
+
+                  _this7.collectTiles = _this7.collectTiles.slice(_this7.collectTiles.length);
+                  _this7.view["temporary"].active = true;
+
+                  _this7.mvTemporary();
+
+                  _this7.gameStop = false;
+
+                case 16:
+                case "end":
+                  return _context6.stop();
+              }
+            }, _callee6);
+          })));
+          this.view["Canvas/Over/win/continue"].on(Node.EventType.TOUCH_END, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7(e) {
+            return _regeneratorRuntime().wrap(function _callee7$(_context7) {
+              while (1) switch (_context7.prev = _context7.next) {
+                case 0:
+                  e.propagationStopped = true;
+                  _context7.next = 3;
+                  return _this7.submitGameOver("true");
+
+                case 3:
+                  _this7.view["GameSpace/ItemSource"].removeAllChildren();
+
+                  _this7.view["Canvas/Over"].active = false;
+                  _this7.gameStop = false;
+                  _this7.collectTiles = []; // this.init(resPkg.GUI.urls.length, 8);
+                  // this.init2(this.InitializedData);
+
+                  _this7.currentLevel = 1;
+                  director.loadScene("start");
+
+                case 9:
+                case "end":
+                  return _context7.stop();
+              }
+            }, _callee7);
+          })));
+          this.view["Canvas/gameOver/mask/setting/sound/Toggle"].on("toggle", function (toggle) {
+            if (toggle.isChecked) {
+              AudioMgr.Instance.play("bg", {
+                playOnAwake: true,
+                loop: true,
+                volume: 0.4
+              });
+            } else {
+              AudioMgr.Instance.stop("bg");
+            }
+          });
+          this.view["Canvas/gameOver/mask/setting/music/Toggle"].on("toggle", function (toggle) {
+            if (toggle.isChecked) {
+              _this7.clickPlay = true;
+            } else {
+              _this7.clickPlay = false;
+            }
+          });
+          this.view["Canvas/ui/bottom/button"].on(Node.EventType.TOUCH_END, function (e) {
+            e.propagationStopped = true; // 开始讲数据已到上面;
+
+            if (_this7.stage1 == 0) {
+              _this7.view["Canvas/BulletFrame"].active = true;
+
+              _this7.view["Canvas/BulletFrame"].getComponent(BulletFrame).setType(1);
+
+              return;
+            }
+
+            if (_this7.collectTiles.length == 0) {
+              Tost("No items were collected");
+              return;
+            } else {
+              if (_this7.collectTiles.length > 3) {
+                //删除this.collectTiles 前3 个 节点存储搭配移动到临时节点
+                _this7.temporaryItem = _this7.collectTiles.slice(0, 3);
+                _this7.collectTiles = _this7.collectTiles.slice(3);
+              } else {
+                //将前3个移动到临时节点
+                _this7.temporaryItem = _this7.collectTiles.slice(0, _this7.collectTiles.length);
+                _this7.collectTiles = _this7.collectTiles.slice(_this7.collectTiles.length);
+              }
+
+              _this7.temporaryItem.forEach(function (item) {
+                var tileItem = item.getComponent(Item);
+                tileItem.isBottom = false;
+              });
+            }
+
+            _this7.view["temporary"].active = true;
+
+            _this7.mvTemporary();
+
+            _this7.stage1 = 0;
+
+            _this7.changeTag();
+          });
+          this.view["Canvas/ui/bottom/button1"].on(Node.EventType.TOUCH_END, function (e) {
+            e.propagationStopped = true;
+
+            if (_this7.stage2 == 0) {
+              _this7.view["Canvas/BulletFrame"].active = true;
+
+              _this7.view["Canvas/BulletFrame"].getComponent(BulletFrame).setType(2);
+
+              return;
+            }
+
+            if (_this7.collectTiles.length == 0) {
+              Tost("No items were collected");
+              return;
+            } else {
+              // 找到两个相同的物品
+              var sameItem = _this7.collectTiles.filter(function (a, i) {
+                return _this7.collectTiles.some(function (b, j) {
+                  return a.name == b.name && i != j;
+                });
+              });
+
+              if (sameItem.length > 0) {
+                var nodeName = sameItem[0].name; //从
+
+                var delNodeList = [];
+
+                for (var i = 0; i < _this7.allItem.length; ++i) {
+                  if (_this7.allItem[i].name == nodeName) {
+                    delNodeList.push.apply(delNodeList, _this7.allItem.splice(i, 1));
+                    break;
+                  }
+                } // 插入
+
+
+                delNodeList.forEach(function (item) {
+                  var bInsert = false;
+
+                  for (var i = _this7.collectTiles.length - 1; i >= 0; --i) {
+                    if (_this7.collectTiles[i].name == item.name) {
+                      item.getComponent(Item).destoryCollider();
+                      item.getComponent(Item).setUseGravity(false);
+
+                      _this7.collectTiles.splice(i + 1, 0, item);
+
+                      bInsert = true;
+                      break;
+                    }
+                  }
+
+                  if (!bInsert) {
+                    _this7.collectTiles.push(item);
+                  }
+                });
+
+                _this7.playAnimationStart(nodeName);
+              } else {
+                //没有找到就取this.collectTiles 中的第一个 
+                if (_this7.collectTiles.length < 6) {
+                  var _nodeName = _this7.collectTiles[0].name;
+                  var _delNodeList = [];
+
+                  for (var j = 0; j < 2; j++) {
+                    for (var i = 0; i < _this7.allItem.length; ++i) {
+                      if (_this7.allItem[i].name == _nodeName) {
+                        _delNodeList.push.apply(_delNodeList, _this7.allItem.splice(i, 1));
+
+                        break;
+                      }
+                    }
+                  } // 插入
+
+
+                  _delNodeList.forEach(function (item) {
+                    var bInsert = false;
+
+                    for (var i = _this7.collectTiles.length - 1; i >= 0; --i) {
+                      if (_this7.collectTiles[i].name == item.name) {
+                        item.getComponent(Item).destoryCollider();
+                        item.getComponent(Item).setUseGravity(false);
+
+                        _this7.collectTiles.splice(i + 1, 0, item);
+
+                        bInsert = true;
+                        break;
+                      }
+                    }
+
+                    if (!bInsert) {
+                      _this7.collectTiles.push(item);
+                    }
+                  });
+
+                  _this7.playAnimationStart(_nodeName);
+                } else {
+                  Tost("Insufficient vacancies");
+                  return;
+                }
+              }
+            }
+
+            _this7.stage2 = 0;
+
+            _this7.changeTag();
+          });
+          this.view["Canvas/ui/bottom/button2"].on(Node.EventType.TOUCH_END, function (e) {
+            e.propagationStopped = true;
+
+            if (_this7.stage3 == 0) {
+              _this7.view["Canvas/BulletFrame"].active = true;
+
+              _this7.view["Canvas/BulletFrame"].getComponent(BulletFrame).setType(3);
+
+              return;
+            }
+
+            _this7.stage3 = 1;
+
+            _this7.changeTag();
+          });
+          this.view["Canvas/BulletFrame/mask/Button"].on(Node.EventType.TOUCH_END, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8(e) {
+            var nodeTemp;
+            return _regeneratorRuntime().wrap(function _callee8$(_context8) {
+              while (1) switch (_context8.prev = _context8.next) {
+                case 0:
+                  e.propagationStopped = true;
+                  nodeTemp = _this7.view["Canvas/BulletFrame"].getComponent(BulletFrame);
+
+                  if (nodeTemp.type == 1) {
+                    _this7.stage1 = 1;
+                  } else if (nodeTemp.type == 2) {
+                    _this7.stage2 = 1;
+                  } else {
+                    _this7.stage3 = 1;
+                  }
+
+                  _context8.next = 5;
+                  return _this7.buyAndShareItem();
+
+                case 5:
+                  _this7.changeTag();
+
+                  nodeTemp.close();
+
+                case 7:
+                case "end":
+                  return _context8.stop();
+              }
+            }, _callee8);
+          })));
+        };
+
+        _proto.submitGameOver = /*#__PURE__*/function () {
+          var _submitGameOver = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9(res) {
+            return _regeneratorRuntime().wrap(function _callee9$(_context9) {
+              while (1) switch (_context9.prev = _context9.next) {
+                case 0:
+                  _context9.next = 2;
+                  return gameOver({
+                    game_user_id: this.gameDate.game_user_id,
+                    game_id: this.gameDate.game_id,
+                    result: res,
+                    inside_point: this.myCoinCount,
+                    inside_usdt: this.usdtCount,
+                    prop_one: this.gameDate.prop_one
+                  });
+
+                case 2:
+                  _context9.sent;
+
+                case 3:
+                case "end":
+                  return _context9.stop();
+              }
+            }, _callee9, this);
+          }));
+
+          function submitGameOver(_x7) {
+            return _submitGameOver.apply(this, arguments);
+          }
+
+          return submitGameOver;
+        }() //实现业务逻辑购买和转发
+        ;
+
+        _proto.buyAndShareItem = /*#__PURE__*/function () {
+          var _buyAndShareItem = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
+            var hash, _window, _window$TelegramGameP, result;
+
+            return _regeneratorRuntime().wrap(function _callee10$(_context10) {
+              while (1) switch (_context10.prev = _context10.next) {
+                case 0:
+                  if (!(this.gameDate.prop_one % 3 == 0)) {
+                    _context10.next = 7;
+                    break;
+                  }
+
+                  _context10.next = 3;
+                  return GameFiMgr.Instance.sendTransaction(0.00001);
+
+                case 3:
+                  hash = _context10.sent;
+                  console.log(hash);
+                  _context10.next = 8;
+                  break;
+
+                case 7:
+                  (_window = window) == null ? void 0 : (_window$TelegramGameP = _window.TelegramGameProxy) == null ? void 0 : _window$TelegramGameP.shareScore();
+                // const telegram = new TelegramWebAppContainer({ exposeInMainWorld: true });
+                // const shareUrl = 'https://game1-mocha.vercel.app';
+                // const shareText = '123232';
+                // `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`;
+                // await telegram.WebApp.openTelegramLink(shareText);
+                // Tost("分享逻辑");
+
+                case 8:
+                  _context10.next = 10;
+                  return buyPropProduct({
+                    game_id: this.gameDate.game_id,
+                    prop_one: this.gameDate.prop_one
+                  });
+
+                case 10:
+                  result = _context10.sent;
+
+                  if (result.code == 200) {
+                    this.gameDate.prop_one = result.result.prop_one;
+                  }
+
+                case 13:
+                case "end":
+                  return _context10.stop();
+              }
+            }, _callee10, this);
+          }));
+
+          function buyAndShareItem() {
+            return _buyAndShareItem.apply(this, arguments);
+          }
+
+          return buyAndShareItem;
+        }();
+
+        _proto.playAnimationStart = function playAnimationStart(nodeName) {
+          this.moveToRightPos(); //标记要删除的节点
+
+          var tmp = this.collectTiles.filter(function (a) {
+            return a.name == nodeName;
+          });
+
+          if (tmp.length == 3) {
+            for (var i = this.collectTiles.length - 1; i >= 0; --i) {
+              if (this.collectTiles[i].name == nodeName) {
+                var delNode = this.collectTiles[i];
+                delNode.getComponent(Item).removed = true;
+                this.collectTiles.splice(i, 1);
+                delNode.getComponent(Item).removedPos = tmp[1].worldPosition;
+                if (delNode == tmp[1]) //是否是最中央的
+                  delNode.getComponent(Item).playRmovedEff = true;
+              }
+            }
+          }
+
+          this.checkResult();
+        } // 移动到临时节点
+        ;
+
+        _proto.mvTemporary = function mvTemporary() {
+          var _this8 = this;
+
+          var tempArr = this.temporaryPos.map(function (item) {
+            return item.clone();
+          });
+          this.temporaryItem.map(function (tempNode, index) {
+            tempNode.getComponent(Item).isTemp = true;
+            var i = index % 3;
+            var layer = Math.floor(index / 3);
+
+            if (layer == 1) {
+              tempArr[i].y = tempArr[i].y * 2;
+            } else if (layer == 2) {
+              tempArr[i].y = tempArr[i].y * 3;
+            } else {
+              tempArr[i].y = tempArr[i].y * 1;
+            }
+
+            tween(tempNode).to(0.4, {
+              worldPosition: tempArr[i]
+            }).call(function () {
+              _this8.moveToRightPos();
+            }).start();
+          });
+        };
+
+        _proto.update = function update(dt) {};
+
+        return Main;
+      }(UICtrl), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "material", [_dec2], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "tag", [_dec3], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "add", [_dec4], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "nft", [_dec5], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "usdc", [_dec6], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "coin", [_dec7], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      })), _class2)) || _class));
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/Message.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UiMgr.ts'], function (exports) {
+  var _inheritsLoose, cclegacy, _decorator, Label, UIOpacity, tween, UICtrl;
+
+  return {
+    setters: [function (module) {
+      _inheritsLoose = module.inheritsLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      _decorator = module._decorator;
+      Label = module.Label;
+      UIOpacity = module.UIOpacity;
+      tween = module.tween;
+    }, function (module) {
+      UICtrl = module.UICtrl;
+    }],
+    execute: function () {
+      var _dec, _class;
+
+      cclegacy._RF.push({}, "51bc7fU8Y9MSYWWLBh/fEe+", "Message", undefined);
+
+      var ccclass = _decorator.ccclass,
+          property = _decorator.property;
+      var Message = exports('Message', (_dec = ccclass('Message'), _dec(_class = /*#__PURE__*/function (_UICtrl) {
+        _inheritsLoose(Message, _UICtrl);
+
+        function Message() {
+          return _UICtrl.apply(this, arguments) || this;
+        }
+
+        var _proto = Message.prototype;
+
+        _proto.onLoad = function onLoad() {
+          _UICtrl.prototype.onLoad.call(this);
+        };
+
+        _proto.setValue = function setValue(value, time) {
+          var _this = this;
+
+          this.node.getChildByName("Label").getComponent(Label).string = value;
+          var opComp = this.node.getComponent(UIOpacity);
+          tween(opComp).to(0.6, {
+            opacity: 255
+          }).start();
+          var timer = setTimeout(function () {
+            if (_this.node) {
+              _this.node.active = false;
+
+              _this.node.destroy();
+            }
+
+            clearTimeout(timer);
+          }, time ? time : 2000);
+        };
+
+        return Message;
+      }(UICtrl)) || _class));
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/request.ts", ['cc', './config.ts', './ResMgr.ts', './index2.ts', './storage.ts'], function (exports) {
+  var cclegacy, find, instantiate, baseUrl, baseUrl1, ResMgr, keyObject, getStorageData;
+  return {
+    setters: [function (module) {
+      cclegacy = module.cclegacy;
+      find = module.find;
+      instantiate = module.instantiate;
+    }, function (module) {
+      baseUrl = module.baseUrl;
+      baseUrl1 = module.baseUrl1;
+    }, function (module) {
+      ResMgr = module.ResMgr;
+    }, function (module) {
+      keyObject = module.keyObject;
+    }, function (module) {
+      getStorageData = module.getStorageData;
+    }],
+    execute: function () {
+      exports('default', request);
+
+      cclegacy._RF.push({}, "0b092YOWnRMHZj9czjoyStZ", "request", undefined);
+
+      var Ajax = /*#__PURE__*/function () {
+        function Ajax() {
+          this.xhr = void 0;
+          this.xhr = new XMLHttpRequest();
+          this.xhr.timeout = 50000;
+        }
+
+        var _proto = Ajax.prototype;
+
+        _proto.get = function get(url, data) {
+          var _this = this;
+
+          return new Promise(function (resolve, reject) {
+            var canvas = find("Canvas");
+            var Loading = ResMgr.Instance.getAsset("GUI", "component/Loading");
+            var child = instantiate(Loading);
+
+            if (!canvas.getChildByName("Loading")) {
+              canvas.addChild(child);
+            }
+
+            _this.xhr.onreadystatechange = function () {
+              if (_this.xhr.readyState == 4 && _this.xhr.status == 200) {
+                var res = JSON.parse(_this.xhr.responseText);
+                child.destroy();
+                resolve(res);
+              }
+            };
+
+            var urlString = baseUrl1 + url;
+
+            if (data) {
+              if (data) {
+                urlString = urlString + '?' + keyObject(data);
+              }
+            }
+
+            _this.xhr.open("GET", urlString, true);
+
+            var token = getStorageData("token");
+
+            if (token) {
+              _this.xhr.setRequestHeader("token", token);
+            }
+
+            _this.xhr.setRequestHeader("Content-type", "application/json;charset=utf-8");
+
+            _this.xhr.send();
+          });
+        };
+
+        _proto.post = function post(url, data) {
+          var _this2 = this;
+
+          return new Promise(function (resolve, reject) {
+            _this2.xhr.onreadystatechange = function () {
+              if (_this2.xhr.readyState == 4 && _this2.xhr.status == 201) {
+                var res = JSON.parse(_this2.xhr.responseText);
+                resolve(res);
+              }
+            };
+
+            var urlString = baseUrl1 + url;
+
+            _this2.xhr.open("POST", urlString, true);
+
+            var token = getStorageData("token");
+
+            if (token) {
+              _this2.xhr.setRequestHeader("token", token);
+            }
+
+            _this2.xhr.setRequestHeader("Content-type", "application/json;charset=utf-8");
+
+            _this2.xhr.send(JSON.stringify(data));
+          });
+        };
+
+        return Ajax;
+      }();
+
+      var ajax = exports('ajax', new Ajax());
+
+      function request(options) {
+        return new Promise(function (resolve, reject) {
+          var canvas = find("Canvas"); // const Loading = ResMgr.Instance.getAsset("GUI", "component/Loading");
+          // const child = instantiate(Loading);
+          // if (!canvas.getChildByName("Loading")) {
+          //   if (
+          //     options.url == "levelList/getAllClearLevelList"
+          //     || options.url == "levelList/levelToGame"
+          //     || options.url == "arenaUser/ticket"
+          //     // || options.url == "talentTreeUser/getAllTalentTree"
+          //   ) {
+          //     canvas.addChild(child);
+          //   }
+          // };
+
+          var xhr = new XMLHttpRequest();
+
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 201)) {
+              var res = JSON.parse(xhr.responseText); // child.destroy();
+
+              resolve(res);
+            }
+          };
+
+          xhr.timeout = options.timeout || 50000; // 5 seconds for timeout
+
+          var method = options.method || 'GET';
+          var url = baseUrl + options.url;
+          options.data = options.data;
+
+          if (method == 'get' || method == "GET") {
+            if (options.data) {
+              url = url + '?' + keyObject(options.data);
+            }
+
+            xhr.open(method, url, true);
+            var token = getStorageData("token");
+
+            if (token) {
+              xhr.setRequestHeader("token", token);
+            }
+
+            xhr.setRequestHeader("Content-type", "application/json;charset=utf-8");
+            xhr.send();
+          } else {
+            xhr.open(method, url, true);
+
+            var _token = getStorageData("token");
+
+            if (_token) {
+              xhr.setRequestHeader("token", _token);
+            }
+
+            xhr.setRequestHeader("Content-type", "application/json;charset=utf-8");
+
+            try {
+              xhr.send(JSON.stringify(options.data));
+            } catch (error) {
+              console.log(error);
+            }
+          }
+        });
+      }
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/ResMgr.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _inheritsLoose, cclegacy, assetManager, SpriteFrame, SpriteAtlas, Component;
+
+  return {
+    setters: [function (module) {
+      _inheritsLoose = module.inheritsLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      assetManager = module.assetManager;
+      SpriteFrame = module.SpriteFrame;
+      SpriteAtlas = module.SpriteAtlas;
+      Component = module.Component;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "87881hT1qdLp79gFpPIDHKe", "ResMgr", undefined);
+
+      var ResMgr = exports('ResMgr', /*#__PURE__*/function (_Component) {
+        _inheritsLoose(ResMgr, _Component);
+
+        function ResMgr() {
+          var _this;
+
+          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+
+          _this = _Component.call.apply(_Component, [this].concat(args)) || this;
+          _this.totalAb = 0;
+          _this.nowAb = 0;
+          _this.total = 0;
+          _this.now = 0;
+          _this.abBUnds = {};
+          _this.progressFun = null;
+          _this.endFun = null;
+          return _this;
+        }
+
+        var _proto = ResMgr.prototype;
+
+        _proto.onLoad = function onLoad() {
+          if (!ResMgr.Instance) {
+            ResMgr.Instance = this;
+          } else {
+            this.destroy();
+            return;
+          }
+        } //加载
+        ;
+
+        _proto.preloadResourcePkg = function preloadResourcePkg(resPkg, progressFun, endFun) {
+          var _this2 = this;
+
+          this.totalAb = 0;
+          this.nowAb = 0;
+          this.total = 0;
+          this.now = 0;
+          this.progressFun = progressFun;
+          this.endFun = endFun;
+
+          for (var key in resPkg) {
+            this.totalAb++;
+            this.total += resPkg[key].urls.length;
+          }
+
+          for (var _key2 in resPkg) {
+            this.loadAssetBundle(_key2, function () {
+              _this2.nowAb++;
+
+              if (_this2.nowAb == _this2.totalAb) {
+                //完了加载资源
+                _this2.loadAssetsInAssetBundle(resPkg);
+              }
+            });
+          }
+        } //预加载
+        ;
+
+        _proto.preloadResourcePkgAny = function preloadResourcePkgAny(resPkg, progressFun, endFun) {
+          var _this3 = this;
+
+          this.totalAb = 0;
+          this.nowAb = 0;
+          this.total = 0;
+          this.now = 0;
+          this.progressFun = progressFun;
+          this.endFun = endFun;
+
+          for (var key in resPkg) {
+            this.totalAb++;
+            this.total += resPkg[key].urls.length;
+          }
+
+          for (var _key3 in resPkg) {
+            assetManager.preloadAny(resPkg[_key3].urls, function (finished, total, item) {
+              _this3.nowAb++;
+              _this3.now += finished;
+
+              if (_this3.progressFun) {
+                _this3.progressFun(_this3.now, _this3.total);
+              }
+            }, function (err, data) {
+              if (err) {
+                console.error("预加载失败");
+              }
+
+              if (_this3.endFun) {
+                _this3.endFun();
+              }
+            });
+          }
+        };
+
+        _proto.loadAssetsInAssetBundle = function loadAssetsInAssetBundle(resPkg) {
+          var _this4 = this;
+
+          var _loop = function _loop(key) {
+            var urlSet = resPkg[key].urls;
+            urlSet.forEach(function (item) {
+              _this4.loadRes(_this4.abBUnds[key], item.path, item.assetType);
+            });
+          };
+
+          for (var key in resPkg) {
+            _loop(key);
+          }
+        };
+
+        _proto.loadRes = function loadRes(bundle, url, type) {
+          var _this5 = this;
+
+          bundle.load(url, type, function (err, asset) {
+            _this5.now++;
+            if (type.name == "SpriteAtlas") ;
+
+            if (err) {
+              console.error(err);
+              console.error("load res err " + url);
+            }
+
+            if (_this5.progressFun) {
+              _this5.progressFun(_this5.now, _this5.total);
+            }
+
+            if (_this5.now >= _this5.total) {
+              if (_this5.endFun) {
+                _this5.endFun();
+              }
+            }
+          });
+        };
+
+        _proto.loadAssetBundle = function loadAssetBundle(abName, callFun) {
+          var _this6 = this;
+
+          assetManager.loadBundle(abName, function (error, bundle) {
+            if (error) {
+              console.error("load loadAssetBundle error" + abName); // this.abBUnds[abName] = null;
+            } else {
+              _this6.abBUnds[abName] = bundle;
+            } // if (abName == "LSource") {
+            //     bundle.preloadDir("/", SpriteFrame);
+            //     bundle.preloadDir("/card", SpriteFrame);
+            //     bundle.preloadDir("/trainBuff", SpriteFrame);
+            // }
+
+
+            if (callFun) {
+              callFun();
+            }
+          });
+        } //释放内存
+        ;
+
+        _proto.unloadResourcePkg = function unloadResourcePkg(resPkg) {
+          for (var key in resPkg) {
+            assetManager.removeBundle(this.abBUnds[key]);
+          } // assetManager.releaseAll();
+
+        };
+
+        _proto.getAsset = function getAsset(abName, url, callBack) {
+          var bundle = assetManager.getBundle(abName);
+          if (!bundle) console.error("getBundle err !!!");
+          bundle.load(url, SpriteFrame, function (err, asset) {});
+          var data = bundle.get(url);
+
+          if (!data) {
+            bundle.load(url, SpriteFrame, function (err, asset) {
+              // console.log(asset);
+              callBack && callBack(asset);
+            });
+          }
+
+          return data;
+        };
+
+        _proto.getPlistAsset = function getPlistAsset(abName, url, callBack) {
+          var bundle = assetManager.getBundle(abName);
+          if (!bundle) console.error("getBundle err !!!");
+          bundle.load(url, SpriteAtlas, function (err, asset) {
+            if (err) {
+              console.error("load res err " + url);
+            }
+
+            callBack && callBack(asset);
+          });
+        };
+
+        return ResMgr;
+      }(Component));
+      ResMgr.Instance = void 0;
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/Start.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './ResMgr.ts', './GameFiMgr.ts', './index.ts', './UiMgr.ts', './index3.ts', './storage.ts'], function (exports) {
+  var _applyDecoratedDescriptor, _inheritsLoose, _initializerDefineProperty, _assertThisInitialized, _asyncToGenerator, _regeneratorRuntime, cclegacy, _decorator, Node, director, Label, ProgressBar, ResMgr, GameFiMgr, resPkg, UICtrl, getGameUserInfo, setStorageData;
+
+  return {
+    setters: [function (module) {
+      _applyDecoratedDescriptor = module.applyDecoratedDescriptor;
+      _inheritsLoose = module.inheritsLoose;
+      _initializerDefineProperty = module.initializerDefineProperty;
+      _assertThisInitialized = module.assertThisInitialized;
+      _asyncToGenerator = module.asyncToGenerator;
+      _regeneratorRuntime = module.regeneratorRuntime;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      _decorator = module._decorator;
+      Node = module.Node;
+      director = module.director;
+      Label = module.Label;
+      ProgressBar = module.ProgressBar;
+    }, function (module) {
+      ResMgr = module.ResMgr;
+    }, function (module) {
+      GameFiMgr = module.GameFiMgr;
+    }, function (module) {
+      resPkg = module.resPkg;
+    }, function (module) {
+      UICtrl = module.UICtrl;
+    }, function (module) {
+      getGameUserInfo = module.getGameUserInfo;
+    }, function (module) {
+      setStorageData = module.setStorageData;
+    }],
+    execute: function () {
+      var _dec, _dec2, _class, _class2, _descriptor;
+
+      cclegacy._RF.push({}, "56e26DaluZGB6fS6NaTOueI", "Start", undefined); // import { TelegramWebAppContainer } from '@telegram-web-app/core';
+
+
+      var ccclass = _decorator.ccclass,
+          property = _decorator.property;
+      var Start = exports('Start', (_dec = ccclass('Start'), _dec2 = property(Node), _dec(_class = (_class2 = /*#__PURE__*/function (_UICtrl) {
+        _inheritsLoose(Start, _UICtrl);
+
+        function Start() {
+          var _this;
+
+          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+
+          _this = _UICtrl.call.apply(_UICtrl, [this].concat(args)) || this;
+
+          _initializerDefineProperty(_this, "GameData", _descriptor, _assertThisInitialized(_this));
+
+          _this.isLogin = false;
+          _this.address = "";
+          return _this;
+        }
+
+        var _proto = Start.prototype;
+
+        _proto.onLoad = function onLoad() {
+          _UICtrl.prototype.onLoad.call(this);
+
+          director.addPersistRootNode(this.GameData);
+          this.initGameDatainfo();
+        };
+
+        _proto.initGameDatainfo = /*#__PURE__*/function () {
+          var _initGameDatainfo = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
+            var _this2 = this;
+
+            return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+              while (1) switch (_context4.prev = _context4.next) {
+                case 0:
+                  if (!GameFiMgr.Instance._bTonInit) {
+                    GameFiMgr.Instance.initTonConnect( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(info) {
+                      return _regeneratorRuntime().wrap(function _callee$(_context) {
+                        while (1) switch (_context.prev = _context.next) {
+                          case 0:
+                            console.log(info);
+
+                            if (info) {
+                              _this2.address = info.account.address; // console.log(info);
+                              // this.loginWeb();
+
+                              _this2.isLogin = true;
+                            } else {
+                              _this2.isLogin = true;
+                              _this2.address = GameFiMgr.Instance._cocosGameFi.wallet.account.address; // this.loginWeb();
+                            }
+
+                          case 2:
+                          case "end":
+                            return _context.stop();
+                        }
+                      }, _callee);
+                    })));
+                  } else {
+                    this.isLogin = true;
+                    this.address = GameFiMgr.Instance._cocosGameFi.wallet.account.address; // this.loginWeb();
+                  }
+
+                  this.view["Button"].on(Node.EventType.TOUCH_END, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(e) {
+                    var hash;
+                    return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+                      while (1) switch (_context2.prev = _context2.next) {
+                        case 0:
+                          e.propagationStopped = true;
+
+                          if (!_this2.isLogin) {
+                            _context2.next = 8;
+                            break;
+                          }
+
+                          _context2.next = 4;
+                          return GameFiMgr.Instance.sendTransaction(0.00001);
+
+                        case 4:
+                          hash = _context2.sent;
+                          console.log(hash); // director.loadScene("main");
+                          // const hash = await GameFiMgr.Instance.sendTransaction(0.00001);
+                          // console.log("hash", hash);
+
+                          _context2.next = 10;
+                          break;
+
+                        case 8:
+                          console.log(GameFiMgr.Instance);
+                          GameFiMgr.Instance.openModal();
+
+                        case 10:
+                        case "end":
+                          return _context2.stop();
+                      }
+                    }, _callee2);
+                  })));
+                  this.view["Button1"].on(Node.EventType.TOUCH_END, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(e) {
+                    var _window, _window$TelegramGameP;
+
+                    return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+                      while (1) switch (_context3.prev = _context3.next) {
+                        case 0:
+                          e.propagationStopped = true;
+                          (_window = window) == null ? void 0 : (_window$TelegramGameP = _window.TelegramGameProxy) == null ? void 0 : _window$TelegramGameP.shareScore();
+                        // const hash = await GameFiMgr.Instance.sendTransaction(0.00001);
+                        // console.log("hash", hash);
+
+                        case 2:
+                        case "end":
+                          return _context3.stop();
+                      }
+                    }, _callee3);
+                  })));
+
+                case 3:
+                case "end":
+                  return _context4.stop();
+              }
+            }, _callee4, this);
+          }));
+
+          function initGameDatainfo() {
+            return _initGameDatainfo.apply(this, arguments);
+          }
+
+          return initGameDatainfo;
+        }();
+
+        _proto.loginWeb = /*#__PURE__*/function () {
+          var _loginWeb = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
+            var result;
+            return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+              while (1) switch (_context5.prev = _context5.next) {
+                case 0:
+                  _context5.next = 2;
+                  return getGameUserInfo({
+                    user_id_wallet: this.address // reference:1
+
+                  });
+
+                case 2:
+                  result = _context5.sent;
+
+                  if (result.code == 200) {
+                    // console.log(result);
+                    this.saveResult(result.result);
+                  }
+
+                case 4:
+                case "end":
+                  return _context5.stop();
+              }
+            }, _callee5, this);
+          }));
+
+          function loginWeb() {
+            return _loginWeb.apply(this, arguments);
+          }
+
+          return loginWeb;
+        }();
+
+        _proto.saveResult = function saveResult(data) {
+          setStorageData("user_info", data);
+          this.view["bitcone/eggCoinGroup/Label"].getComponent(Label).string = data.points;
+          this.view["bitcone/usdcCoinGroup/Label"].getComponent(Label).string = data.usdt_coin;
+        };
+
+        _proto.start = function start() {
+          var _this3 = this;
+
+          this.isLogin = false;
+          ResMgr.Instance.preloadResourcePkg(resPkg, function (now, total) {
+            var Progress = _this3.view["pbar/ProgressBar"];
+            Progress.getComponent(ProgressBar).progress = now / total;
+          }, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
+            return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+              while (1) switch (_context6.prev = _context6.next) {
+                case 0:
+                  try {
+                    _this3.view["Button"].active = true; // debugger
+                    // AudioMgr.Instance.play("pass", {
+                    //     loop: true,
+                    //     playOnAwake: true,
+                    //     volume: 0.4,
+                    // })
+                  } catch (error) {
+                    console.log(error);
+                  }
+
+                case 1:
+                case "end":
+                  return _context6.stop();
+              }
+            }, _callee6);
+          })));
+        };
+
+        _proto.update = function update(deltaTime) {};
+
+        return Start;
+      }(UICtrl), _descriptor = _applyDecoratedDescriptor(_class2.prototype, "GameData", [_dec2], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return null;
+        }
+      }), _class2)) || _class));
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/storage.ts", ['cc'], function (exports) {
+  var cclegacy, sys;
+  return {
+    setters: [function (module) {
+      cclegacy = module.cclegacy;
+      sys = module.sys;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "28fccWncOFOiruMdj4PtvaN", "storage", undefined);
+
+      var setStorageData = exports('setStorageData', function setStorageData(key, value) {
+        sys.localStorage.setItem(key, JSON.stringify(value));
+      });
+      var getStorageData = exports('getStorageData', function getStorageData(key) {
+        if (sys.localStorage.getItem(key)) {
+          return JSON.parse(sys.localStorage.getItem(key));
+        } else {
+          return null;
+        }
+      });
+      var removeStorageData = exports('removeStorageData', function removeStorageData(key) {
+        sys.localStorage.removeItem(key);
+      });
+      var clearStorageData = exports('clearStorageData', function clearStorageData() {
+        sys.localStorage.clear();
+      });
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/type.ts", ['cc'], function () {
+  var cclegacy;
+  return {
+    setters: [function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "c05a00xUqVKorvfx9AXhENp", "type", undefined);
+
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/UiMgr.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _inheritsLoose, cclegacy, Button, Component;
+
+  return {
+    setters: [function (module) {
+      _inheritsLoose = module.inheritsLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      Button = module.Button;
+      Component = module.Component;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "0347bkkmf9Lwpk/Cdl/7Fvq", "UiMgr", undefined);
+
+      var UICtrl = exports('UICtrl', /*#__PURE__*/function (_Component) {
+        _inheritsLoose(UICtrl, _Component);
+
+        function UICtrl() {
+          var _this;
+
+          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+
+          _this = _Component.call.apply(_Component, [this].concat(args)) || this;
+          _this.view = {};
+          return _this;
+        }
+
+        var _proto = UICtrl.prototype;
+
+        _proto.onLoad = function onLoad() {
+          this.load_all_node(this.node, "");
+        };
+
+        _proto.load_all_node = function load_all_node(root, path) {
+          for (var i = 0; i < root.children.length; i++) {
+            this.view[path + root.children[i].name] = root.children[i];
+            this.load_all_node(root.children[i], path + root.children[i].name + "/");
+          }
+        };
+
+        _proto.addButtonListener = function addButtonListener(name, self, callBack) {
+          var node = this.view[name];
+
+          if (node) {
+            var button = node.getComponent(Button);
+
+            if (button) {
+              node.on(Button.EventType.CLICK, callBack, self);
+            } else {
+              console.error(name + "Component not found");
+            }
+          } else {
+            console.error(name + "node not found");
+            return;
+          }
+        };
+
+        return UICtrl;
+      }(Component));
+
+      cclegacy._RF.pop();
+    }
+  };
+});
 
 (function(r) {
   r('virtual:///prerequisite-imports/main', 'chunks:///_virtual/main'); 

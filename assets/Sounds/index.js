@@ -1,4 +1,8 @@
-System.register("chunks:///_virtual/Sounds",[],(function(){return{execute:function(){}}}));
+System.register("chunks:///_virtual/Sounds", [], function () {
+  return {
+    execute: function () {}
+  };
+});
 
 (function(r) {
   r('virtual:///prerequisite-imports/Sounds', 'chunks:///_virtual/Sounds'); 
