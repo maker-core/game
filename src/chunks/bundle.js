@@ -3123,169 +3123,7 @@ System.register("chunks:///_virtual/hmac.js", ['./cjs-loader.mjs', './core.js'],
   };
 });
 
-System.register("chunks:///_virtual/index.js", ['./cjs-loader.mjs', './core.js', './x64-core.js', './lib-typedarrays.js', './enc-utf16.js', './enc-base64.js', './enc-base64url.js', './md5.js', './sha1.js', './sha256.js', './sha224.js', './sha512.js', './sha384.js', './sha3.js', './ripemd160.js', './hmac.js', './pbkdf2.js', './evpkdf.js', './cipher-core.js', './mode-cfb.js', './mode-ctr.js', './mode-ctr-gladman.js', './mode-ofb.js', './mode-ecb.js', './pad-ansix923.js', './pad-iso10126.js', './pad-iso97971.js', './pad-zeropadding.js', './pad-nopadding.js', './format-hex.js', './aes.js', './tripledes.js', './rc4.js', './rabbit.js', './rabbit-legacy.js', './blowfish.js'], function (exports, module) {
-  var loader, __cjsMetaURL$1, __cjsMetaURL$2, __cjsMetaURL$3, __cjsMetaURL$4, __cjsMetaURL$5, __cjsMetaURL$6, __cjsMetaURL$7, __cjsMetaURL$8, __cjsMetaURL$9, __cjsMetaURL$a, __cjsMetaURL$b, __cjsMetaURL$c, __cjsMetaURL$d, __cjsMetaURL$e, __cjsMetaURL$f, __cjsMetaURL$g, __cjsMetaURL$h, __cjsMetaURL$i, __cjsMetaURL$j, __cjsMetaURL$k, __cjsMetaURL$l, __cjsMetaURL$m, __cjsMetaURL$n, __cjsMetaURL$o, __cjsMetaURL$p, __cjsMetaURL$q, __cjsMetaURL$r, __cjsMetaURL$s, __cjsMetaURL$t, __cjsMetaURL$u, __cjsMetaURL$v, __cjsMetaURL$w, __cjsMetaURL$x, __cjsMetaURL$y, __cjsMetaURL$z;
-  return {
-    setters: [function (module) {
-      loader = module.default;
-    }, function (module) {
-      __cjsMetaURL$1 = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$2 = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$3 = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$4 = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$5 = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$6 = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$7 = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$8 = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$9 = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$a = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$b = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$c = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$d = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$e = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$f = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$g = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$h = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$i = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$j = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$k = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$l = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$m = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$n = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$o = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$p = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$q = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$r = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$s = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$t = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$u = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$v = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$w = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$x = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$y = module.__cjsMetaURL;
-    }, function (module) {
-      __cjsMetaURL$z = module.__cjsMetaURL;
-    }],
-    execute: function () {
-      exports('default', void 0);
-      let _cjsExports;
-      const __cjsMetaURL = exports('__cjsMetaURL', module.meta.url);
-      loader.define(__cjsMetaURL, function (exports$1, require, module, __filename, __dirname) {
-        (function (root, factory, undef) {
-          if (typeof exports$1 === "object") {
-            // CommonJS
-            module.exports = exports$1 = factory(require("./core"), require("./x64-core"), require("./lib-typedarrays"), require("./enc-utf16"), require("./enc-base64"), require("./enc-base64url"), require("./md5"), require("./sha1"), require("./sha256"), require("./sha224"), require("./sha512"), require("./sha384"), require("./sha3"), require("./ripemd160"), require("./hmac"), require("./pbkdf2"), require("./evpkdf"), require("./cipher-core"), require("./mode-cfb"), require("./mode-ctr"), require("./mode-ctr-gladman"), require("./mode-ofb"), require("./mode-ecb"), require("./pad-ansix923"), require("./pad-iso10126"), require("./pad-iso97971"), require("./pad-zeropadding"), require("./pad-nopadding"), require("./format-hex"), require("./aes"), require("./tripledes"), require("./rc4"), require("./rabbit"), require("./rabbit-legacy"), require("./blowfish"));
-          } else if (typeof define === "function" && define.amd) {
-            // AMD
-            define(["./core", "./x64-core", "./lib-typedarrays", "./enc-utf16", "./enc-base64", "./enc-base64url", "./md5", "./sha1", "./sha256", "./sha224", "./sha512", "./sha384", "./sha3", "./ripemd160", "./hmac", "./pbkdf2", "./evpkdf", "./cipher-core", "./mode-cfb", "./mode-ctr", "./mode-ctr-gladman", "./mode-ofb", "./mode-ecb", "./pad-ansix923", "./pad-iso10126", "./pad-iso97971", "./pad-zeropadding", "./pad-nopadding", "./format-hex", "./aes", "./tripledes", "./rc4", "./rabbit", "./rabbit-legacy", "./blowfish"], factory);
-          } else {
-            // Global (browser)
-            root.CryptoJS = factory(root.CryptoJS);
-          }
-        })(this, function (CryptoJS) {
-          return CryptoJS;
-        });
-
-        // #endregion ORIGINAL CODE
-
-        _cjsExports = exports('default', module.exports);
-      }, () => ({
-        './core': __cjsMetaURL$1,
-        './x64-core': __cjsMetaURL$2,
-        './lib-typedarrays': __cjsMetaURL$3,
-        './enc-utf16': __cjsMetaURL$4,
-        './enc-base64': __cjsMetaURL$5,
-        './enc-base64url': __cjsMetaURL$6,
-        './md5': __cjsMetaURL$7,
-        './sha1': __cjsMetaURL$8,
-        './sha256': __cjsMetaURL$9,
-        './sha224': __cjsMetaURL$a,
-        './sha512': __cjsMetaURL$b,
-        './sha384': __cjsMetaURL$c,
-        './sha3': __cjsMetaURL$d,
-        './ripemd160': __cjsMetaURL$e,
-        './hmac': __cjsMetaURL$f,
-        './pbkdf2': __cjsMetaURL$g,
-        './evpkdf': __cjsMetaURL$h,
-        './cipher-core': __cjsMetaURL$i,
-        './mode-cfb': __cjsMetaURL$j,
-        './mode-ctr': __cjsMetaURL$k,
-        './mode-ctr-gladman': __cjsMetaURL$l,
-        './mode-ofb': __cjsMetaURL$m,
-        './mode-ecb': __cjsMetaURL$n,
-        './pad-ansix923': __cjsMetaURL$o,
-        './pad-iso10126': __cjsMetaURL$p,
-        './pad-iso97971': __cjsMetaURL$q,
-        './pad-zeropadding': __cjsMetaURL$r,
-        './pad-nopadding': __cjsMetaURL$s,
-        './format-hex': __cjsMetaURL$t,
-        './aes': __cjsMetaURL$u,
-        './tripledes': __cjsMetaURL$v,
-        './rc4': __cjsMetaURL$w,
-        './rabbit': __cjsMetaURL$x,
-        './rabbit-legacy': __cjsMetaURL$y,
-        './blowfish': __cjsMetaURL$z
-      }));
-    }
-  };
-});
-
-System.register("chunks:///_virtual/index.mjs_cjs=&original=.js", ['./index.js', './cjs-loader.mjs'], function (exports, module) {
-  var __cjsMetaURL, loader;
-  return {
-    setters: [function (module) {
-      __cjsMetaURL = module.__cjsMetaURL;
-      var _setter = {};
-      _setter.__cjsMetaURL = module.__cjsMetaURL;
-      _setter.default = module.default;
-      exports(_setter);
-    }, function (module) {
-      loader = module.default;
-    }],
-    execute: function () {
-      // I am the facade module who provides access to the CommonJS module './index.js'~
-      if (!__cjsMetaURL) {
-        loader.throwInvalidWrapper('./index.js', module.meta.url);
-      }
-      loader.require(__cjsMetaURL);
-    }
-  };
-});
-
-System.register("chunks:///_virtual/index2.js", ['./chunk-MQXBDTVK.js'], function (exports) {
+System.register("chunks:///_virtual/index.js", ['./chunk-MQXBDTVK.js'], function (exports) {
   var __privateAdd, __privateGet, __privateSet, __privateMethod;
   return {
     setters: [function (module) {
@@ -6264,6 +6102,168 @@ System.register("chunks:///_virtual/index2.js", ['./chunk-MQXBDTVK.js'], functio
         }
       });
       _TelegramWebAppContainer_webApp = /* @__PURE__ */new WeakMap(), _TelegramWebAppContainer_webView = /* @__PURE__ */new WeakMap();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/index.mjs_cjs=&original=.js", ['./index2.js', './cjs-loader.mjs'], function (exports, module) {
+  var __cjsMetaURL, loader;
+  return {
+    setters: [function (module) {
+      __cjsMetaURL = module.__cjsMetaURL;
+      var _setter = {};
+      _setter.__cjsMetaURL = module.__cjsMetaURL;
+      _setter.default = module.default;
+      exports(_setter);
+    }, function (module) {
+      loader = module.default;
+    }],
+    execute: function () {
+      // I am the facade module who provides access to the CommonJS module './index.js'~
+      if (!__cjsMetaURL) {
+        loader.throwInvalidWrapper('./index.js', module.meta.url);
+      }
+      loader.require(__cjsMetaURL);
+    }
+  };
+});
+
+System.register("chunks:///_virtual/index2.js", ['./cjs-loader.mjs', './core.js', './x64-core.js', './lib-typedarrays.js', './enc-utf16.js', './enc-base64.js', './enc-base64url.js', './md5.js', './sha1.js', './sha256.js', './sha224.js', './sha512.js', './sha384.js', './sha3.js', './ripemd160.js', './hmac.js', './pbkdf2.js', './evpkdf.js', './cipher-core.js', './mode-cfb.js', './mode-ctr.js', './mode-ctr-gladman.js', './mode-ofb.js', './mode-ecb.js', './pad-ansix923.js', './pad-iso10126.js', './pad-iso97971.js', './pad-zeropadding.js', './pad-nopadding.js', './format-hex.js', './aes.js', './tripledes.js', './rc4.js', './rabbit.js', './rabbit-legacy.js', './blowfish.js'], function (exports, module) {
+  var loader, __cjsMetaURL$1, __cjsMetaURL$2, __cjsMetaURL$3, __cjsMetaURL$4, __cjsMetaURL$5, __cjsMetaURL$6, __cjsMetaURL$7, __cjsMetaURL$8, __cjsMetaURL$9, __cjsMetaURL$a, __cjsMetaURL$b, __cjsMetaURL$c, __cjsMetaURL$d, __cjsMetaURL$e, __cjsMetaURL$f, __cjsMetaURL$g, __cjsMetaURL$h, __cjsMetaURL$i, __cjsMetaURL$j, __cjsMetaURL$k, __cjsMetaURL$l, __cjsMetaURL$m, __cjsMetaURL$n, __cjsMetaURL$o, __cjsMetaURL$p, __cjsMetaURL$q, __cjsMetaURL$r, __cjsMetaURL$s, __cjsMetaURL$t, __cjsMetaURL$u, __cjsMetaURL$v, __cjsMetaURL$w, __cjsMetaURL$x, __cjsMetaURL$y, __cjsMetaURL$z;
+  return {
+    setters: [function (module) {
+      loader = module.default;
+    }, function (module) {
+      __cjsMetaURL$1 = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$2 = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$3 = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$4 = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$5 = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$6 = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$7 = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$8 = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$9 = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$a = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$b = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$c = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$d = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$e = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$f = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$g = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$h = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$i = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$j = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$k = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$l = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$m = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$n = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$o = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$p = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$q = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$r = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$s = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$t = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$u = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$v = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$w = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$x = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$y = module.__cjsMetaURL;
+    }, function (module) {
+      __cjsMetaURL$z = module.__cjsMetaURL;
+    }],
+    execute: function () {
+      exports('default', void 0);
+      let _cjsExports;
+      const __cjsMetaURL = exports('__cjsMetaURL', module.meta.url);
+      loader.define(__cjsMetaURL, function (exports$1, require, module, __filename, __dirname) {
+        (function (root, factory, undef) {
+          if (typeof exports$1 === "object") {
+            // CommonJS
+            module.exports = exports$1 = factory(require("./core"), require("./x64-core"), require("./lib-typedarrays"), require("./enc-utf16"), require("./enc-base64"), require("./enc-base64url"), require("./md5"), require("./sha1"), require("./sha256"), require("./sha224"), require("./sha512"), require("./sha384"), require("./sha3"), require("./ripemd160"), require("./hmac"), require("./pbkdf2"), require("./evpkdf"), require("./cipher-core"), require("./mode-cfb"), require("./mode-ctr"), require("./mode-ctr-gladman"), require("./mode-ofb"), require("./mode-ecb"), require("./pad-ansix923"), require("./pad-iso10126"), require("./pad-iso97971"), require("./pad-zeropadding"), require("./pad-nopadding"), require("./format-hex"), require("./aes"), require("./tripledes"), require("./rc4"), require("./rabbit"), require("./rabbit-legacy"), require("./blowfish"));
+          } else if (typeof define === "function" && define.amd) {
+            // AMD
+            define(["./core", "./x64-core", "./lib-typedarrays", "./enc-utf16", "./enc-base64", "./enc-base64url", "./md5", "./sha1", "./sha256", "./sha224", "./sha512", "./sha384", "./sha3", "./ripemd160", "./hmac", "./pbkdf2", "./evpkdf", "./cipher-core", "./mode-cfb", "./mode-ctr", "./mode-ctr-gladman", "./mode-ofb", "./mode-ecb", "./pad-ansix923", "./pad-iso10126", "./pad-iso97971", "./pad-zeropadding", "./pad-nopadding", "./format-hex", "./aes", "./tripledes", "./rc4", "./rabbit", "./rabbit-legacy", "./blowfish"], factory);
+          } else {
+            // Global (browser)
+            root.CryptoJS = factory(root.CryptoJS);
+          }
+        })(this, function (CryptoJS) {
+          return CryptoJS;
+        });
+
+        // #endregion ORIGINAL CODE
+
+        _cjsExports = exports('default', module.exports);
+      }, () => ({
+        './core': __cjsMetaURL$1,
+        './x64-core': __cjsMetaURL$2,
+        './lib-typedarrays': __cjsMetaURL$3,
+        './enc-utf16': __cjsMetaURL$4,
+        './enc-base64': __cjsMetaURL$5,
+        './enc-base64url': __cjsMetaURL$6,
+        './md5': __cjsMetaURL$7,
+        './sha1': __cjsMetaURL$8,
+        './sha256': __cjsMetaURL$9,
+        './sha224': __cjsMetaURL$a,
+        './sha512': __cjsMetaURL$b,
+        './sha384': __cjsMetaURL$c,
+        './sha3': __cjsMetaURL$d,
+        './ripemd160': __cjsMetaURL$e,
+        './hmac': __cjsMetaURL$f,
+        './pbkdf2': __cjsMetaURL$g,
+        './evpkdf': __cjsMetaURL$h,
+        './cipher-core': __cjsMetaURL$i,
+        './mode-cfb': __cjsMetaURL$j,
+        './mode-ctr': __cjsMetaURL$k,
+        './mode-ctr-gladman': __cjsMetaURL$l,
+        './mode-ofb': __cjsMetaURL$m,
+        './mode-ecb': __cjsMetaURL$n,
+        './pad-ansix923': __cjsMetaURL$o,
+        './pad-iso10126': __cjsMetaURL$p,
+        './pad-iso97971': __cjsMetaURL$q,
+        './pad-zeropadding': __cjsMetaURL$r,
+        './pad-nopadding': __cjsMetaURL$s,
+        './format-hex': __cjsMetaURL$t,
+        './aes': __cjsMetaURL$u,
+        './tripledes': __cjsMetaURL$v,
+        './rc4': __cjsMetaURL$w,
+        './rabbit': __cjsMetaURL$x,
+        './rabbit-legacy': __cjsMetaURL$y,
+        './blowfish': __cjsMetaURL$z
+      }));
     }
   };
 });
