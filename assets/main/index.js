@@ -772,86 +772,7 @@ System.register("chunks:///_virtual/index.ts", ['cc'], function (exports) {
   };
 });
 
-System.register("chunks:///_virtual/index2.ts", ['cc', './request.ts'], function (exports) {
-  var cclegacy, request;
-  return {
-    setters: [function (module) {
-      cclegacy = module.cclegacy;
-    }, function (module) {
-      request = module.default;
-    }],
-    execute: function () {
-      exports({
-        buyPropProduct: buyPropProduct,
-        gameOver: gameOver,
-        generateModelSorting: generateModelSorting,
-        getGameUserInfo: getGameUserInfo,
-        getPrice: getPrice,
-        openNewGame: openNewGame,
-        postTest: postTest
-      });
-      cclegacy._RF.push({}, "c657fQy5bpLFLenBmom+S00", "index", undefined);
-      function getPrice(params) {
-        return request({
-          data: params || null,
-          method: "GET",
-          url: "getPrice"
-        });
-      }
-      function postTest(params) {
-        return request({
-          data: params || null,
-          method: "POST",
-          url: "postTest"
-        });
-      }
-      //rule/generateModelSorting
-      function generateModelSorting(params) {
-        return request({
-          data: params || null,
-          method: "GET",
-          url: "rule/generateModelSorting"
-        });
-      }
-      //getGameUserInfo?
-      function getGameUserInfo(params) {
-        return request({
-          data: params || null,
-          method: "GET",
-          url: "gameUser/getGameUserInfo"
-        });
-      }
-      //http://192.168.31.109:3000/game/openNewGame
-      function openNewGame(params) {
-        return request({
-          data: params || null,
-          method: "GET",
-          url: "game/openNewGame"
-        });
-      }
-      //game/buyPropProduct?game_id=f25fdbfc-adae-4ac4-a893-91f1ecf565e9&prop_one=0
-      function buyPropProduct(params) {
-        return request({
-          data: params || null,
-          method: "GET",
-          url: "game/buyPropProduct"
-        });
-      }
-      // 结算 /game/gameOver?game_user_id=39cf03ec-c893-456a-b9fd-da5035a921fb&game_id=3d5cb2a7-ddd5-45fa-9b1e-a3abd5fe2d84&result=true&inside_point=5&inside_usdt=10&prop_one=2
-
-      function gameOver(params) {
-        return request({
-          data: params || null,
-          method: "POST",
-          url: "game/gameOver"
-        });
-      }
-      cclegacy._RF.pop();
-    }
-  };
-});
-
-System.register("chunks:///_virtual/index3.ts", ['cc', './moment.mjs_cjs=&original=.js', './moment.js'], function (exports) {
+System.register("chunks:///_virtual/index2.ts", ['cc', './moment.mjs_cjs=&original=.js', './moment.js'], function (exports) {
   var cclegacy, _cjsExports;
   return {
     setters: [function (module) {
@@ -933,6 +854,85 @@ System.register("chunks:///_virtual/index3.ts", ['cc', './moment.mjs_cjs=&origin
   };
 });
 
+System.register("chunks:///_virtual/index3.ts", ['cc', './request.ts'], function (exports) {
+  var cclegacy, request;
+  return {
+    setters: [function (module) {
+      cclegacy = module.cclegacy;
+    }, function (module) {
+      request = module.default;
+    }],
+    execute: function () {
+      exports({
+        buyPropProduct: buyPropProduct,
+        gameOver: gameOver,
+        generateModelSorting: generateModelSorting,
+        getGameUserInfo: getGameUserInfo,
+        getPrice: getPrice,
+        openNewGame: openNewGame,
+        postTest: postTest
+      });
+      cclegacy._RF.push({}, "c657fQy5bpLFLenBmom+S00", "index", undefined);
+      function getPrice(params) {
+        return request({
+          data: params || null,
+          method: "GET",
+          url: "getPrice"
+        });
+      }
+      function postTest(params) {
+        return request({
+          data: params || null,
+          method: "POST",
+          url: "postTest"
+        });
+      }
+      //rule/generateModelSorting
+      function generateModelSorting(params) {
+        return request({
+          data: params || null,
+          method: "GET",
+          url: "rule/generateModelSorting"
+        });
+      }
+      //getGameUserInfo?
+      function getGameUserInfo(params) {
+        return request({
+          data: params || null,
+          method: "GET",
+          url: "gameUser/getGameUserInfo"
+        });
+      }
+      //http://192.168.31.109:3000/game/openNewGame
+      function openNewGame(params) {
+        return request({
+          data: params || null,
+          method: "GET",
+          url: "game/openNewGame"
+        });
+      }
+      //game/buyPropProduct?game_id=f25fdbfc-adae-4ac4-a893-91f1ecf565e9&prop_one=0
+      function buyPropProduct(params) {
+        return request({
+          data: params || null,
+          method: "GET",
+          url: "game/buyPropProduct"
+        });
+      }
+      // 结算 /game/gameOver?game_user_id=39cf03ec-c893-456a-b9fd-da5035a921fb&game_id=3d5cb2a7-ddd5-45fa-9b1e-a3abd5fe2d84&result=true&inside_point=5&inside_usdt=10&prop_one=2
+
+      function gameOver(params) {
+        return request({
+          data: params || null,
+          method: "POST",
+          url: "game/gameOver"
+        });
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
 System.register("chunks:///_virtual/Item.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _applyDecoratedDescriptor, _initializerDefineProperty, cclegacy, Vec3, _decorator, Component, RigidBody, Collider;
   return {
@@ -1008,14 +1008,14 @@ System.register("chunks:///_virtual/Item.ts", ['./rollupPluginModLoBabelHelpers.
   };
 });
 
-System.register("chunks:///_virtual/main", ['./debug-view-runtime-control.ts', './BulletFrame.ts', './Message.ts', './config.ts', './index.ts', './GameData.ts', './Item.ts', './Main.ts', './Start.ts', './AudioMgr.ts', './EventMgr.ts', './GameFiMgr.ts', './ResMgr.ts', './UiMgr.ts', './app.ts', './index3.ts', './request.ts', './storage.ts', './type.ts', './index2.ts'], function () {
+System.register("chunks:///_virtual/main", ['./debug-view-runtime-control.ts', './BulletFrame.ts', './Message.ts', './config.ts', './index.ts', './GameData.ts', './Item.ts', './Main.ts', './Start.ts', './AudioMgr.ts', './EventMgr.ts', './GameFiMgr.ts', './ResMgr.ts', './UiMgr.ts', './app.ts', './index2.ts', './request.ts', './storage.ts', './type.ts', './index3.ts'], function () {
   return {
     setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
     execute: function () {}
   };
 });
 
-System.register("chunks:///_virtual/Main.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UiMgr.ts', './index.ts', './ResMgr.ts', './AudioMgr.ts', './Item.ts', './index3.ts', './moment.mjs_cjs=&original=.js', './app.ts', './BulletFrame.ts', './index2.ts', './index2.js', './index.mjs_cjs=&original=.js', './storage.ts', './GameFiMgr.ts', './index.js', './moment.js'], function (exports) {
+System.register("chunks:///_virtual/Main.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './UiMgr.ts', './index.ts', './ResMgr.ts', './AudioMgr.ts', './Item.ts', './index2.ts', './moment.mjs_cjs=&original=.js', './app.ts', './BulletFrame.ts', './index3.ts', './index2.js', './index.mjs_cjs=&original=.js', './storage.ts', './GameFiMgr.ts', './index.js', './moment.js'], function (exports) {
   var _applyDecoratedDescriptor, _initializerDefineProperty, cclegacy, Material, SpriteFrame, Prefab, _decorator, sp, Sprite, Label, game, input, Input, Camera, geometry, PhysicsSystem, MeshRenderer, Tween, Vec3, tween, instantiate, RigidBody, Node, director, UICtrl, resPkg, ResMgr, AudioMgr, Item, getRandom, countdown, Tost, BulletFrame, generateModelSorting, openNewGame, gameOver, buyPropProduct, TelegramWebAppContainer, getStorageData, GameFiMgr, _cjsExports, _cjsExports$1;
   return {
     setters: [function (module) {
@@ -2006,7 +2006,7 @@ System.register("chunks:///_virtual/Message.ts", ['cc', './UiMgr.ts'], function 
   };
 });
 
-System.register("chunks:///_virtual/request.ts", ['cc', './config.ts', './ResMgr.ts', './index3.ts', './storage.ts'], function (exports) {
+System.register("chunks:///_virtual/request.ts", ['cc', './config.ts', './ResMgr.ts', './index2.ts', './storage.ts'], function (exports) {
   var cclegacy, find, instantiate, baseUrl, baseUrl1, ResMgr, keyObject, getStorageData;
   return {
     setters: [function (module) {
@@ -2306,7 +2306,7 @@ System.register("chunks:///_virtual/ResMgr.ts", ['cc'], function (exports) {
   };
 });
 
-System.register("chunks:///_virtual/Start.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './ResMgr.ts', './GameFiMgr.ts', './index.ts', './UiMgr.ts', './index2.js', './index2.ts', './storage.ts'], function (exports) {
+System.register("chunks:///_virtual/Start.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './ResMgr.ts', './GameFiMgr.ts', './index.ts', './UiMgr.ts', './index2.js', './index3.ts', './storage.ts'], function (exports) {
   var _applyDecoratedDescriptor, _initializerDefineProperty, cclegacy, Node, _decorator, director, Label, ProgressBar, ResMgr, GameFiMgr, resPkg, UICtrl, TelegramWebAppContainer, getGameUserInfo, setStorageData;
   return {
     setters: [function (module) {
@@ -2395,14 +2395,23 @@ System.register("chunks:///_virtual/Start.ts", ['./rollupPluginModLoBabelHelpers
             const telegram = new TelegramWebAppContainer({
               exposeInMainWorld: true
             });
+            console.log(telegram);
             const shareText = '123232';
             await telegram.WebApp.openTelegramLink(shareText);
-            window?.TelegramGameProxy?.shareScore();
+            // (window as any)?.TelegramGameProxy?.shareScore()
             // const hash = await GameFiMgr.Instance.sendTransaction(0.00001);
             // console.log("hash", hash);
           });
-        }
 
+          this.view["Button2"].on(Node.EventType.TOUCH_END, async e => {
+            e.propagationStopped = true;
+            const telegram = new TelegramWebAppContainer({
+              exposeInMainWorld: true
+            });
+            console.log(telegram);
+            telegram.TelegramGameProxy.shareScore();
+          });
+        }
         async loginWeb() {
           const result = await getGameUserInfo({
             user_id_wallet: this.address
