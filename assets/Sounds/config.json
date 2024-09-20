@@ -20,39 +20,48 @@
     "paths": {
         "416e4707-1f7b-4fa6-b1bc-b4bd97a0733f": [
             "Message",
-            "cc.Prefab"
+            "cc.Prefab",
+            1
         ],
         "a57da1cf-1bb9-4037-9072-e2461ef5954c": [
             "bg",
-            "cc.AudioClip"
+            "cc.AudioClip",
+            1
         ],
         "6863d139-9025-4b72-b94e-2d00b093c966": [
             "btnclick",
-            "cc.AudioClip"
+            "cc.AudioClip",
+            1
         ],
         "93cc94fe-6f73-4a2d-962e-f1895c8e330b": [
             "click",
-            "cc.AudioClip"
+            "cc.AudioClip",
+            1
         ],
         "02657263-6b36-4782-a1e7-496a0668089f": [
             "freeze",
-            "cc.AudioClip"
+            "cc.AudioClip",
+            1
         ],
         "e0e187fc-be6f-4af8-b5cc-620ae39a4705": [
             "pass",
-            "cc.AudioClip"
+            "cc.AudioClip",
+            1
         ],
         "2de95baa-4b2b-443f-97e5-b645fc39c2f3": [
             "softFail",
-            "cc.AudioClip"
+            "cc.AudioClip",
+            1
         ],
         "7746ed43-0120-4d5a-acf0-f6022569afcc": [
             "starCollect",
-            "cc.AudioClip"
+            "cc.AudioClip",
+            1
         ],
         "72e1909e-ccf8-488f-b454-cd676aec1e30": [
             "tap",
-            "cc.AudioClip"
+            "cc.AudioClip",
+            1
         ]
     },
     "scenes": {},
@@ -63,16 +72,10 @@
     },
     "redirect": [
         "e0ace583-891b-4bec-b36b-aaf39549ec06@f9941",
-        "0",
-        "e0ace583-891b-4bec-b36b-aaf39549ec06@f9941",
         "0"
     ],
     "debug": true,
     "extensionMap": {},
     "hasPreloadScript": true,
-    "dependencyRelationships": {
-        "416e4707-1f7b-4fa6-b1bc-b4bd97a0733f": [
-            "e0ace583-891b-4bec-b36b-aaf39549ec06@f9941"
-        ]
-    }
+    "dependencyRelationships": {}
 }

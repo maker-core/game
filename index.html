@@ -45,8 +45,17 @@
     </div>
   </div>
   <script src="https://telegram.org/js/games.js"></script>
+  <script src="./vconsole.min.js"></script>
+  <script type="text/javascript">
+    // open web debugger console
+    window.VConsole && (window.vConsole = new VConsole());
+  </script>
+
+
   <!-- Polyfills bundle. -->
+
   <script src="src/polyfills.bundle.js" charset="utf-8"> </script>
+
 
   <!-- SystemJS support. -->
   <script src="src/system.bundle.js" charset="utf-8"> </script>
