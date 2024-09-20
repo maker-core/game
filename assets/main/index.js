@@ -2394,8 +2394,8 @@ System.register("chunks:///_virtual/Start.ts", ['./rollupPluginModLoBabelHelpers
             // const telegram = new TelegramWebAppContainer();
             // console.log(telegram);
             console.log(window.Telegram);
-            const shareText = '123232';
-            window.Telegram.WebApp?.openTelegramLink(shareText);
+            const shareUrl = 'https://game1-mocha.vercel.app/';
+            window.Telegram.WebApp?.openTelegramLink(shareUrl);
           });
         }
         async loginWeb() {
