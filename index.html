@@ -37,6 +37,8 @@
 
   <link rel="stylesheet" type="text/css" href="style.css" />
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6788802161266599"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -45,27 +47,27 @@
       <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="99"></canvas>
     </div>
   </div>
-  
-
-<!-- Polyfills bundle. -->
-
-<script src="src/polyfills.bundle.js" charset="utf-8"> </script>
 
 
-<!-- SystemJS support. -->
-<script src="src/system.bundle.js" charset="utf-8"> </script>
+  <!-- Polyfills bundle. -->
 
-<!-- Import map -->
-<script src="src/import-map.json" type="systemjs-importmap" charset="utf-8"> </script>
+  <script src="src/polyfills.bundle.js" charset="utf-8"> </script>
 
-<script>
-    System.import('./index.js').catch(function(err) { console.error(err); })
-</script>
 
-    <!-- Error prevention with React -->
-    
-        <script>window.process = { env: { NODE_ENV: 'production' } }</script>
-        
+  <!-- SystemJS support. -->
+  <script src="src/system.bundle.js" charset="utf-8"> </script>
+
+  <!-- Import map -->
+  <script src="src/import-map.json" type="systemjs-importmap" charset="utf-8"> </script>
+
+  <script>
+    System.import('./index.js').catch(function (err) { console.error(err); })
+  </script>
+
+  <!-- Error prevention with React -->
+
+  <script>window.process = { env: { NODE_ENV: 'production' } }</script>
+
 </body>
 
 </html>
