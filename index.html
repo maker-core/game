@@ -47,12 +47,6 @@
     </div>
   </div>
   
-<script src="./vconsole.min.js"></script>
-<script type="text/javascript">
-    // open web debugger console
-    window.VConsole && (window.vConsole = new VConsole());
-</script>
-
 
 <!-- Polyfills bundle. -->
 
@@ -66,13 +60,13 @@
 <script src="src/import-map.498fd.json" type="systemjs-importmap" charset="utf-8"> </script>
 
 <script>
-    System.import('./index.20ffb.js').catch(function(err) { console.error(err); })
+    System.import('./index.58db0.js').catch(function(err) { console.error(err); })
 </script>
 
     <!-- Error prevention with React -->
     
-      <script>window.process = { env: { NODE_ENV: 'development' } }</script>
-      
+        <script>window.process = { env: { NODE_ENV: 'production' } }</script>
+        
 </body>
 
 </html>
